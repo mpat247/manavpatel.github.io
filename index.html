@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+	<title>manavpatel.me</title>
 	<head>
 	
 
@@ -15,6 +16,7 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
@@ -38,53 +40,64 @@
 	<![endif]-->
 
 	<style>
-		body {
-		  font-family: "Lato", sans-serif;
+		
+		
+		.header {
+		  background-color: #f1f1f1;
+		  padding: 30px;
+		  text-align: center;
 		}
 		
-		.sidenav {
-		  height: 100%;
-		  width: 160px;
-		  position: fixed;
-		  z-index: 1;
-		  top: 0;
-		  left: 0;
-		  background-color: #f5aa49;
-		  overflow-x: hidden;
-		  padding-top: 20px;
+		#navbar {
+		  overflow: hidden;
+		  background-color: rgb(255, 132, 17);
 		}
 		
-		.sidenav a {
-		  padding: 6px 8px 6px 16px;
-		  text-decoration: none;
-		  font-size: 25px;
-		  color: #ffffff;
+		#navbar a {
+		  float: left;
 		  display: block;
+		  color: #000000;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
 		}
 		
-		
-		
-		.main {
-		  margin-left: 160px; /* Same as the width of the sidenav */
-		  font-family: 'icomoon';
-		  font-size: 28px; /* Increased text to enable scrolling */
-		  padding: 0px 10px;
+		#navbar a:hover {
+		  background-color: #ddd;
+		  color: black;
 		}
 		
-		@media screen and (max-height: 450px) {
-		  .sidenav {padding-top: 15px;}
-		  .sidenav a {font-size: 18px;}
+		#navbar a.active {
+		  background-color: #ff5e00;
+		  color: white;
 		}
-		</style>
+		
+		.content {
+		  padding: 16px;
+		}
+		
+		.sticky {
+		  position: sticky;
+		  top: 0;
+		  width: 100%;
+		  z-index: 1;
+		}
+		
+		.sticky + .content {
+		  padding-top: 60px;
+		}
+	</style>
 
 
 	</head>
 	<body>
-		<div class="sidenav">
+		<div id="navbar">
+			<a class="active" href="#page">Home</a>
 			<a href="#about">About Me</a>
 			<a href="#fh5co-skills">Skills</a>
 			<a href="#work">Projects</a>
-		  </div>
+		</div>
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">	
@@ -123,6 +136,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<br><br>
 					<h2>About Me</h2>
 				</div>
 			</div>
@@ -223,6 +237,7 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<br><br>
 					<h2>Projects</h2>
 				</div>
 			</div>
@@ -327,6 +342,7 @@
 					</a>
 				</div>
 			</div>
+			<br><br>
 		</div>
 	</div>
 
@@ -355,6 +371,22 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
 	
+
+	<script>
+		window.onscroll = function() {myFunction()};
+		
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+		
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
