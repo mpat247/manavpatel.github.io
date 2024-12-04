@@ -1,570 +1,1693 @@
-<!DOCTYPE HTML>
-<html>
-	<title>manavpatel.me</title>
-	<head>
-	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manav Patel | Portfolio</title>
+    
+    <!-- Meta Tags for SEO and Responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Manav Patel | Portfolio"/>
+    <meta property="og:image" content="images/toronto_linkedin.jpg"/>
+    <meta property="og:url" content="http://manavpatel.me"/>
+    <meta property="og:site_name" content="Manav Patel"/>
+    <meta property="og:description" content="Machine Learning | Frontend & Backend Development | MEng Candidate at TMU"/>
+    <meta name="twitter:title" content="Manav Patel | Portfolio" />
+    <meta name="twitter:image" content="images/toronto_linkedin.jpg" />
+    <meta name="twitter:url" content="http://manavpatel.me" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-	
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome for Standard Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/K5Ryl8ZHyQjMvWx9tWQ1zH1aZXrS8L6R3H5qYBODTdnQ6gm" crossorigin="anonymous">
 
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Icomoon for Custom Icons -->
+    <link rel="stylesheet" href="fonts/icomoon/icomoon.css">
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+    <!-- Magnific Popup CSS for Lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
-	<style>
-		
-		
-		.header {
-		  background-color: #f1f1f1;
-		  padding: 30px;
-		  text-align: center;
-		}
-		
-		#navbar {
-		  overflow: hidden;
-		  background-color: rgb(255, 132, 17);
-		}
-		
-		#navbar a {
-		  float: left;
-		  display: block;
-		  color: #080202;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		  font-size: 15px;
-		}
-		
-		#navbar a:hover {
-		  background-color: #ddd;
-		  color: black;
-		}
-		
-		#navbar a.active {
-		  background-color: #ff5e00;
-		  color: white;
-		}
-		
-		.content {
-		  padding: 16px;
-		}
-		
-		.sticky {
-		  position: sticky;
-		  top: 0;
-		  width: 100%;
-		  z-index: 1;
-		}
-		
-		.sticky + .content {
-		  padding-top: 60px;
-		}
-	</style>
+    <!-- Custom CSS -->
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-	</head>
-	<body>
-		<div id="navbar">
-			<a class="active" href="#page">Home</a>
-			<a href="#about">About Me</a>
-			<!-- <a href="#fh5co-skills">Skills</a> -->
-			<a href="#experience">Experience</a>
-			<a href="#work">Projects</a>
-			<a href="#resumes">Resume</a>
-		</div>
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">	
-		<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/toronto\ linkedin.jpg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			
-			<div class="container" style="max-width: 1200px;">
-		
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<div class="display-t js-fullheight">
-							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-								<a href="http://manavpatel.me">
-								<!-- <div class="profile-thumb" style="background: url(images/me3.jpg);"></div></a> -->
-								<a href="http://manavpatel.me">
-								<h1 style="font-size: 60px;"><span>Manav Patel</span></h1></a>
-								<h3 style="font-size: 28px; margin-bottom: 15px;">
-									<span style="color: white;">
-										<a href="#" style="color: white;">Machine Learning | Full Stack Development</a>
-									</span>
-								</h3>
-								<h3 style="font-size: 22px;">
-									<span style="color: white;">
-										<a href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/" style="color: white;">
-											MEng Candidate and Teaching Assistant @ TMU
-										</a>
-									</span>
-								</h3>
-								
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
 
-								<p>
-									
-									<ul class="fh5co-social-icons" style="font-size: 25px;">
-										<li><a href="https://www.linkedin.com/in/manavpat/" target="_blank"><i class="icon-linkedin2"></i></a></li>
-										<li><a href="https://github.com/mpat247" target="_blank"><i class="icon-github2"></i></a></li>
-										<li><a href="#resumes"><i class="fas fa-file-pdf"></i></a></li>
-									
-									</ul>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-		
+        body.dark-mode a {
+            color: #bb86fc;
+        }
 
-	
+        body.dark-mode #navbar {
+            background: #1f1f1f;
+        }
 
-	<div id="about" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<br><br>
-					<h2>About Me</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<ul class="info">
-						<li><span class="first-block">Full Name:</span><span class="second-block"><a href="#">Manav Patel</a></span></li>
-						<li><span class="first-block">Email:</span><span class="second-block"><a href="mailto:manav1.patel@torontomu.com">manav1.patel@torontomu.ca</a></span></li>
-						<li><span class="first-block">Website:</span><span class="second-block"><a href="http://manavpatel.me">manavpatel.me</a></span></li>
-						<li><span class="first-block">Resume:</span><span class="second-block"><a href="files/Manav_Patel_Resume.pdf" target="_blank">My Resume</a></span></li>
-					</ul>
-				</div>
-				<div class="col-md-8">
-					<h2>Hello There!</h2>
-					<p>I'm Manav, a recent Software Engineering graduate currently pursuing a <a href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/">MEng in Computer Engineering</a> at <a href="torontomu.ca">Toronto Metropolitan University</a>, where I'm deepening my knowledge in machine learning and AI. I am on track to graduate in April 2025. I've gained valuable backend development experience building REST APIs and database models at <a href="https://www.lockheedmartin.com/en-ca/index.html">Lockheed Martin</a> and honed my full-stack skills while working with ASP.NET MVC applications at <a href="https://www.fgfbrands.com/">FGF Brands</a>. Currently, I'm a Teaching Assistant for <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-engineering/COE/318/">COE318 Software Systems</a> (Intro to Java and OOP) at TMU. I'm a dedicated problem-solver, a hard worker, and always eager to learn new things.</p>
-					<p>I'm actively seeking entry-level Software Engineering positions in machine learning, backend development, or software testing.</p>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-	<div id="experience"> 
-	<div id="fh5co-resume" class="fh5co-bg-color">
-		<div class="container">
-			
-			<div class="row animate-box">
-				
-			</div>
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Work Experience</h3></div>
-						</li>
-						<li class="animate-box timeline">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h2 class="timeline-title"><b>Junior Software Engineer</b></h2>
-									<h3 class="timeline-title">Oakville, Ontario, Canada</h3>
-									<span class="company"><a href="https://www.linkedin.com/company/gocashly/">Cashly Inc.</a> | November 2024 - Present</span>
-									<h4 class="timeline-title"><b>Skills</b></h4>
-									<h5 class="timeline-title">Full stack development, end-to-end development, machine learning</h5>
-								</div>
-								<div class="timeline-body">
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-inverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h2 class="timeline-title"><b>Teaching Assistant</b></h2>
-									<h3 class="timeline-title">Toronto, Ontario, Canada</h3>
-									<span class="company"><a href="http://www.torontomu.ca">Toronto Metropolitan University</a> | September 2024 - Present</span>
-									<h4 class="timeline-title"><b>Skills</b></h4>
-									<h5 class="timeline-title">Java, OOP, JUnit, Netbeans, University Teaching, Public Speaking</h5>
-								</div>
-								<div class="timeline-body">
-								</div>
-							</div>
-						</li>
+        body.dark-mode .timeline::before,
+        body.dark-mode .education-timeline::before {
+            background: #bb86fc;
+        }
 
-						<li class="timeline-unverted animate-box">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h2 class="timeline-title"><b>Software Engineer Intern</b></h2>
-									<h3 class="timeline-title">Toronto, Ontario, Canada</h3>
-									<span class="company"><a href="https://www.fgfbrands.com/" target="_blank">FGF Brands</a> | May 2023 - August 2023</span>
-									<h4 class="timeline-title"><b>Skills</b></h4>
-									<h5 class="timeline-title">C#, .NET Framework, ASP.NET MVC, Microsoft SQL Server, Git, Microsoft Azure</h5>
-								</div>
-								<div class="timeline-body">
-									
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-inverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h2 class="timeline-title"><b>Software Engineer Intern</b></h2>
-									<h3 class="timeline-title">Ottawa, Ontario, Canada</h3>
-									<span class="company"><a href="https://www.lockheedmartin.com/en-ca/" target="_blank">Lockheed Martin</a> | September 2022 - April 2022</span>
-									<h4 class="timeline-title"><b>Skills</b></h4>
-									<h5 class="timeline-title">JavaScript, REST APIs, Relational Databases, PostgreSQL, Express.js, Node.js, Git, Docker</h5>
-								</div>
-								<div class="timeline-body">
-									
-								</div>
-							</div>
-						</li>
-						<br>
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Education</h3></div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h2 class="timeline-title"><b>Master Of Engineering (MEng)</b></h2>
-									<h3 class="timeline-title">Toronto, Ontario, Canada</h3>
-									<span class="company"><a href="https://www.torontomu.ca/graduate/programs/electrical-computer-engineering/" target="_blank">Toronto Metropolitan University (Formerly Ryerson University)</a> 2024 - Exp. 2025</span>
-								</div>
-								<div class="timeline-body">
-									<p>Electrical and Computer Engineering - Artifical Intelligence Concentration</p>
-									<p><b>Relevant Courses: </b>Neural Networks, Deep Learning, Neural Information Processing and Retrieval, Secure Machine Learning</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-inverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h2 class="timeline-title"><b>Bachelor Of Engineering (BEng)</b></h2>
-									<h3 class="timeline-title">Toronto, Ontario, Canada</h3>
-									<span class="company"><a href="https://www.torontomu.ca/programs/undergraduate/computer-engineering/" target="_blank">Toronto Metropolitan University (Formerly Ryerson University)</a> 2019 - 2024</span>
-								</div>
-								<div class="timeline-body">
-									<p>Computer Engineering - Software Option</p>
-									<p>Fourth Year Student</p>
-								</div>
-							</div>
-						</li>
-						
-						
-			    	</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+        /* Side Navigation Bar */
+        .side-nav {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 1001;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            display: none; /* Initially hidden */
+        }
+
+        .side-nav a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: #FF8C00;
+            font-size: 16px;
+            transition: background 0.3s, color 0.3s;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .side-nav a.active,
+        .side-nav a:hover {
+            background: #FF8C00;
+            color: #fff;
+        }
+
+        .side-nav a i {
+            margin-right: 10px;
+        }
+
+        /* Navbar Styles */
+        #navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            background: linear-gradient(45deg, #FF8C00, #FFA500);
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        #navbar.scrolled {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        #navbar .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        #navbar .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            padding: 15px 20px;
+            transition: color 0.3s, border-bottom 0.3s;
+            font-size: 16px;
+        }
+
+        #navbar .nav-link.active,
+        #navbar .nav-link:hover {
+            border-bottom: 2px solid #fff;
+            color: #fff !important;
+        }
+
+        /* Navbar Social Icons */
+        #navbar .navbar-social-icons {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #navbar .navbar-social-icons a {
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        #navbar .navbar-social-icons a:hover {
+            color: #FFD700;
+            transform: scale(1.2);
+        }
+
+        /* Dark Mode Toggle Button */
+        /* Hide Dark Mode Toggle Button */
+.dark-mode-toggle {
+    display: none; /* Completely remove it from rendering */
+    visibility: hidden; /* Ensure it is invisible */
+    opacity: 0; /* Make it transparent */
+    width: 0; /* Remove width */
+    height: 0; /* Remove height */
+    pointer-events: none; /* Disable any interaction */
+    position: absolute; /* Remove it from the layout flow */
+    z-index: -1; /* Send it far below other elements */
+}
 
 
-	<!-- <div id="fh5co-skills" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Skills</h2>
-				</div>
-			</div>
-			<div class="row row-pb-md">
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="100"><span><strong>Python</strong></span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="100"><span><strong>JavaScript</strong></span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="100"><span><strong>C/C++</strong></span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="100"><span><strong>Java</strong></span></div>
-				</div>
-				
+        .dark-mode-toggle:hover {
+            background: #FFA500;
+        }
 
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="100"><span><strong>SQL</strong></span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="100"><span><strong>HTML/CSS</strong></span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="100"><span><strong>MatLab</strong></span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="100"><span><strong>VHDL</strong></span></div>
-				</div>
-			</div>
-			<br><br><br><br>
-		</div>
-	</div> -->
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            z-index: 1;
+            background: linear-gradient(135deg, #FF8C00, #FFA500);
+        }
 
-	<div id="work" class="fh5co-bg-dark">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<br><br>
-					<h2>Projects</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/mpat247/MovieSuccessPredictor" class="work" style="background-image: url(images/movie4.png);">
-						<div class="desc">
-							<h3>Movie Success Predictor</h3>
-							<h5>Neural Networks</h5>
-							<span>NLP, LSTM, BERT, Random Forest, TensorFlow, scikit-learn</span>
-							<span>July 2024</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/mpat247/BiasAware" class="work" style="background-image: url(images/image_grid.jpg);">
-						<div class="desc">
-							<h3>BiasAware</h3>
-							<h5>Engineering Capstone Project</h5>
-							<span>Node.js, React, MongoDB, Image Processing</span>
-							<span>April 2024</span>
-						</div>
-					</a>
-				</div>
-				
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/mpat247/SecureBankingSystem" class="work" style="background-image: url(images/banking.png);">
-						<div class="desc">
-							<h3>Secure Banking System</h3>
-							<h5>Network Security</h5>
-							<span>Python Cryptography Libraries, PyQt</span>
-							<span>March 2024</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/mpat247/ResortTransportationManagement" target="_blank" class="work" style="background-image: url(images/bus.webp);">
-						<div class="desc">
-							<h3>Resort Transportation Management System</h3>
-							<h5>Distributed Systems and Cloud Computing</h5>
-							<span>FastAPI, React, Docker, Kubernetes, AWS</span>
-							<span>March 2024</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/mpat247/onTrack" target="_blank" class="work" style="background-image: url(images/text.png);">
-						<div class="desc">
-							<h3>Text-Recognition OCR</h3>
-							<h5>Computer Vision</h5>
-							<span>Python, OpenCV, Pytesseract</span>
-							<span>November 2023</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/mpat247/onTrack" target="_blank" class="work" style="background-image: url(images/calendar.jpg);">
-						<div class="desc">
-							<h3>onTrack</h3>
-							<h5>Software Project Management</h5>
-							<span>Node.js, Express.js, React, Oracle</span>
-							<span>November 2023</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/mpat247/onTrack" target="_blank" class="work" style="background-image: url(images/ecommerce.png);">
-						<div class="desc">
-							<h3>Online Shopping Store</h3>
-							<h5>Software Design and Architecture</h5>
-							<span>Java, MySQL, Docker, Kubernetes, Google Cloud Platform</span>
-							<span>March 2022</span>
-						</div>
-					</a>
-				</div>
-				
-				
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/mpat247/Movie-Store-DB-project" target="_blank" class="work" style="background-image: url(images/movies.jpg);">
-						<div class="desc">
-							<h3>Movie Store DBMS</h3>
-							<h5>Database Systems</h5>
-							<span>Node.js, Express.js, React, Oracle</span>
-							<span>November 2021</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/mpat247/manavpatel.github.io" target="_blank" class="work" style="background-image: url(images/portfolio.png);">
-						<div class="desc">
-							<h3>manavpatel.me</h3>
-							<span>HTML, CSS, JavaScript</span>
-						</div>
-					</a>
-				</div>
-				
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/mpat247/Simple-ALU-Design" target="_blank" class="work" style="background-image: url(images/alu.png);">
-						<div class="desc">
-							<h3>Simple ALU Design</h3>
-							<span>VHDL, Quartus</span>
-						</div>
-					</a>
-				</div>
-				
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/mpat247" target="_blank" class="work" style="background-image: url(images/github.png);">
-						<div class="desc" style="font-family: Arial; font-size: 20px; color: #F9A029;">
-							<h3>My GitHub</h3>
-						</div>
-					</a>
-				</div>
-			</div>
-			<br><br>
-		</div>
-	</div>
+        /* Particles.js Container */
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Behind the content */
+            pointer-events: none; /* Allow clicks through the particles */
+        }
 
-	<!-- Resumes Section -->
-	<div id="resumes" class="fh5co-bg-color">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<br><br>
-					<h2>Resumes</h2>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-12">
-					<!-- Nav Tabs -->
-					<ul class="nav nav-tabs" role="tablist" style="margin-bottom: 20px;">
-						<li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">General</a></li>
-						<li role="presentation"><a href="#ml" aria-controls="ml" role="tab" data-toggle="tab">Machine Learning</a></li>
-						<li role="presentation"><a href="#swe" aria-controls="swe" role="tab" data-toggle="tab">Software Engineering</a></li>
-					</ul>
-	
-					<!-- Tab Panes -->
-					<div class="tab-content">
-						<!-- General Resume -->
-						<div role="tabpanel" class="tab-pane active" id="general">
-							<iframe class="resume-frame" src="files/Manav_Patel_Resume.pdf" allowfullscreen></iframe>
-							<p class="text-center" style="margin-top: 10px;">
-								<a href="files/Manav_Patel_Resume.pdf" target="_blank" class="btn btn-primary">Download General Resume</a>
-							</p>
-						</div>
-	
-						<!-- Machine Learning Resume -->
-						<div role="tabpanel" class="tab-pane" id="ml">
-							<iframe class="resume-frame" src="files/Manav_Patel_Resume_ML.pdf" allowfullscreen></iframe>
-							<p class="text-center" style="margin-top: 10px;">
-								<a href="files/Manav_Patel_Resume_ML.pdf" target="_blank" class="btn btn-primary">Download ML Resume</a>
-							</p>
-						</div>
-	
-						<!-- Software Engineering Resume -->
-						<div role="tabpanel" class="tab-pane" id="swe">
-							<iframe class="resume-frame" src="files/Manav_Patel_Resume_SWE.pdf" allowfullscreen></iframe>
-							<p class="text-center" style="margin-top: 10px;">
-								<a href="files/Manav_Patel_Resume_SWE.pdf" target="_blank" class="btn btn-primary">Download SWE Resume</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<style>
-		.resume-frame {
-			width: 100%;
-			height: calc(100vh - 150px); /* Adjust height dynamically to fit the screen */
-			border: none; /* Removes border */
-		}
-	</style>
-	
+        .hero-content {
+            position: relative;
+            z-index: 1; /* Above the particles */
+            max-width: 800px;
+            padding: 0 20px;
+        }
 
-	
-	
-	<div id="fh5co-footer">
-		<div class="container">
-			<div class="row">
-				<ul class="fh5co-social-icons">
-					<li><a href="https://www.linkedin.com/in/manavpat/" target="_blank"><i class="icon-linkedin2"></i></a></li>
-					<li><a href="https://github.com/mpat247" target="_blank"><i class="icon-github2"></i></a></li>
-					<li><a href="#resumes" ><i class="fas fa-file-pdf"></i></a></li>
-				</ul>
-				<div class="col-md-12">
-					
-			
-					<p>&copy; 2024 Manav Patel.</p>
-				</div>
-			</div>
-		</div>
-		
-	</div>
+        .hero-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease forwards;
+        }
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-	</div>
-	
+        .hero-content h3 {
+            font-weight: 400;
+            margin-bottom: 30px;
+            font-size: 36px;
+            animation: fadeInUp 1s ease forwards;
+        }
 
-	<script>
-		window.onscroll = function() {myFunction()};
-		
-		var navbar = document.getElementById("navbar");
-		var sticky = navbar.offsetTop;
-		
-		function myFunction() {
-		  if (window.pageYOffset >= sticky) {
-			navbar.classList.add("sticky")
-		  } else {
-			navbar.classList.remove("sticky");
-		  }
-		}
-	</script>
+        .typed-text {
+            color: #FFD700;
+            font-weight: 600;
+        }
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Easy PieChart -->
-	<script src="js/jquery.easypiechart.min.js"></script>
-	
-	
-	<!-- Main -->
-	<script src="js/main.js"></script>
+        /* Social Icons in Hero */
+        .hero-social-icons {
+            margin-top: 30px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            z-index: 2; /* Ensures it's above other elements */
+        }
 
-	</body>
+        .hero-social-icons a {
+            color: #FFD700;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .hero-social-icons a:hover {
+            color: #fff;
+            transform: scale(1.2);
+        }
+
+        /* Scroll Down Icon */
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            color: #fff;
+            z-index: 1;
+        }
+
+        /* Keyframes for Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* About Section */
+        #about {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        #about .info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        #about .info .first-block {
+            width: 180px;
+            font-weight: 600;
+            color: #FF8C00;
+        }
+
+        #about .info .second-block a {
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        #about .info .second-block a:hover {
+            color: #FF8C00;
+        }
+
+        #about .about-text h2 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        #about .about-text p {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        /* Skills Section within About */
+        #about .skills {
+            margin-top: 40px;
+        }
+
+        #about .skills .skill-item {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border: 2px solid #FF8C00;
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #about .skills .skill-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        #about .skills .skill-item i {
+            color: #FF8C00;
+            margin-bottom: 15px;
+            font-size: 40px;
+        }
+
+        #about .skills .skill-item h5 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #FF8C00;
+        }
+
+        #about .skills .skill-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Timeline Styles for Experience */
+        .timeline {
+            list-style: none;
+            padding: 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            background: #FF8C00;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            margin-left: -2px;
+        }
+
+        .timeline li {
+            margin: 20px 0;
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+
+        .timeline li:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline li:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline li::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .timeline .timeline-badge {
+            position: absolute;
+            top: 20px;
+            right: -10px;
+            background: #fff;
+            border: 4px solid #FF8C00;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            z-index: 100;
+            transition: transform 0.3s;
+        }
+
+        .timeline li:nth-child(even) .timeline-badge {
+            left: -10px;
+            right: auto;
+        }
+
+        .timeline .timeline-badge:hover {
+            transform: scale(1.2);
+        }
+
+        .timeline .timeline-panel {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .timeline .timeline-panel:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        .timeline .timeline-heading h3 {
+            margin-top: 0;
+            color: #FF8C00;
+            font-size: 24px;
+        }
+
+        .timeline .timeline-heading h4,
+        .timeline .timeline-heading h5 {
+            margin: 5px 0;
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* Education Section - New Design: Horizontal Timeline */
+        #education {
+            padding: 80px 0;
+            background: #f1f1f1;
+        }
+
+        #education .education-timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        #education .education-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #FF8C00;
+            transform: translateX(-50%);
+        }
+
+        #education .education-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+
+        #education .education-item.left {
+            left: 0;
+        }
+
+        #education .education-item.right {
+            left: 50%;
+        }
+
+        #education .education-item::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border: 4px solid #FF8C00;
+            border-radius: 50%;
+            z-index: 100;
+        }
+
+        #education .education-item.left::after {
+            right: -10px;
+        }
+
+        #education .education-item.right::after {
+            left: -10px;
+        }
+
+        #education .education-panel {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #education .education-panel:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        #education .education-panel h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #FF8C00;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        #education .education-panel h5 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        #education .education-panel p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Projects Section */
+        #work {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        #work .work-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #work .work-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        #work .work-item .desc {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            width: 100%;
+            padding: 15px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        #work .work-item:hover .desc {
+            opacity: 1;
+        }
+
+        #work .desc h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #FF8C00;
+        }
+
+        #work .desc h5 {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        #work .desc span {
+            display: block;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        /* Filter Buttons */
+        .filter-btns {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .filter-btns .btn {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: #FF8C00;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            font-size: 16px;
+        }
+
+        .filter-btns .btn:hover,
+        .filter-btns .btn.active {
+            background: #FFA500;
+            transform: scale(1.05);
+        }
+
+        /* Lightbox Modal */
+        .modal-content {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            background: #FF8C00;
+            color: #fff;
+            border-bottom: none;
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        /* Resumes Section */
+        #resumes {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        #resumes .nav-tabs {
+            border-bottom: 2px solid #FF8C00;
+        }
+
+        #resumes .nav-tabs .nav-link {
+            color: #FF8C00;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+            font-size: 18px;
+        }
+
+        #resumes .nav-tabs .nav-link.active {
+            background: #FF8C00;
+            color: #fff !important;
+            border-radius: 5px;
+        }
+
+        .resume-frame {
+            width: 100%;
+            height: 800px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #f0f0f0;
+        }
+
+        /* Footer Styles */
+        #fh5co-footer {
+            background: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        #fh5co-footer .social-icons a {
+            color: #FF8C00;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        #fh5co-footer .social-icons a:hover {
+            color: #FFA500;
+            transform: scale(1.2);
+        }
+
+        /* Scroll-to-Top Button */
+        .gototop {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            display: none;
+        }
+
+        .gototop a {
+            background: #FF8C00;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            transition: background 0.3s, transform 0.3s;
+            font-size: 18px;
+        }
+
+        .gototop a:hover {
+            background: #FFA500;
+            transform: scale(1.1);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .side-nav {
+                top: auto;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 15px;
+                background: rgba(255, 255, 255, 0.9);
+            }
+
+            .side-nav a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .timeline::before,
+            #education .education-timeline::before {
+                left: 20px;
+            }
+
+            .timeline li,
+            #education .education-item {
+                width: 100%;
+                padding-left: 60px;
+                margin-bottom: 30px;
+            }
+
+            .timeline li:nth-child(odd),
+            .timeline li:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline .timeline-badge,
+            #education .education-item::after {
+                left: 0;
+                right: auto;
+            }
+
+            /* About Me Skills - 2x2 grid */
+            #about .skills .skill-item {
+                margin-bottom: 20px;
+            }
+
+            /* Navbar Social Icons */
+            #navbar .navbar-social-icons {
+                margin-left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Side Navigation Bar -->
+    <nav class="side-nav" id="sideNav">
+        <a href="#about" class="nav-link"><i class="icon-user"></i> About Me</a>
+        <a href="#experience" class="nav-link"><i class="icon-briefcase"></i> Experience</a>
+        <a href="#education" class="nav-link"><i class="icon-graduation-cap"></i> Education</a>
+        <a href="#work" class="nav-link"><i class="icon-project-diagram"></i> Projects</a>
+        <a href="#resumes" class="nav-link"><i class="icon-file-alt"></i> Resumes</a>
+    </nav>
+
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand" href="#page" style="color: white;">Manav Patel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars text-white"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#page" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" style="color: white;">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience" style="color: white;">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education" style="color: white;">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work" style="color: white;">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resumes" style="color: white;">Resumes</a>
+                    </li>
+                </ul>
+                <div class="navbar-social-icons" style="display: flex; gap: 15px; align-items: center; margin-left: 20px;">
+                    <!-- LinkedIn Icon -->
+                    <a href="https://www.linkedin.com/in/manavpat/" target="_blank" style="text-decoration: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+
+                    <!-- GitHub Icon -->
+                    <a href="https://github.com/mpat247" target="_blank" style="text-decoration: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.85 10.95.57.1.78-.25.78-.55v-2.14c-3 .65-3.87-1.53-3.87-1.53-.52-1.31-1.27-1.66-1.27-1.66-1.04-.72.08-.71.08-.71 1.14.08 1.74 1.17 1.74 1.17 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97.01 1.94.13 2.87.39 2.2-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.4-2.71 5.37-5.29 5.65.41.35.78 1.03.78 2.07v3.06c0 .31.21.66.79.55 4.56-1.54 7.84-5.85 7.84-10.95 0-6.27-5.23-11.5-11.5-11.5z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="page">
+        <!-- Particles.js Container -->
+        <div id="particles-js"></div>
+
+        <!-- Content -->
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Manav Patel</h1>
+            <h3><span class="typed-text"></span></h3>
+            <div class="hero-social-icons" style="display: flex; gap: 20px; align-items: center; justify-content: center; margin-top: 20px;">
+                <!-- LinkedIn Icon -->
+                <a href="https://www.linkedin.com/in/manavpat/" target="_blank" style="text-decoration: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+
+                <!-- GitHub Icon -->
+                <a href="https://github.com/mpat247" target="_blank" style="text-decoration: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.85 10.95.57.1.78-.25.78-.55v-2.14c-3 .65-3.87-1.53-3.87-1.53-.52-1.31-1.27-1.66-1.27-1.66-1.04-.72.08-.71.08-.71 1.14.08 1.74 1.17 1.74 1.17 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97.01 1.94.13 2.87.39 2.2-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.4-2.71 5.37-5.29 5.65.41.35.78 1.03.78 2.07v3.06c0 .31.21.66.79.55 4.56-1.54 7.84-5.85 7.84-10.95 0-6.27-5.23-11.5-11.5-11.5z"></path>
+                    </svg>
+                </a>
+
+                <!-- Resume Icon -->
+                <a href="#resumes" style="text-decoration: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <line x1="10" y1="9" x2="8" y2="9"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Icon -->
+        <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });" style="margin-top: 30px; text-align: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 15.5l-7-7h14l-7 7z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" data-aos="fade-up">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h2>About Me</h2>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Information Block -->
+                <div class="col-md-4" data-aos="fade-right">
+                    <ul class="info">
+                        <li><span class="first-block">Full Name:</span><span class="second-block"><a href="#">Manav Patel</a></span></li>
+                        <li><span class="first-block">Email:</span><span class="second-block"><a href="mailto:manav1.patel@torontomu.ca">manav1.patel@torontomu.ca</a></span></li>
+                        <li><span class="first-block">Website:</span><span class="second-block"><a href="http://manavpatel.me">manavpatel.me</a></span></li>
+                        <li><span class="first-block">Resume:</span><span class="second-block"><a href="#resumes">My Resume</a></span></li>
+                    </ul>
+                </div>
+                <!-- About Text Block -->
+                <div class="col-md-8 about-text" data-aos="fade-left">
+                    <h2>Hello There!</h2>
+                    <p>I'm Manav, a recent Software Engineering graduate currently pursuing a <a href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/" target="_blank">MEng in Computer Engineering</a> at <a href="https://www.torontomu.ca" target="_blank">Toronto Metropolitan University</a>, where I'm deepening my knowledge in machine learning and AI. I am on track to graduate in April 2025. I've gained valuable backend development experience building REST APIs and database models at <strong><a href="https://www.lockheedmartin.com/en-ca/index.html" target="_blank">Lockheed Martin</a></strong> and honed my frontend skills while working with React and Node.js applications at <strong><a href="https://www.fgfbrands.com/" target="_blank">FGF Brands</a></strong>. Currently, I'm a Teaching Assistant for <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-engineering/COE/318/" target="_blank">COE318 Software Systems</a> (Intro to Java and OOP) at TMU. I'm a dedicated problem-solver, a hard worker, and always eager to learn new things.</p>
+                    <p>I'm actively seeking entry-level Software Engineering positions in machine learning, backend development, or software testing.</p>
+
+                    <!-- Skills Section within About -->
+                    <div class="skills" data-aos="fade-up">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 skill-item">
+                                <i class="fas fa-code"></i>
+                                <h5>Frontend Development</h5>
+                                <p>Experienced in creating responsive and user-friendly interfaces using HTML, CSS, JavaScript, and React.</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 skill-item">
+                                <i class="fas fa-server"></i>
+                                <h5>Backend Development</h5>
+                                <p>Proficient in building robust backend systems with Node.js, Express.js, and Python.</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 skill-item">
+                                <i class="fas fa-robot"></i>
+                                <h5>Machine Learning</h5>
+                                <p>Skilled in developing and deploying machine learning models using TensorFlow, scikit-learn, and PyTorch.</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 skill-item">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <h5>Teaching Assistant</h5>
+                                <p>Assisting students in understanding complex software engineering concepts and programming languages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="bg-light" data-aos="fade-up">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h2>Experience</h2>
+                </div>
+            </div>
+            <ul class="timeline">
+                <!-- Work Experience -->
+                <li data-aos="fade-right">
+                    <div class="timeline-badge"><i class="fas fa-briefcase"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h3 class="timeline-title"><strong>Junior Software Engineer</strong></h3>
+                            <h4>Oakville, Ontario, Canada</h4>
+                            <span class="company"><strong><a href="https://www.linkedin.com/company/gocashly/" target="_blank">Cashly Inc.</a></strong> | November 2024 - Present</span>
+                            <h5><strong>Skills:</strong> Full stack development, end-to-end development, machine learning</h5>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-left">
+                    <div class="timeline-badge"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h3 class="timeline-title"><strong>Teaching Assistant</strong></h3>
+                            <h4>Toronto, Ontario, Canada</h4>
+                            <span class="company"><strong><a href="http://www.torontomu.ca" target="_blank">Toronto Metropolitan University</a></strong> | September 2024 - Present</span>
+                            <h5><strong>Skills:</strong> Java, OOP, JUnit, Netbeans, University Teaching, Public Speaking</h5>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-right">
+                    <div class="timeline-badge"><i class="fas fa-briefcase"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h3 class="timeline-title"><strong>Software Engineer Intern</strong></h3>
+                            <h4>Toronto, Ontario, Canada</h4>
+                            <span class="company"><strong><a href="https://www.fgfbrands.com/" target="_blank">FGF Brands</a></strong> | May 2023 - August 2023</span>
+                            <h5><strong>Skills:</strong> C#, .NET Framework, ASP.NET MVC, Microsoft SQL Server, Git, Microsoft Azure</h5>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-left">
+                    <div class="timeline-badge"><i class="fas fa-briefcase"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h3 class="timeline-title"><strong>Software Engineer Intern</strong></h3>
+                            <h4>Ottawa, Ontario, Canada</h4>
+                            <span class="company"><strong><a href="https://www.lockheedmartin.com/en-ca/" target="_blank">Lockheed Martin</a></strong> | September 2022 - April 2023</span>
+                            <h5><strong>Skills:</strong> JavaScript, REST APIs, Relational Databases, PostgreSQL, Express.js, Node.js, Git, Docker</h5>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section - New Design: Horizontal Timeline -->
+    <section id="education" data-aos="fade-up">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h2>Education</h2>
+                </div>
+            </div>
+            <div class="education-timeline">
+                <!-- Education Item 1 -->
+                <div class="education-item left" data-aos="fade-right">
+                    <div class="education-panel">
+                        <h4>Master Of Engineering (MEng)</h4>
+                        <h5>Toronto Metropolitan University (Formerly Ryerson University)</h5>
+                        <p><strong>Location:</strong> Toronto, Ontario, Canada</p>
+                        <p><strong>Duration:</strong> 2024 - Expected 2025</p>
+                        <p><strong>Concentration:</strong> Electrical and Computer Engineering - Artificial Intelligence</p>
+                        <p><strong>Relevant Courses:</strong> Neural Networks, Deep Learning, Neural Information Processing and Retrieval, Secure Machine Learning</p>
+                    </div>
+                </div>
+                <!-- Education Item 2 -->
+                <div class="education-item right" data-aos="fade-left">
+                    <div class="education-panel">
+                        <h4>Bachelor Of Engineering (BEng)</h4>
+                        <h5>Toronto Metropolitan University (Formerly Ryerson University)</h5>
+                        <p><strong>Location:</strong> Toronto, Ontario, Canada</p>
+                        <p><strong>Duration:</strong> 2019 - 2024</p>
+                        <p><strong>Specialization:</strong> Computer Engineering - Software Option</p>
+                        <p><strong>Status:</strong> Fourth Year Student</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="work" data-aos="fade-up">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h2>Projects</h2>
+                </div>
+            </div>
+            <!-- Filter Buttons -->
+            <div class="filter-btns" data-aos="fade-in">
+                <button class="btn active" data-filter="all">All</button>
+                <button class="btn" data-filter="ml">Machine Learning</button>
+                <button class="btn" data-filter="fullstack">Full Stack</button>
+                <button class="btn" data-filter="other">Other</button>
+            </div>
+            <div class="row">
+                <!-- Project Items -->
+                <!-- Example Project 1 -->
+                <div class="col-md-4 mb-4 project-item" data-category="ml">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal1" style="background-image: url('images/movie4.png');">
+                        <div class="desc">
+                            <h3>Movie Success Predictor</h3>
+                            <h5>Neural Networks</h5>
+                            <span>NLP, LSTM, BERT, Random Forest, TensorFlow, scikit-learn</span>
+                            <span>July 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Project 2 -->
+                <div class="col-md-4 mb-4 project-item" data-category="fullstack">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal2" style="background-image: url('images/image_grid.jpg');">
+                        <div class="desc">
+                            <h3>BiasAware</h3>
+                            <h5>Engineering Capstone Project</h5>
+                            <span>Node.js, React, MongoDB, Image Processing</span>
+                            <span>April 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Project 3 -->
+                <div class="col-md-4 mb-4 project-item" data-category="other">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal3" style="background-image: url('images/banking.png');">
+                        <div class="desc">
+                            <h3>Secure Banking System</h3>
+                            <h5>Network Security</h5>
+                            <span>Python Cryptography Libraries, PyQt</span>
+                            <span>March 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Project 4 -->
+                <div class="col-md-4 mb-4 project-item" data-category="fullstack">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal4" style="background-image: url('images/bus.webp');">
+                        <div class="desc">
+                            <h3>Resort Transportation Management System</h3>
+                            <h5>Distributed Systems and Cloud Computing</h5>
+                            <span>FastAPI, React, Docker, Kubernetes, AWS</span>
+                            <span>March 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Project 5 -->
+                <div class="col-md-4 mb-4 project-item" data-category="ml">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal5" style="background-image: url('images/text.png');">
+                        <div class="desc">
+                            <h3>Text-Recognition OCR</h3>
+                            <h5>Computer Vision</h5>
+                            <span>Python, OpenCV, Pytesseract</span>
+                            <span>November 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Project 6 -->
+                <div class="col-md-4 mb-4 project-item" data-category="fullstack">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal6" style="background-image: url('images/calendar.jpg');">
+                        <div class="desc">
+                            <h3>onTrack</h3>
+                            <h5>Software Project Management</h5>
+                            <span>Node.js, Express.js, React, Oracle</span>
+                            <span>November 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Project 7 -->
+                <div class="col-md-4 mb-4 project-item" data-category="fullstack">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal7" style="background-image: url('images/ecommerce.png');">
+                        <div class="desc">
+                            <h3>Online Shopping Store</h3>
+                            <h5>Software Design and Architecture</h5>
+                            <span>Java, MySQL, Docker, Kubernetes, Google Cloud Platform</span>
+                            <span>March 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Project 8 -->
+                <div class="col-md-4 mb-4 project-item" data-category="ml">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal8" style="background-image: url('images/movies.jpg');">
+                        <div class="desc">
+                            <h3>Movie Store DBMS</h3>
+                            <h5>Database Systems</h5>
+                            <span>Node.js, Express.js, React, Oracle</span>
+                            <span>November 2021</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Project 9 -->
+                <div class="col-md-4 mb-4 project-item" data-category="fullstack">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal9" style="background-image: url('images/portfolio.png');">
+                        <div class="desc">
+                            <h3>manavpatel.me</h3>
+                            <span>HTML, CSS, JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Project 10 -->
+                <div class="col-md-4 mb-4 project-item" data-category="other">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal10" style="background-image: url('images/alu.png');">
+                        <div class="desc">
+                            <h3>Simple ALU Design</h3>
+                            <span>VHDL, Quartus</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Project 11 -->
+                <div class="col-md-4 mb-4 project-item" data-category="all">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal11" style="background-image: url('images/github.png');">
+                        <div class="desc" style="font-size: 20px; color: #F9A029;">
+                            <h3>My GitHub</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <!-- Example Modal Structure for Project 1 -->
+    <div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-labelledby="projectModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal1Label">Movie Success Predictor</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/movie4.png" alt="Movie Success Predictor" class="img-fluid mb-3">
+            <p><strong>Overview:</strong> A machine learning project aimed at predicting the success of movies using various neural network architectures.</p>
+            <p><strong>Technologies:</strong> NLP, LSTM, BERT, Random Forest, TensorFlow, scikit-learn</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/MovieSuccessPredictor" target="_blank">MovieSuccessPredictor Repository</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 2 -->
+    <div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-labelledby="projectModal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal2Label">BiasAware</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/image_grid.jpg" alt="BiasAware" class="img-fluid mb-3">
+            <p><strong>Overview:</strong> An engineering capstone project focused on identifying and mitigating bias in machine learning models.</p>
+            <p><strong>Technologies:</strong> Node.js, React, MongoDB, Image Processing</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/BiasAware" target="_blank">BiasAware Repository</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 3 -->
+    <div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-labelledby="projectModal3Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal3Label">Secure Banking System</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/banking.png" alt="Secure Banking System" class="img-fluid mb-3">
+            <p><strong>Overview:</strong> A secure banking application designed to protect user data and transactions through advanced cryptography.</p>
+            <p><strong>Technologies:</strong> Python Cryptography Libraries, PyQt</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/SecureBankingSystem" target="_blank">SecureBankingSystem Repository</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 4 -->
+    <div class="modal fade" id="projectModal4" tabindex="-1" role="dialog" aria-labelledby="projectModal4Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal4Label">Resort Transportation Management System</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/bus.webp" alt="Resort Transportation Management System" class="img-fluid mb-3">
+            <p><strong>Overview:</strong> A comprehensive system for managing transportation logistics in resort environments, ensuring efficiency and reliability.</p>
+            <p><strong>Technologies:</strong> FastAPI, React, Docker, Kubernetes, AWS</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/ResortTransportationManagement" target="_blank">ResortTransportationManagement Repository</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 5 -->
+    <div class="modal fade" id="projectModal5" tabindex="-1" role="dialog" aria-labelledby="projectModal5Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal5Label">Text-Recognition OCR</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/text.png" alt="Text-Recognition OCR" class="img-fluid mb-3">
+            <p><strong>Overview:</strong> An OCR system capable of accurately recognizing and extracting text from images using computer vision techniques.</p>
+            <p><strong>Technologies:</strong> Python, OpenCV, Pytesseract</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Text-Recognition-OCR" target="_blank">Text-Recognition-OCR Repository</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 6 -->
+    <div class="modal fade" id="projectModal6" tabindex="-1" role="dialog" aria-labelledby="projectModal6Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal6Label">onTrack</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/calendar.jpg" alt="onTrack" class="img-fluid mb-3">
+            <p><strong>Overview:</strong> A project management tool designed to help teams track progress, manage tasks, and collaborate efficiently.</p>
+            <p><strong>Technologies:</strong> Node.js, Express.js, React, Oracle</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/onTrack" target="_blank">onTrack Repository</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 7 -->
+    <div class="modal fade" id="projectModal7" tabindex="-1" role="dialog" aria-labelledby="projectModal7Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal7Label">Online Shopping Store</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/ecommerce.png" alt="Online Shopping Store" class="img-fluid mb-3">
+            <p><strong>Overview:</strong> An e-commerce platform designed to provide users with a seamless online shopping experience.</p>
+            <p><strong>Technologies:</strong> Java, MySQL, Docker, Kubernetes, Google Cloud Platform</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/OnlineShoppingStore" target="_blank">OnlineShoppingStore Repository</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 8 -->
+    <div class="modal fade" id="projectModal8" tabindex="-1" role="dialog" aria-labelledby="projectModal8Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal8Label">Movie Store DBMS</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/movies.jpg" alt="Movie Store DBMS" class="img-fluid mb-3">
+            <p><strong>Overview:</strong> A Database Management System designed for managing movie data efficiently.</p>
+            <p><strong>Technologies:</strong> Node.js, Express.js, React, Oracle</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Movie-Store-DBMS" target="_blank">Movie-Store-DBMS Repository</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 9 -->
+    <div class="modal fade" id="projectModal9" tabindex="-1" role="dialog" aria-labelledby="projectModal9Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal9Label">manavpatel.me</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/portfolio.png" alt="manavpatel.me" class="img-fluid mb-3">
+            <p><strong>Overview:</strong> My personal portfolio website showcasing my projects, experience, and skills.</p>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/manavpatel.github.io" target="_blank">manavpatel.github.io Repository</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 10 -->
+    <div class="modal fade" id="projectModal10" tabindex="-1" role="dialog" aria-labelledby="projectModal10Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal10Label">Simple ALU Design</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="images/alu.png" alt="Simple ALU Design" class="img-fluid mb-3">
+            <p><strong>Overview:</strong> A basic Arithmetic Logic Unit (ALU) design implemented using VHDL.</p>
+            <p><strong>Technologies:</strong> VHDL, Quartus</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Simple-ALU-Design" target="_blank">Simple-ALU-Design Repository</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Modal 11 -->
+    <div class="modal fade" id="projectModal11" tabindex="-1" role="dialog" aria-labelledby="projectModal11Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal11Label">My GitHub</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="images/github.png" alt="My GitHub" class="img-fluid mb-3" style="max-width: 200px;">
+            <p><strong>Overview:</strong> Explore all my projects, repositories, and contributions on my GitHub profile.</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247" target="_blank">mpat247</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resumes Section -->
+    <section id="resumes" data-aos="fade-up">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h2>Resumes</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Nav Tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#general" role="tab" data-toggle="tab">General</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ml" role="tab" data-toggle="tab">Machine Learning</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#swe" role="tab" data-toggle="tab">Software Engineering</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Panes -->
+                    <div class="tab-content mt-4">
+                        <!-- General Resume -->
+                        <div role="tabpanel" class="tab-pane fade show active" id="general">
+                            <iframe class="resume-frame" src="files/Manav_Patel_Resume.pdf" allowfullscreen></iframe>
+                            <p class="text-center mt-3">
+                                <a href="files/Manav_Patel_Resume.pdf" target="_blank" class="btn btn-primary">Download General Resume</a>
+                            </p>
+                        </div>
+
+                        <!-- Machine Learning Resume -->
+                        <div role="tabpanel" class="tab-pane fade" id="ml">
+                            <iframe class="resume-frame" src="files/Manav_Patel_Resume_ML.pdf" allowfullscreen></iframe>
+                            <p class="text-center mt-3">
+                                <a href="files/Manav_Patel_Resume_ML.pdf" target="_blank" class="btn btn-primary">Download ML Resume</a>
+                            </p>
+                        </div>
+
+                        <!-- Software Engineering Resume -->
+                        <div role="tabpanel" class="tab-pane fade" id="swe">
+                            <iframe class="resume-frame" src="files/Manav_Patel_Resume_SWE.pdf" allowfullscreen></iframe>
+                            <p class="text-center mt-3">
+                                <a href="files/Manav_Patel_Resume_SWE.pdf" target="_blank" class="btn btn-primary">Download SWE Resume</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="fh5co-footer">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col">
+                    <ul class="social-icons" style="display: flex; justify-content: center; gap: 20px; list-style: none; padding: 0; margin: 0;">
+                        <!-- LinkedIn Icon -->
+                        <li>
+                            <a href="https://www.linkedin.com/in/manavpat/" target="_blank" style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <!-- GitHub Icon -->
+                        <li>
+                            <a href="https://github.com/mpat247" target="_blank" style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.85 10.95.57.1.78-.25.78-.55v-2.14c-3 .65-3.87-1.53-3.87-1.53-.52-1.31-1.27-1.66-1.27-1.66-1.04-.72.08-.71.08-.71 1.14.08 1.74 1.17 1.74 1.17 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97.01 1.94.13 2.87.39 2.2-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.4-2.71 5.37-5.29 5.65.41.35.78 1.03.78 2.07v3.06c0 .31.21.66.79.55 4.56-1.54 7.84-5.85 7.84-10.95 0-6.27-5.23-11.5-11.5-11.5z"></path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <!-- Resume Icon -->
+                        <li>
+                            <a href="#resumes" style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <line x1="10" y1="9" x2="8" y2="9"></line>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p style="text-align: center; color: white;">&copy; 2024 Manav Patel.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scroll-to-Top Button -->
+    <div class="gototop" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <a href="#" style="text-decoration: none; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #FFA500; border-radius: 50%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M18 15l-6-6-6 6"></path>
+            </svg>
+        </a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Typed.js for Typewriter Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Magnific Popup JS for Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'slide',
+            once: true
+        });
+
+        // Initialize Typed.js with Slower Speed
+        var typed = new Typed('.typed-text', {
+            strings: ["Machine Learning Engineer", "Software Engineer"],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+
+        // Navbar Scroll Effect
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 50) {
+                $('#navbar').addClass('scrolled');
+            } else {
+                $('#navbar').removeClass('scrolled');
+            }
+
+            // Show/Hide Scroll-to-Top Button
+            if ($(this).scrollTop() > 300) {
+                $('.gototop').fadeIn();
+            } else {
+                $('.gototop').fadeOut();
+            }
+
+            // Update Side Navigation Active Link
+            $('section').each(function() {
+                var top = $(window).scrollTop();
+                var offset = $(this).offset().top - 150;
+                var height = $(this).outerHeight();
+                var id = $(this).attr('id');
+
+                if (top >= offset && top < offset + height) {
+                    $('.side-nav a').removeClass('active');
+                    $('.side-nav a[href="#' + id + '"]').addClass('active');
+                }
+            });
+
+            // Show Side Navigation after scrolling past hero section
+            if ($(this).scrollTop() > $('.hero-section').height() - 100) {
+                $('#sideNav').fadeIn();
+            } else {
+                $('#sideNav').fadeOut();
+            }
+        });
+
+        // Scroll-to-Top Smooth Scroll
+        $('.gototop a').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 800);
+        });
+
+        // Dark Mode Toggle
+        const toggleButton = document.getElementById('darkModeToggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.innerHTML = document.body.classList.contains('dark-mode') 
+                ? '<i class="fas fa-sun"></i>' 
+                : '<i class="fas fa-moon"></i>';
+        });
+
+        // Project Filtering
+        $('.filter-btns .btn').click(function() {
+            $('.filter-btns .btn').removeClass('active');
+            $(this).addClass('active');
+
+            const filter = $(this).attr('data-filter');
+            if (filter === 'all') {
+                $('.project-item').show();
+            } else {
+                $('.project-item').hide();
+                $('.project-item[data-category="' + filter + '"]').show();
+            }
+        });
+
+        // Initialize Magnific Popup for Lightbox
+        $(document).ready(function() {
+            $('.work-item').magnificPopup({
+                type: 'inline',
+                midClick: true
+            });
+        });
+
+        // Initialize particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.3,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 4,
+                        "size_min": 0.3,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
 </html>
-
