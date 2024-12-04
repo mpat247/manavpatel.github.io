@@ -361,7 +361,45 @@
             color: #555;
         }
 
-        /* Timeline Styles for Experience */
+        /* Education Section */
+        #education {
+            padding: 80px 0;
+            background: #f1f1f1;
+        }
+
+        #education .education-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #education .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        #education .card-title {
+            font-family: 'Poppins', sans-serif;
+            color: #FF8C00;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        #education .card-subtitle {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        #education .card-text {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Experience Section */
+        #experience {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
         .timeline {
             list-style: none;
             padding: 0;
@@ -448,94 +486,6 @@
             margin: 5px 0;
             color: #555;
             font-size: 18px;
-        }
-
-        /* Education Section - New Design: Horizontal Timeline */
-        #education {
-            padding: 80px 0;
-            background: #f1f1f1;
-        }
-
-        #education .education-timeline {
-            position: relative;
-            padding: 20px 0;
-        }
-
-        #education .education-timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: #FF8C00;
-            transform: translateX(-50%);
-        }
-
-        #education .education-item {
-            position: relative;
-            width: 50%;
-            padding: 20px 40px;
-            box-sizing: border-box;
-        }
-
-        #education .education-item.left {
-            left: 0;
-        }
-
-        #education .education-item.right {
-            left: 50%;
-        }
-
-        #education .education-item::after {
-            content: '';
-            position: absolute;
-            top: 20px;
-            width: 20px;
-            height: 20px;
-            background: #fff;
-            border: 4px solid #FF8C00;
-            border-radius: 50%;
-            z-index: 100;
-        }
-
-        #education .education-item.left::after {
-            right: -10px;
-        }
-
-        #education .education-item.right::after {
-            left: -10px;
-        }
-
-        #education .education-panel {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        #education .education-panel:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-        }
-
-        #education .education-panel h4 {
-            font-family: 'Poppins', sans-serif;
-            color: #FF8C00;
-            margin-bottom: 10px;
-            font-size: 22px;
-        }
-
-        #education .education-panel h5 {
-            margin-bottom: 10px;
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        #education .education-panel p {
-            font-size: 16px;
-            color: #555;
         }
 
         /* Projects Section */
@@ -685,27 +635,58 @@
             transform: scale(1.2);
         }
 
-        /* Scroll-to-Top Button */
         .gototop {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            z-index: 999;
-            display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Use right instead of left */
+    z-index: 1000;
+    display: none;
+}
+
+.gototop a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #FFA500;
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.gototop a:hover {
+    background: #FFD700;
+    transform: scale(1.1);
+}
+
+
+        /* Education Cards */
+        #education .education-card {
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .gototop a {
-            background: #FF8C00;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 50%;
-            transition: background 0.3s, transform 0.3s;
+        #education .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        #education .card-title {
+            font-family: 'Poppins', sans-serif;
+            color: #FF8C00;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        #education .card-subtitle {
+            margin-bottom: 15px;
             font-size: 18px;
+            color: #555;
         }
 
-        .gototop a:hover {
-            background: #FFA500;
-            transform: scale(1.1);
+        #education .card-text {
+            font-size: 16px;
+            color: #555;
         }
 
         /* Responsive Adjustments */
@@ -926,7 +907,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Experience Section -->
     <section id="experience" class="bg-light" data-aos="fade-up">
         <div class="container">
@@ -944,7 +925,7 @@
                             <h3 class="timeline-title"><strong>Junior Software Engineer</strong></h3>
                             <h4>Oakville, Ontario, Canada</h4>
                             <span class="company"><strong><a href="https://www.linkedin.com/company/gocashly/" target="_blank">Cashly Inc.</a></strong> | November 2024 - Present</span>
-                            <h5><strong>Skills:</strong> Full stack development, end-to-end development, machine learning</h5>
+                            <h5><strong>Skills:</strong> PERN Stack, LLMs, Full Stack Development, End-to-End Development, Machine Learning</h5>
                         </div>
                     </div>
                 </li>
@@ -963,7 +944,7 @@
                     <div class="timeline-badge"><i class="fas fa-briefcase"></i></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h3 class="timeline-title"><strong>Software Engineer Intern</strong></h3>
+                            <h3 class="timeline-title"><strong>.NET Software Developer Intern</strong></h3>
                             <h4>Toronto, Ontario, Canada</h4>
                             <span class="company"><strong><a href="https://www.fgfbrands.com/" target="_blank">FGF Brands</a></strong> | May 2023 - August 2023</span>
                             <h5><strong>Skills:</strong> C#, .NET Framework, ASP.NET MVC, Microsoft SQL Server, Git, Microsoft Azure</h5>
@@ -974,7 +955,7 @@
                     <div class="timeline-badge"><i class="fas fa-briefcase"></i></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h3 class="timeline-title"><strong>Software Engineer Intern</strong></h3>
+                            <h3 class="timeline-title"><strong>Backend Developer Intern</strong></h3>
                             <h4>Ottawa, Ontario, Canada</h4>
                             <span class="company"><strong><a href="https://www.lockheedmartin.com/en-ca/" target="_blank">Lockheed Martin</a></strong> | September 2022 - April 2023</span>
                             <h5><strong>Skills:</strong> JavaScript, REST APIs, Relational Databases, PostgreSQL, Express.js, Node.js, Git, Docker</h5>
@@ -985,7 +966,7 @@
         </div>
     </section>
 
-    <!-- Education Section - New Design: Horizontal Timeline -->
+    <!-- Education Section -->
     <section id="education" data-aos="fade-up">
         <div class="container">
             <div class="row mb-5">
@@ -993,29 +974,34 @@
                     <h2>Education</h2>
                 </div>
             </div>
-            <div class="education-timeline">
-                <!-- Education Item 1 -->
-                <div class="education-item left" data-aos="fade-right">
-                    <div class="education-panel">
-                        <h4>Master Of Engineering (MEng)</h4>
-                        <h5>Toronto Metropolitan University (Formerly Ryerson University)</h5>
-                        <p><strong>Location:</strong> Toronto, Ontario, Canada</p>
-                        <p><strong>Duration:</strong> 2024 - Expected 2025</p>
-                        <p><strong>Concentration:</strong> Electrical and Computer Engineering - Artificial Intelligence</p>
-                        <p><strong>Relevant Courses:</strong> Neural Networks, Deep Learning, Neural Information Processing and Retrieval, Secure Machine Learning</p>
+            <div class="row">
+                <!-- Education Card 1 -->
+                <div class="col-md-6 mb-4" data-aos="fade-up">
+                    <div class="card education-card h-100"> <a href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/">
+                        <div class="card-body"> 
+                            <h4 class="card-title">Master Of Engineering (MEng)</h4>
+                            <h5 class="card-subtitle mb-2 text-muted">Toronto Metropolitan University (Formerly Ryerson University)</h5>
+                            <p class="card-text"><strong>Location:</strong> Toronto, Ontario, Canada</p>
+                            <p class="card-text"><strong>Duration:</strong> 2024 - Expected 2025</p>
+                            <p class="card-text"><strong>Concentration:</strong>Electrical and Computer Engineering - Artificial Intelligence</p>
+                            <p class="card-text"><strong>Relevant Courses:</strong> Neural Networks, Deep Learning, Neural Information Processing and Retrieval, Secure Machine Learning</p>
+                        </div></a>
                     </div>
                 </div>
-                <!-- Education Item 2 -->
-                <div class="education-item right" data-aos="fade-left">
-                    <div class="education-panel">
-                        <h4>Bachelor Of Engineering (BEng)</h4>
-                        <h5>Toronto Metropolitan University (Formerly Ryerson University)</h5>
-                        <p><strong>Location:</strong> Toronto, Ontario, Canada</p>
-                        <p><strong>Duration:</strong> 2019 - 2024</p>
-                        <p><strong>Specialization:</strong> Computer Engineering - Software Option</p>
-                        <p><strong>Status:</strong> Fourth Year Student</p>
+                <!-- Education Card 2 -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card education-card h-100"><a href="https://www.torontomu.ca/programs/undergraduate/computer-engineering/">
+                        <div class="card-body">
+                            <h4 class="card-title">Bachelor Of Engineering (BEng)</h4>
+                            <h5 class="card-subtitle mb-2 text-muted">Toronto Metropolitan University (Formerly Ryerson University)</h5>
+                            <p class="card-text"><strong>Location:</strong> Toronto, Ontario, Canada</p>
+                            <p class="card-text"><strong>Duration:</strong> 2019 - 2024</p>
+                            <p class="card-text"><strong>Specialization:</strong> Computer Engineering - Software Option</p>
+                            <p class="card-text"><strong>Status:</strong> Fourth Year Student</p>
+                        </div></a>
                     </div>
                 </div>
+                <!-- Add more education cards here if needed -->
             </div>
         </div>
     </section>
@@ -1477,6 +1463,8 @@
             </svg>
         </a>
     </div>
+
+
 
     <!-- JavaScript Libraries -->
     <!-- jQuery -->
