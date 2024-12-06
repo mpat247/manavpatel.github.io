@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Manav Patel | Portfolio</title>
-    
+
     <!-- Meta Tags for SEO and Responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Manav Patel | Portfolio"/>
-    <meta property="og:image" content="images/toronto_linkedin.jpg"/>
-    <meta property="og:url" content="http://manavpatel.me"/>
-    <meta property="og:site_name" content="Manav Patel"/>
-    <meta property="og:description" content="Machine Learning | Frontend & Backend Development | MEng Candidate at TMU"/>
+    <meta property="og:title" content="Manav Patel | Portfolio" />
+    <meta property="og:image" content="images/toronto_linkedin.jpg" />
+    <meta property="og:url" content="http://manavpatel.me" />
+    <meta property="og:site_name" content="Manav Patel" />
+    <meta property="og:description"
+        content="Machine Learning | Frontend & Backend Development | MEng Candidate at TMU" />
     <meta name="twitter:title" content="Manav Patel | Portfolio" />
     <meta name="twitter:image" content="images/toronto_linkedin.jpg" />
     <meta name="twitter:url" content="http://manavpatel.me" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome for Standard Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/K5Ryl8ZHyQjMvWx9tWQ1zH1aZXrS8L6R3H5qYBODTdnQ6gm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/K5Ryl8ZHyQjMvWx9tWQ1zH1aZXrS8L6R3H5qYBODTdnQ6gm" crossorigin="anonymous">
 
     <!-- Icomoon for Custom Icons -->
     <link rel="stylesheet" href="fonts/icomoon/icomoon.css">
@@ -37,7 +41,8 @@
     <!-- Custom CSS -->
     <style>
         /* Base Styles */
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
@@ -82,8 +87,8 @@
             padding: 10px;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-            display: none; /* Initially hidden */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            display: none;
         }
 
         .side-nav a {
@@ -119,7 +124,7 @@
         }
 
         #navbar.scrolled {
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         #navbar .navbar-brand {
@@ -162,18 +167,16 @@
         }
 
         /* Dark Mode Toggle Button */
-        /* Hide Dark Mode Toggle Button */
-.dark-mode-toggle {
-    display: none; /* Completely remove it from rendering */
-    visibility: hidden; /* Ensure it is invisible */
-    opacity: 0; /* Make it transparent */
-    width: 0; /* Remove width */
-    height: 0; /* Remove height */
-    pointer-events: none; /* Disable any interaction */
-    position: absolute; /* Remove it from the layout flow */
-    z-index: -1; /* Send it far below other elements */
-}
-
+        .dark-mode-toggle {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+            position: absolute;
+            z-index: -1;
+        }
 
         .dark-mode-toggle:hover {
             background: #FFA500;
@@ -193,20 +196,19 @@
             background: linear-gradient(135deg, #FF8C00, #FFA500);
         }
 
-        /* Particles.js Container */
         #particles-js {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 0; /* Behind the content */
-            pointer-events: none; /* Allow clicks through the particles */
+            z-index: 0;
+            pointer-events: none;
         }
 
         .hero-content {
             position: relative;
-            z-index: 1; /* Above the particles */
+            z-index: 1;
             max-width: 800px;
             padding: 0 20px;
         }
@@ -230,7 +232,6 @@
             font-weight: 600;
         }
 
-        /* Social Icons in Hero */
         .hero-social-icons {
             margin-top: 30px;
             font-size: 30px;
@@ -238,7 +239,7 @@
             justify-content: center;
             gap: 20px;
             position: relative;
-            z-index: 2; /* Ensures it's above other elements */
+            z-index: 2;
         }
 
         .hero-social-icons a {
@@ -251,7 +252,6 @@
             transform: scale(1.2);
         }
 
-        /* Scroll Down Icon */
         .scroll-down {
             position: absolute;
             bottom: 20px;
@@ -264,24 +264,49 @@
             z-index: 1;
         }
 
-        /* Keyframes for Animations */
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-10px); }
-            60% { transform: translateX(-50%) translateY(-5px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
         }
 
-        /* About Section */
         #about {
             padding: 80px 0;
             background: #f9f9f9;
@@ -309,18 +334,11 @@
             color: #FF8C00;
         }
 
-        #about .about-text h2 {
-            font-family: 'Poppins', sans-serif;
-            margin-bottom: 20px;
-            font-size: 36px;
-        }
-
         #about .about-text p {
             line-height: 1.8;
             font-size: 18px;
         }
 
-        /* Skills Section within About */
         #about .skills {
             margin-top: 40px;
         }
@@ -341,7 +359,7 @@
 
         #about .skills .skill-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
         }
 
         #about .skills .skill-item i {
@@ -361,7 +379,6 @@
             color: #555;
         }
 
-        /* Education Section */
         #education {
             padding: 80px 0;
             background: #f1f1f1;
@@ -373,7 +390,7 @@
 
         #education .education-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
         }
 
         #education .card-title {
@@ -394,7 +411,6 @@
             color: #555;
         }
 
-        /* Experience Section */
         #experience {
             padding: 80px 0;
             background: #f9f9f9;
@@ -466,13 +482,13 @@
             padding: 20px;
             border-radius: 8px;
             position: relative;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .timeline .timeline-panel:hover {
             transform: translateY(-10px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
         }
 
         .timeline .timeline-heading h3 {
@@ -488,7 +504,6 @@
             font-size: 18px;
         }
 
-        /* Projects Section */
         #work {
             padding: 80px 0;
             background: #f9f9f9;
@@ -507,13 +522,13 @@
 
         #work .work-item:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
         }
 
         #work .work-item .desc {
             position: absolute;
             bottom: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             width: 100%;
             padding: 15px;
@@ -543,7 +558,6 @@
             color: #ddd;
         }
 
-        /* Filter Buttons */
         .filter-btns {
             text-align: center;
             margin-bottom: 40px;
@@ -567,7 +581,6 @@
             transform: scale(1.05);
         }
 
-        /* Lightbox Modal */
         .modal-content {
             border-radius: 10px;
             overflow: hidden;
@@ -583,7 +596,6 @@
             padding: 20px;
         }
 
-        /* Resumes Section */
         #resumes {
             padding: 80px 0;
             background: #fff;
@@ -611,11 +623,10 @@
             height: 800px;
             border: none;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             background: #f0f0f0;
         }
 
-        /* Footer Styles */
         #fh5co-footer {
             background: #333;
             color: #fff;
@@ -636,60 +647,30 @@
         }
 
         .gototop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px; /* Use right instead of left */
-    z-index: 1000;
-    display: none;
-}
-
-.gototop a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: #FFA500;
-    border-radius: 50%;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.gototop a:hover {
-    background: #FFD700;
-    transform: scale(1.1);
-}
-
-
-        /* Education Cards */
-        #education .education-card {
-            transition: transform 0.3s, box-shadow 0.3s;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
         }
 
-        #education .education-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        .gototop a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #FFA500;
+            border-radius: 50%;
+            transition: background 0.3s, transform 0.3s;
         }
 
-        #education .card-title {
-            font-family: 'Poppins', sans-serif;
-            color: #FF8C00;
-            margin-bottom: 10px;
-            font-size: 22px;
+        .gototop a:hover {
+            background: #FFD700;
+            transform: scale(1.1);
         }
 
-        #education .card-subtitle {
-            margin-bottom: 15px;
-            font-size: 18px;
-            color: #555;
-        }
-
-        #education .card-text {
-            font-size: 16px;
-            color: #555;
-        }
-
-        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .side-nav {
                 top: auto;
@@ -729,18 +710,17 @@
                 right: auto;
             }
 
-            /* About Me Skills - 2x2 grid */
             #about .skills .skill-item {
                 margin-bottom: 20px;
             }
 
-            /* Navbar Social Icons */
             #navbar .navbar-social-icons {
                 margin-left: 15px;
             }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Side Navigation Bar -->
@@ -761,7 +741,8 @@
     <nav id="navbar" class="navbar navbar-expand-md">
         <div class="container">
             <a class="navbar-brand" href="#page" style="color: white;">Manav Patel</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars text-white"></i></span>
             </button>
 
@@ -786,10 +767,12 @@
                         <a class="nav-link" href="#resumes" style="color: white;">Resumes</a>
                     </li>
                 </ul>
-                <div class="navbar-social-icons" style="display: flex; gap: 15px; align-items: center; margin-left: 20px;">
+                <div class="navbar-social-icons"
+                    style="display: flex; gap: 15px; align-items: center; margin-left: 20px;">
                     <!-- LinkedIn Icon -->
                     <a href="https://www.linkedin.com/in/manavpat/" target="_blank" style="text-decoration: none;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="white"
+                            stroke-width="2" viewBox="0 0 24 24">
                             <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z"></path>
                             <rect x="2" y="9" width="4" height="12"></rect>
                             <circle cx="4" cy="4" r="2"></circle>
@@ -798,8 +781,11 @@
 
                     <!-- GitHub Icon -->
                     <a href="https://github.com/mpat247" target="_blank" style="text-decoration: none;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.85 10.95.57.1.78-.25.78-.55v-2.14c-3 .65-3.87-1.53-3.87-1.53-.52-1.31-1.27-1.66-1.27-1.66-1.04-.72.08-.71.08-.71 1.14.08 1.74 1.17 1.74 1.17 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97.01 1.94.13 2.87.39 2.2-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.4-2.71 5.37-5.29 5.65.41.35.78 1.03.78 2.07v3.06c0 .31.21.66.79.55 4.56-1.54 7.84-5.85 7.84-10.95 0-6.27-5.23-11.5-11.5-11.5z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="white"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path
+                                d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.85 10.95.57.1.78-.25.78-.55v-2.14c-3 .65-3.87-1.53-3.87-1.53-.52-1.31-1.27-1.66-1.27-1.66-1.04-.72.08-.71.08-.71 1.14.08 1.74 1.17 1.74 1.17 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97.01 1.94.13 2.87.39 2.2-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.4-2.71 5.37-5.29 5.65.41.35.78 1.03.78 2.07v3.06c0 .31.21.66.79.55 4.56-1.54 7.84-5.85 7.84-10.95 0-6.27-5.23-11.5-11.5-11.5z">
+                            </path>
                         </svg>
                     </a>
                 </div>
@@ -809,33 +795,31 @@
 
     <!-- Hero Section -->
     <section class="hero-section" id="page">
-        <!-- Particles.js Container -->
         <div id="particles-js"></div>
-
-        <!-- Content -->
         <div class="hero-content" data-aos="fade-up">
             <h1>Manav Patel</h1>
             <h3><span class="typed-text"></span></h3>
-            <div class="hero-social-icons" style="display: flex; gap: 20px; align-items: center; justify-content: center; margin-top: 20px;">
-                <!-- LinkedIn Icon -->
+            <div class="hero-social-icons"
+                style="display: flex; gap: 20px; align-items: center; justify-content: center; margin-top: 20px;">
                 <a href="https://www.linkedin.com/in/manavpat/" target="_blank" style="text-decoration: none;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="white"
+                        stroke-width="2" viewBox="0 0 24 24">
                         <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
                         <circle cx="4" cy="4" r="2"></circle>
                     </svg>
                 </a>
-
-                <!-- GitHub Icon -->
                 <a href="https://github.com/mpat247" target="_blank" style="text-decoration: none;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.85 10.95.57.1.78-.25.78-.55v-2.14c-3 .65-3.87-1.53-3.87-1.53-.52-1.31-1.27-1.66-1.27-1.66-1.04-.72.08-.71.08-.71 1.14.08 1.74 1.17 1.74 1.17 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97.01 1.94.13 2.87.39 2.2-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.4-2.71 5.37-5.29 5.65.41.35.78 1.03.78 2.07v3.06c0 .31.21.66.79.55 4.56-1.54 7.84-5.85 7.84-10.95 0-6.27-5.23-11.5-11.5-11.5z"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="white"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path
+                            d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.85 10.95.57.1.78-.25.78-.55v-2.14c-3 .65-3.87-1.53-3.87-1.53-.52-1.31-1.27-1.66-1.27-1.66-1.04-.72.08-.71.08-.71 1.14.08 1.74 1.17 1.74 1.17 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97.01 1.94.13 2.87.39 2.2-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.4-2.71 5.37-5.29 5.65.41.35.78 1.03.78 2.07v3.06c0 .31.21.66.79.55 4.56-1.54 7.84-5.85 7.84-10.95 0-6.27-5.23-11.5-11.5-11.5z">
+                        </path>
                     </svg>
                 </a>
-
-                <!-- Resume Icon -->
                 <a href="#resumes" style="text-decoration: none;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                         <polyline points="14 2 14 8 20 8"></polyline>
                         <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -845,11 +829,11 @@
                 </a>
             </div>
         </div>
-
-        <!-- Scroll Down Icon -->
-        <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });" style="margin-top: 30px; text-align: center;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M12 15.5l-7-7h14l-7 7z"/>
+        <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });"
+            style="margin-top: 30px; text-align: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path d="M12 15.5l-7-7h14l-7 7z" />
             </svg>
         </div>
     </section>
@@ -863,43 +847,62 @@
                 </div>
             </div>
             <div class="row">
-                <!-- Information Block -->
                 <div class="col-md-4" data-aos="fade-right">
                     <ul class="info">
-                        <li><span class="first-block">Full Name:</span><span class="second-block"><a href="#">Manav Patel</a></span></li>
-                        <li><span class="first-block">Email:</span><span class="second-block"><a href="mailto:manav1.patel@torontomu.ca">manav1.patel@torontomu.ca</a></span></li>
-                        <li><span class="first-block">Website:</span><span class="second-block"><a href="http://manavpatel.me">manavpatel.me</a></span></li>
-                        <li><span class="first-block">Resume:</span><span class="second-block"><a href="#resumes">My Resume</a></span></li>
+                        <li><span class="first-block">Full Name:</span><span class="second-block"><a href="#">Manav
+                                    Patel</a></span></li>
+                        <li><span class="first-block">Email:</span><span class="second-block"><a
+                                    href="mailto:manav1.patel@torontomu.ca">manav1.patel@torontomu.ca</a></span></li>
+                        <li><span class="first-block">Website:</span><span class="second-block"><a
+                                    href="http://manavpatel.me">manavpatel.me</a></span></li>
+                        <li><span class="first-block">Resume:</span><span class="second-block"><a href="#resumes">My
+                                    Resume</a></span></li>
                     </ul>
                 </div>
-                <!-- About Text Block -->
                 <div class="col-md-8 about-text" data-aos="fade-left">
-                    <h2>Hello There!</h2>
-                    <p>I'm Manav, a recent Software Engineering graduate currently pursuing a <a href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/" target="_blank">MEng in Computer Engineering</a> at <a href="https://www.torontomu.ca" target="_blank">Toronto Metropolitan University</a>, where I'm deepening my knowledge in machine learning and AI. I am on track to graduate in April 2025. I've gained valuable backend development experience building REST APIs and database models at <strong><a href="https://www.lockheedmartin.com/en-ca/index.html" target="_blank">Lockheed Martin</a></strong> and honed my frontend skills while working with React and Node.js applications at <strong><a href="https://www.fgfbrands.com/" target="_blank">FGF Brands</a></strong>. Currently, I'm a Teaching Assistant for <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-engineering/COE/318/" target="_blank">COE318 Software Systems</a> (Intro to Java and OOP) at TMU. I'm a dedicated problem-solver, a hard worker, and always eager to learn new things.</p>
-                    <p>I'm actively seeking entry-level Software Engineering positions in machine learning, backend development, or software testing.</p>
+                    <p>I'm Manav, a recent Software Engineering graduate currently pursuing a <a
+                            href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/"
+                            target="_blank">MEng in Computer Engineering</a> at <a href="https://www.torontomu.ca"
+                            target="_blank">Toronto Metropolitan University</a>, where I'm deepening my knowledge in
+                        machine learning and AI. I am on track to graduate in April 2025. I've gained valuable backend
+                        development experience building REST APIs and database models at <strong><a
+                                href="https://www.lockheedmartin.com/en-ca/index.html" target="_blank">Lockheed
+                                Martin</a></strong> and honed my frontend skills while working with React and Node.js
+                        applications at <strong><a href="https://www.fgfbrands.com/" target="_blank">FGF
+                                Brands</a></strong>. Currently, I'm a Teaching Assistant for <a
+                            href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-engineering/COE/318/"
+                            target="_blank">COE318 Software Systems</a> (Intro to Java and OOP) at TMU. I'm a dedicated
+                        problem-solver, a hard worker, and always eager to learn new things.</p>
+                    <p>I'm actively seeking entry-level Software Engineering positions in machine learning, backend
+                        development, or software testing.</p>
 
-                    <!-- Skills Section within About -->
                     <div class="skills" data-aos="fade-up">
                         <div class="row">
                             <div class="col-md-6 col-sm-6 skill-item">
                                 <i class="fas fa-code"></i>
                                 <h5>Frontend Development</h5>
-                                <p>Experienced in creating responsive and user-friendly interfaces using HTML, CSS, JavaScript, and React.</p>
+                                <p>Experienced in creating responsive and user-friendly interfaces using HTML, CSS,
+                                    JavaScript, and React.</p>
                             </div>
                             <div class="col-md-6 col-sm-6 skill-item">
                                 <i class="fas fa-server"></i>
                                 <h5>Backend Development</h5>
-                                <p>Proficient in building robust backend systems with Node.js, Express.js, and Python.</p>
+                                <p>Proficient in building robust backend systems with Node.js, Express.js, and Python.
+                                </p>
                             </div>
+                        </div>
+                        <div class="row mt-4">
                             <div class="col-md-6 col-sm-6 skill-item">
                                 <i class="fas fa-robot"></i>
                                 <h5>Machine Learning</h5>
-                                <p>Skilled in developing and deploying machine learning models using TensorFlow, scikit-learn, and PyTorch.</p>
+                                <p>Skilled in developing and deploying machine learning models using TensorFlow,
+                                    scikit-learn, and PyTorch.</p>
                             </div>
                             <div class="col-md-6 col-sm-6 skill-item">
                                 <i class="fas fa-chalkboard-teacher"></i>
                                 <h5>Teaching Assistant</h5>
-                                <p>Assisting students in understanding complex software engineering concepts and programming languages.</p>
+                                <p>Assisting students in understanding complex software engineering concepts and
+                                    programming languages.</p>
                             </div>
                         </div>
                     </div>
@@ -917,15 +920,16 @@
                 </div>
             </div>
             <ul class="timeline">
-                <!-- Work Experience -->
                 <li data-aos="fade-right">
                     <div class="timeline-badge"><i class="fas fa-briefcase"></i></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h3 class="timeline-title"><strong>Junior Software Engineer</strong></h3>
                             <h4>Oakville, Ontario, Canada</h4>
-                            <span class="company"><strong><a href="https://www.linkedin.com/company/gocashly/" target="_blank">Cashly Inc.</a></strong> | November 2024 - Present</span>
-                            <h5><strong>Skills:</strong> PERN Stack, LLMs, Full Stack Development, End-to-End Development, Machine Learning</h5>
+                            <span class="company"><strong><a href="https://www.linkedin.com/company/gocashly/"
+                                        target="_blank">Cashly Inc.</a></strong> | November 2024 - Present</span>
+                            <h5><strong>Skills:</strong> PERN Stack, LLMs, Full Stack Development, End-to-End
+                                Development, Machine Learning</h5>
                         </div>
                     </div>
                 </li>
@@ -935,8 +939,10 @@
                         <div class="timeline-heading">
                             <h3 class="timeline-title"><strong>Teaching Assistant</strong></h3>
                             <h4>Toronto, Ontario, Canada</h4>
-                            <span class="company"><strong><a href="http://www.torontomu.ca" target="_blank">Toronto Metropolitan University</a></strong> | September 2024 - Present</span>
-                            <h5><strong>Skills:</strong> Java, OOP, JUnit, Netbeans, University Teaching, Public Speaking</h5>
+                            <span class="company"><strong><a href="http://www.torontomu.ca" target="_blank">Toronto
+                                        Metropolitan University</a></strong> | September 2024 - Present</span>
+                            <h5><strong>Skills:</strong> Java, OOP, JUnit, Netbeans, University Teaching, Public
+                                Speaking</h5>
                         </div>
                     </div>
                 </li>
@@ -946,8 +952,10 @@
                         <div class="timeline-heading">
                             <h3 class="timeline-title"><strong>.NET Software Developer Intern</strong></h3>
                             <h4>Toronto, Ontario, Canada</h4>
-                            <span class="company"><strong><a href="https://www.fgfbrands.com/" target="_blank">FGF Brands</a></strong> | May 2023 - August 2023</span>
-                            <h5><strong>Skills:</strong> C#, .NET Framework, ASP.NET MVC, Microsoft SQL Server, Git, Microsoft Azure</h5>
+                            <span class="company"><strong><a href="https://www.fgfbrands.com/" target="_blank">FGF
+                                        Brands</a></strong> | May 2023 - August 2023</span>
+                            <h5><strong>Skills:</strong> C#, .NET Framework, ASP.NET MVC, Microsoft SQL Server, Git,
+                                Microsoft Azure</h5>
                         </div>
                     </div>
                 </li>
@@ -957,8 +965,11 @@
                         <div class="timeline-heading">
                             <h3 class="timeline-title"><strong>Backend Developer Intern</strong></h3>
                             <h4>Ottawa, Ontario, Canada</h4>
-                            <span class="company"><strong><a href="https://www.lockheedmartin.com/en-ca/" target="_blank">Lockheed Martin</a></strong> | September 2022 - April 2023</span>
-                            <h5><strong>Skills:</strong> JavaScript, REST APIs, Relational Databases, PostgreSQL, Express.js, Node.js, Git, Docker</h5>
+                            <span class="company"><strong><a href="https://www.lockheedmartin.com/en-ca/"
+                                        target="_blank">Lockheed Martin</a></strong> | September 2022 - April
+                                2023</span>
+                            <h5><strong>Skills:</strong> JavaScript, REST APIs, Relational Databases, PostgreSQL,
+                                Express.js, Node.js, Git, Docker</h5>
                         </div>
                     </div>
                 </li>
@@ -975,34 +986,462 @@
                 </div>
             </div>
             <div class="row">
-                <!-- Education Card 1 -->
                 <div class="col-md-6 mb-4" data-aos="fade-up">
-                    <div class="card education-card h-100"> <a href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/">
-                        <div class="card-body"> 
-                            <h4 class="card-title">Master Of Engineering (MEng)</h4>
-                            <h5 class="card-subtitle mb-2 text-muted">Toronto Metropolitan University (Formerly Ryerson University)</h5>
-                            <p class="card-text"><strong>Location:</strong> Toronto, Ontario, Canada</p>
-                            <p class="card-text"><strong>Duration:</strong> 2024 - Expected 2025</p>
-                            <p class="card-text"><strong>Concentration:</strong>Electrical and Computer Engineering - Artificial Intelligence</p>
-                            <p class="card-text"><strong>Relevant Courses:</strong> Neural Networks, Deep Learning, Neural Information Processing and Retrieval, Secure Machine Learning</p>
-                        </div></a>
+                    <div class="card education-card h-100">
+                        <a
+                            href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/">
+                            <div class="card-body">
+                                <h4 class="card-title">Master Of Engineering (MEng)</h4>
+                                <h5 class="card-subtitle mb-2 text-muted">Toronto Metropolitan University (Formerly
+                                    Ryerson University)</h5>
+                                <p class="card-text"><strong>Location:</strong> Toronto, Ontario, Canada</p>
+                                <p class="card-text"><strong>Duration:</strong> 2024 - Expected 2025</p>
+                                <p class="card-text"><strong>Specialization:</strong> Electrical and Computer
+                                    Engineering - Artificial Intelligence</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <!-- Education Card 2 -->
                 <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card education-card h-100"><a href="https://www.torontomu.ca/programs/undergraduate/computer-engineering/">
-                        <div class="card-body">
-                            <h4 class="card-title">Bachelor Of Engineering (BEng)</h4>
-                            <h5 class="card-subtitle mb-2 text-muted">Toronto Metropolitan University (Formerly Ryerson University)</h5>
-                            <p class="card-text"><strong>Location:</strong> Toronto, Ontario, Canada</p>
-                            <p class="card-text"><strong>Duration:</strong> 2019 - 2024</p>
-                            <p class="card-text"><strong>Specialization:</strong> Computer Engineering - Software Option</p>
-                            <p class="card-text"><strong>Status:</strong> Fourth Year Student</p>
-                        </div></a>
+                    <div class="card education-card h-100">
+                        <a href="https://www.torontomu.ca/programs/undergraduate/computer-engineering/">
+                            <div class="card-body">
+                                <h4 class="card-title">Bachelor Of Engineering (BEng)</h4>
+                                <h5 class="card-subtitle mb-2 text-muted">Toronto Metropolitan University (Formerly
+                                    Ryerson University)</h5>
+                                <p class="card-text"><strong>Location:</strong> Toronto, Ontario, Canada</p>
+                                <p class="card-text"><strong>Duration:</strong> 2019 - 2024</p>
+                                <p class="card-text"><strong>Specialization:</strong> Computer Engineering - Software
+                                    Option</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <!-- Add more education cards here if needed -->
             </div>
+
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <h3>Relevant Courses</h3>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#all-courses" role="tab" data-toggle="tab">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#meng-courses" role="tab" data-toggle="tab">MEng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#beng-courses" role="tab" data-toggle="tab">BEng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ALL COURSES (16 total, arranged in pairs, left-right) -->
+            <!-- Order (Left | Right):
+            Neural Networks | Deep Learning
+            Neural Info. Processing | Secure Machine Learning
+            Advanced Data Engineering | Software Design and Architecture
+            Intelligent Systems | Distributed and Cloud Computing
+            Computer Vision | Software Testing
+            Software Requirement Analysis | Software Project Management
+            Operating Systems | Computer Networks
+            Network Security | Digital Systems Engineering
+            -->
+
+            <div class="tab-content mt-4">
+                <!-- All Courses -->
+                <div role="tabpanel" class="tab-pane fade show active" id="all-courses">
+                    <div class="row">
+                        <!-- Row 1 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/neural-network.png" class="align-self-center mr-3"
+                                    alt="Neural Networks" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/graduate/calendar/programs-and-courses/electrical-computer-engineering/#!accordion-1600184468068-course-listings:~:text=EE8204%20Neural%20Networks"
+                                        target="_blank">Neural Networks</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/deep_learning.png" class="align-self-center mr-3" alt="Deep Learning"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/graduate/calendar/programs-and-courses/electrical-computer-engineering/#!accordion-1600184468068-course-listings:~:text=EE8223%20Deep%20Learning"
+                                        target="_blank">Deep Learning</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/nlp.png" class="align-self-center mr-3"
+                                    alt="Neural Information Processing" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/graduate/calendar/programs-and-courses/electrical-computer-engineering/#!accordion-1600184468068-course-listings:~:text=EE8228%20Neural%20Information%20Processing%20and%20Retrieval"
+                                        target="_blank">Neural Information Processing and Retrieval</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/mls.png" class="align-self-center mr-3"
+                                    alt="Secure Machine Learning Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/graduate/calendar/programs-and-courses/electrical-computer-engineering/#!accordion-1600184468068-course-listings:~:text=EE8227%20Secure%20Machine%20Learning%C2%A0"
+                                        target="_blank">Secure Machine Learning</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 3 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/dba.png" class="align-self-center mr-3"
+                                    alt="Advanced Data Engineering Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/graduate/calendar/programs-and-courses/electrical-computer-engineering/#!accordion-1600184468068-course-listings:~:text=EE8222%20Advanced%20Data%20Engineering"
+                                        target="_blank">Advanced Data Engineering</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/sda.png" class="align-self-center mr-3"
+                                    alt="Software Design and Architecture Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE692_course_outline.html"
+                                        target="_blank">Software Design and Architecture</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/ml.png" class="align-self-center mr-3" alt="Intelligent Systems Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/ELE888_course_outline.html"
+                                        target="_blank">Intelligent Systems</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/dcc.png" class="align-self-center mr-3"
+                                    alt="Distributed and Cloud Computing Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE892_course_outline.html"
+                                        target="_blank">Distributed and Cloud Computing</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 5 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/cv.png" class="align-self-center mr-3" alt="Computer Vision Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-science/CPS/843/"
+                                        target="_blank">Computer Vision</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/st.png" class="align-self-center mr-3" alt="Software Testing Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE891_course_outline.html"
+                                        target="_blank">Software Testing</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 6 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/sra.png" class="align-self-center mr-3"
+                                    alt="Software Requirement Analysis Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE691_course_outline.html"
+                                        target="_blank">Software Requirement Analysis</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/spm.png" class="align-self-center mr-3"
+                                    alt="Software Project Management Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-science/CPS/714/"
+                                        target="_blank">Software Project Management</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 7 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/os.png" class="align-self-center mr-3" alt="Operating Systems Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE628_course_outline.html"
+                                        target="_blank">Operating Systems</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/cn.png" class="align-self-center mr-3" alt="Computer Networks Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE768_course_outline.html"
+                                        target="_blank">Computer Networks</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 8 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/ns.png" class="align-self-center mr-3" alt="Network Security Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE817_course_outline.html"
+                                        target="_blank">Network Security</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/dse.png" class="align-self-center mr-3"
+                                    alt="Digital Systems Engineering Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE758_course_outline.html"
+                                        target="_blank">Digital Systems Engineering</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 9 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/dbs.png" class="align-self-center mr-3" alt="Database Systems Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-science/CPS/510/" target="_blank">Database Systems</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MEng Courses (5):
+                Left-Right pairs:
+                Neural Networks | Deep Learning
+                Neural Info. | Secure Machine
+                Advanced Data (alone on left)
+                -->
+                <div role="tabpanel" class="tab-pane fade" id="meng-courses">
+                    <div class="row">
+                        <!-- Row 1 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/neural-network.png" class="align-self-center mr-3"
+                                    alt="Neural Networks" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/graduate/calendar/programs-and-courses/electrical-computer-engineering/#!accordion-1600184468068-course-listings:~:text=EE8204%20Neural%20Networks"
+                                        target="_blank">Neural Networks</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/deep_learning.png" class="align-self-center mr-3" alt="Deep Learning"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/graduate/calendar/programs-and-courses/electrical-computer-engineering/#!accordion-1600184468068-course-listings:~:text=EE8223%20Deep%20Learning"
+                                        target="_blank">Deep Learning</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/nlp.png" class="align-self-center mr-3"
+                                    alt="Neural Information Processing" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/graduate/calendar/programs-and-courses/electrical-computer-engineering/#!accordion-1600184468068-course-listings:~:text=EE8228%20Neural%20Information%20Processing%20and%20Retrieval"
+                                        target="_blank">Neural Information Processing and Retrieval</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/mls.png" class="align-self-center mr-3"
+                                    alt="Secure Machine Learning Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/graduate/calendar/programs-and-courses/electrical-computer-engineering/#!accordion-1600184468068-course-listings:~:text=EE8227%20Secure%20Machine%20Learning%C2%A0"
+                                        target="_blank">Secure Machine Learning</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 3 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/dba.png" class="align-self-center mr-3"
+                                    alt="Advanced Data Engineering Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/graduate/calendar/programs-and-courses/electrical-computer-engineering/#!accordion-1600184468068-course-listings:~:text=EE8222%20Advanced%20Data%20Engineering"
+                                        target="_blank">Advanced Data Engineering</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BEng Courses (11):
+                Pairs:
+                Intelligent Systems | Software Design and Architecture
+                Distributed and Cloud Computing | Computer Vision
+                Software Testing | Software Requirement Analysis
+                Software Project Management | Operating Systems
+                Computer Networks | Network Security
+                Digital Systems Engineering alone last row left
+                -->
+                <div role="tabpanel" class="tab-pane fade" id="beng-courses">
+                    <div class="row">
+                        <!-- Row 1 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/ml.png" class="align-self-center mr-3" alt="Intelligent Systems Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/ELE888_course_outline.html"
+                                        target="_blank">Intelligent Systems</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/sda.png" class="align-self-center mr-3"
+                                    alt="Software Design and Architecture Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE692_course_outline.html"
+                                        target="_blank">Software Design and Architecture</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/dcc.png" class="align-self-center mr-3" alt="Distributed and Cloud Computing Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE892_course_outline.html"
+                                        target="_blank">Distributed and Cloud Computing</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/cv.png" class="align-self-center mr-3" alt="Computer Vision Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-science/CPS/843/"
+                                        target="_blank">Computer Vision</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 3 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/st.png" class="align-self-center mr-3" alt="Software Testing Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE891_course_outline.html"
+                                        target="_blank">Software Testing</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/sra.png" class="align-self-center mr-3"
+                                    alt="Software Requirement Analysis Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE692_course_outline.html"
+                                        target="_blank">Software Requirement Analysis</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/spm.png" class="align-self-center mr-3"
+                                    alt="Software Project Management Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-science/CPS/817/"
+                                        target="_blank">Software Project Management</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/os.png" class="align-self-center mr-3" alt="Operating Systems Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE628_course_outline.html"
+                                        target="_blank">Operating Systems</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 5 -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/cn.png" class="align-self-center mr-3" alt="Computer Networks Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE768_course_outline.html"
+                                        target="_blank">Computer Networks</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/ns.png" class="align-self-center mr-3" alt="Network Security Icon"
+                                    style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE817_course_outline.html"
+                                        target="_blank">Network Security</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 6 (last one alone) -->
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/dse.png" class="align-self-center mr-3"
+                                    alt="Digital Systems Engineering Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE758_course_outline.html"
+                                        target="_blank">Digital Systems Engineering</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media">
+                                <img src="images/dbs.png" class="align-self-center mr-3" alt="Digital Systems Engineering Icon" style="width:40px;">
+                                <div class="media-body">
+                                    <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-science/CPS/510/"
+                                    target="_blank">Database Systems</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </section>
 
@@ -1010,11 +1449,11 @@
     <section id="work" data-aos="fade-up">
         <div class="container">
             <div class="row mb-5">
-                <div class="col text-center">
-                    <h2>Projects</h2>
+                
+                <div class="col text-center"><a href="https://github.com/mpat247?tab=repositories">
+                    <h2>Projects</h2></a>
                 </div>
             </div>
-            <!-- Filter Buttons -->
             <div class="filter-btns" data-aos="fade-in">
                 <button class="btn active" data-filter="all">All</button>
                 <button class="btn" data-filter="ml">Machine Learning</button>
@@ -1022,10 +1461,9 @@
                 <button class="btn" data-filter="other">Other</button>
             </div>
             <div class="row">
-                <!-- Project Items -->
-                <!-- Example Project 1 -->
                 <div class="col-md-4 mb-4 project-item" data-category="ml">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal1" style="background-image: url('images/movie4.png');">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal1"
+                        style="background-image: url('images/movie4.png');">
                         <div class="desc">
                             <h3>Movie Success Predictor</h3>
                             <h5>Neural Networks</h5>
@@ -1034,9 +1472,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Example Project 2 -->
                 <div class="col-md-4 mb-4 project-item" data-category="fullstack">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal2" style="background-image: url('images/image_grid.jpg');">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal2"
+                        style="background-image: url('images/image_grid.jpg');">
                         <div class="desc">
                             <h3>BiasAware</h3>
                             <h5>Engineering Capstone Project</h5>
@@ -1045,9 +1483,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Example Project 3 -->
                 <div class="col-md-4 mb-4 project-item" data-category="other">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal3" style="background-image: url('images/banking.png');">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal3"
+                        style="background-image: url('images/banking.png');">
                         <div class="desc">
                             <h3>Secure Banking System</h3>
                             <h5>Network Security</h5>
@@ -1056,9 +1494,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Example Project 4 -->
                 <div class="col-md-4 mb-4 project-item" data-category="fullstack">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal4" style="background-image: url('images/bus.webp');">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal4"
+                        style="background-image: url('images/bus.webp');">
                         <div class="desc">
                             <h3>Resort Transportation Management System</h3>
                             <h5>Distributed Systems and Cloud Computing</h5>
@@ -1067,9 +1505,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Example Project 5 -->
                 <div class="col-md-4 mb-4 project-item" data-category="ml">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal5" style="background-image: url('images/text.png');">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal5"
+                        style="background-image: url('images/text.png');">
                         <div class="desc">
                             <h3>Text-Recognition OCR</h3>
                             <h5>Computer Vision</h5>
@@ -1078,9 +1516,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Example Project 6 -->
                 <div class="col-md-4 mb-4 project-item" data-category="fullstack">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal6" style="background-image: url('images/calendar.jpg');">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal6"
+                        style="background-image: url('images/calendar.jpg');">
                         <div class="desc">
                             <h3>onTrack</h3>
                             <h5>Software Project Management</h5>
@@ -1089,9 +1527,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Example Project 7 -->
                 <div class="col-md-4 mb-4 project-item" data-category="fullstack">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal7" style="background-image: url('images/ecommerce.png');">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal7"
+                        style="background-image: url('images/ecommerce.png');">
                         <div class="desc">
                             <h3>Online Shopping Store</h3>
                             <h5>Software Design and Architecture</h5>
@@ -1100,9 +1538,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Example Project 8 -->
                 <div class="col-md-4 mb-4 project-item" data-category="ml">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal8" style="background-image: url('images/movies.jpg');">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal8"
+                        style="background-image: url('images/movies.jpg');">
                         <div class="desc">
                             <h3>Movie Store DBMS</h3>
                             <h5>Database Systems</h5>
@@ -1111,27 +1549,27 @@
                         </div>
                     </div>
                 </div>
-                <!-- Example Project 9 -->
                 <div class="col-md-4 mb-4 project-item" data-category="fullstack">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal9" style="background-image: url('images/portfolio.png');">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal9"
+                        style="background-image: url('images/portfolio.png');">
                         <div class="desc">
                             <h3>manavpatel.me</h3>
                             <span>HTML, CSS, JavaScript</span>
                         </div>
                     </div>
                 </div>
-                <!-- Example Project 10 -->
                 <div class="col-md-4 mb-4 project-item" data-category="other">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal10" style="background-image: url('images/alu.png');">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal10"
+                        style="background-image: url('images/alu.png');">
                         <div class="desc">
                             <h3>Simple ALU Design</h3>
                             <span>VHDL, Quartus</span>
                         </div>
                     </div>
                 </div>
-                <!-- Example Project 11 -->
                 <div class="col-md-4 mb-4 project-item" data-category="all">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal11" style="background-image: url('images/github.png');">
+                    <div class="work-item" data-toggle="modal" data-target="#projectModal11"
+                        style="background-image: url('images/github.png');">
                         <div class="desc" style="font-size: 20px; color: #F9A029;">
                             <h3>My GitHub</h3>
                         </div>
@@ -1142,213 +1580,223 @@
     </section>
 
     <!-- Project Modals -->
-    <!-- Example Modal Structure for Project 1 -->
-    <div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-labelledby="projectModal1Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal1Label">Movie Success Predictor</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="images/movie4.png" alt="Movie Success Predictor" class="img-fluid mb-3">
-            <p><strong>Overview:</strong> A machine learning project aimed at predicting the success of movies using various neural network architectures.</p>
-            <p><strong>Technologies:</strong> NLP, LSTM, BERT, Random Forest, TensorFlow, scikit-learn</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/MovieSuccessPredictor" target="_blank">MovieSuccessPredictor Repository</a></p>
-          </div>
+    <div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Movie Success Predictor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/movie4.png" alt="Movie Success Predictor" class="img-fluid mb-3">
+                    <p><strong>Overview:</strong> A machine learning project aimed at predicting the success of movies
+                        using various neural network architectures.</p>
+                    <p><strong>Technologies:</strong> NLP, LSTM, BERT, Random Forest, TensorFlow, scikit-learn</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/MovieSuccessPredictor"
+                            target="_blank">MovieSuccessPredictor Repository</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Project Modal 2 -->
-    <div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-labelledby="projectModal2Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal2Label">BiasAware</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="images/image_grid.jpg" alt="BiasAware" class="img-fluid mb-3">
-            <p><strong>Overview:</strong> An engineering capstone project focused on identifying and mitigating bias in machine learning models.</p>
-            <p><strong>Technologies:</strong> Node.js, React, MongoDB, Image Processing</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/BiasAware" target="_blank">BiasAware Repository</a></p>
-          </div>
+    <div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>BiasAware</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/image_grid.jpg" alt="BiasAware" class="img-fluid mb-3">
+                    <p><strong>Overview:</strong> An engineering capstone project focused on identifying and mitigating
+                        bias in machine learning models.</p>
+                    <p><strong>Technologies:</strong> Node.js, React, MongoDB, Image Processing</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/BiasAware" target="_blank">BiasAware
+                            Repository</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Project Modal 3 -->
-    <div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-labelledby="projectModal3Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal3Label">Secure Banking System</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="images/banking.png" alt="Secure Banking System" class="img-fluid mb-3">
-            <p><strong>Overview:</strong> A secure banking application designed to protect user data and transactions through advanced cryptography.</p>
-            <p><strong>Technologies:</strong> Python Cryptography Libraries, PyQt</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/SecureBankingSystem" target="_blank">SecureBankingSystem Repository</a></p>
-          </div>
+    <div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Secure Banking System</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/banking.png" alt="Secure Banking System" class="img-fluid mb-3">
+                    <p><strong>Overview:</strong> A secure banking application designed to protect user data and
+                        transactions through advanced cryptography.</p>
+                    <p><strong>Technologies:</strong> Python Cryptography Libraries, PyQt</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/SecureBankingSystem"
+                            target="_blank">SecureBankingSystem Repository</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Project Modal 4 -->
-    <div class="modal fade" id="projectModal4" tabindex="-1" role="dialog" aria-labelledby="projectModal4Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal4Label">Resort Transportation Management System</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="images/bus.webp" alt="Resort Transportation Management System" class="img-fluid mb-3">
-            <p><strong>Overview:</strong> A comprehensive system for managing transportation logistics in resort environments, ensuring efficiency and reliability.</p>
-            <p><strong>Technologies:</strong> FastAPI, React, Docker, Kubernetes, AWS</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/ResortTransportationManagement" target="_blank">ResortTransportationManagement Repository</a></p>
-          </div>
+    <div class="modal fade" id="projectModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Resort Transportation Management System</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/bus.webp" alt="Resort Transportation Management System" class="img-fluid mb-3">
+                    <p><strong>Overview:</strong> A comprehensive system for managing transportation logistics in resort
+                        environments, ensuring efficiency and reliability.</p>
+                    <p><strong>Technologies:</strong> FastAPI, React, Docker, Kubernetes, AWS</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/ResortTransportationManagement"
+                            target="_blank">ResortTransportationManagement Repository</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Project Modal 5 -->
-    <div class="modal fade" id="projectModal5" tabindex="-1" role="dialog" aria-labelledby="projectModal5Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal5Label">Text-Recognition OCR</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="images/text.png" alt="Text-Recognition OCR" class="img-fluid mb-3">
-            <p><strong>Overview:</strong> An OCR system capable of accurately recognizing and extracting text from images using computer vision techniques.</p>
-            <p><strong>Technologies:</strong> Python, OpenCV, Pytesseract</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Text-Recognition-OCR" target="_blank">Text-Recognition-OCR Repository</a></p>
-          </div>
+    <div class="modal fade" id="projectModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Text-Recognition OCR</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/text.png" alt="Text-Recognition OCR" class="img-fluid mb-3">
+                    <p><strong>Overview:</strong> An OCR system capable of accurately recognizing and extracting text
+                        from images using computer vision techniques.</p>
+                    <p><strong>Technologies:</strong> Python, OpenCV, Pytesseract</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Text-Recognition-OCR"
+                            target="_blank">Text-Recognition-OCR Repository</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Project Modal 6 -->
-    <div class="modal fade" id="projectModal6" tabindex="-1" role="dialog" aria-labelledby="projectModal6Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal6Label">onTrack</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="images/calendar.jpg" alt="onTrack" class="img-fluid mb-3">
-            <p><strong>Overview:</strong> A project management tool designed to help teams track progress, manage tasks, and collaborate efficiently.</p>
-            <p><strong>Technologies:</strong> Node.js, Express.js, React, Oracle</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/onTrack" target="_blank">onTrack Repository</a></p>
-          </div>
+    <div class="modal fade" id="projectModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>onTrack</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/calendar.jpg" alt="onTrack" class="img-fluid mb-3">
+                    <p><strong>Overview:</strong> A project management tool designed to help teams track progress,
+                        manage tasks, and collaborate efficiently.</p>
+                    <p><strong>Technologies:</strong> Node.js, Express.js, React, Oracle</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/onTrack" target="_blank">onTrack
+                            Repository</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Project Modal 7 -->
-    <div class="modal fade" id="projectModal7" tabindex="-1" role="dialog" aria-labelledby="projectModal7Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal7Label">Online Shopping Store</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="images/ecommerce.png" alt="Online Shopping Store" class="img-fluid mb-3">
-            <p><strong>Overview:</strong> An e-commerce platform designed to provide users with a seamless online shopping experience.</p>
-            <p><strong>Technologies:</strong> Java, MySQL, Docker, Kubernetes, Google Cloud Platform</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/OnlineShoppingStore" target="_blank">OnlineShoppingStore Repository</a></p>
-          </div>
+    <div class="modal fade" id="projectModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Online Shopping Store</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/ecommerce.png" alt="Online Shopping Store" class="img-fluid mb-3">
+                    <p><strong>Overview:</strong> An e-commerce platform designed to provide users with a seamless
+                        online shopping experience.</p>
+                    <p><strong>Technologies:</strong> Java, MySQL, Docker, Kubernetes, Google Cloud Platform</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/OnlineShoppingStore"
+                            target="_blank">OnlineShoppingStore Repository</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Project Modal 8 -->
-    <div class="modal fade" id="projectModal8" tabindex="-1" role="dialog" aria-labelledby="projectModal8Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal8Label">Movie Store DBMS</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="images/movies.jpg" alt="Movie Store DBMS" class="img-fluid mb-3">
-            <p><strong>Overview:</strong> A Database Management System designed for managing movie data efficiently.</p>
-            <p><strong>Technologies:</strong> Node.js, Express.js, React, Oracle</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Movie-Store-DBMS" target="_blank">Movie-Store-DBMS Repository</a></p>
-          </div>
+    <div class="modal fade" id="projectModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Movie Store DBMS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/movies.jpg" alt="Movie Store DBMS" class="img-fluid mb-3">
+                    <p><strong>Overview:</strong> A Database Management System designed for managing movie data
+                        efficiently.</p>
+                    <p><strong>Technologies:</strong> Node.js, Express.js, React, Oracle</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Movie-Store-DBMS"
+                            target="_blank">Movie-Store-DBMS
+                            Repository</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Project Modal 9 -->
-    <div class="modal fade" id="projectModal9" tabindex="-1" role="dialog" aria-labelledby="projectModal9Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal9Label">manavpatel.me</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="images/portfolio.png" alt="manavpatel.me" class="img-fluid mb-3">
-            <p><strong>Overview:</strong> My personal portfolio website showcasing my projects, experience, and skills.</p>
-            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/manavpatel.github.io" target="_blank">manavpatel.github.io Repository</a></p>
-          </div>
+    <div class="modal fade" id="projectModal9" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>manavpatel.me</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/portfolio.png" alt="manavpatel.me" class="img-fluid mb-3">
+                    <p><strong>Overview:</strong> My personal portfolio website showcasing my projects, experience, and
+                        skills.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/manavpatel.github.io"
+                            target="_blank">manavpatel.github.io Repository</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Project Modal 10 -->
-    <div class="modal fade" id="projectModal10" tabindex="-1" role="dialog" aria-labelledby="projectModal10Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal10Label">Simple ALU Design</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="images/alu.png" alt="Simple ALU Design" class="img-fluid mb-3">
-            <p><strong>Overview:</strong> A basic Arithmetic Logic Unit (ALU) design implemented using VHDL.</p>
-            <p><strong>Technologies:</strong> VHDL, Quartus</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Simple-ALU-Design" target="_blank">Simple-ALU-Design Repository</a></p>
-          </div>
+    <div class="modal fade" id="projectModal10" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Simple ALU Design</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/alu.png" alt="Simple ALU Design" class="img-fluid mb-3">
+                    <p><strong>Overview:</strong> A basic Arithmetic Logic Unit (ALU) design implemented using VHDL.</p>
+                    <p><strong>Technologies:</strong> VHDL, Quartus</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Simple-ALU-Design"
+                            target="_blank">Simple-ALU-Design Repository</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Project Modal 11 -->
-    <div class="modal fade" id="projectModal11" tabindex="-1" role="dialog" aria-labelledby="projectModal11Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal11Label">My GitHub</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <img src="images/github.png" alt="My GitHub" class="img-fluid mb-3" style="max-width: 200px;">
-            <p><strong>Overview:</strong> Explore all my projects, repositories, and contributions on my GitHub profile.</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/mpat247" target="_blank">mpat247</a></p>
-          </div>
+    <div class="modal fade" id="projectModal11" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>My GitHub</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/github.png" alt="My GitHub" class="img-fluid mb-3" style="max-width: 200px;">
+                    <p><strong>Overview:</strong> Explore all my projects, repositories, and contributions on my GitHub
+                        profile.</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247" target="_blank">mpat247</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Resumes Section -->
@@ -1361,7 +1809,6 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <!-- Nav Tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" href="#general" role="tab" data-toggle="tab">General</a>
@@ -1373,30 +1820,23 @@
                             <a class="nav-link" href="#swe" role="tab" data-toggle="tab">Software Engineering</a>
                         </li>
                     </ul>
-
-                    <!-- Tab Panes -->
                     <div class="tab-content mt-4">
-                        <!-- General Resume -->
                         <div role="tabpanel" class="tab-pane fade show active" id="general">
-                            <iframe class="resume-frame" src="files/Manav_Patel_Resume.pdf" allowfullscreen></iframe>
+                            <iframe class="resume-frame" src="files/Manav_Patel_Resume.pdf" style="width:100%; height:100vh; border:none; background-color:#ffffff;" allowfullscreen></iframe>
                             <p class="text-center mt-3">
-                                <a href="files/Manav_Patel_Resume.pdf" target="_blank" class="btn btn-primary">Download General Resume</a>
+                                <a href="files/Manav_Patel_Resume.pdf" target="_blank" class="btn" style="background-color: #FF8C00; border: none; color: white;">Download General Resume</a>
                             </p>
                         </div>
-
-                        <!-- Machine Learning Resume -->
                         <div role="tabpanel" class="tab-pane fade" id="ml">
-                            <iframe class="resume-frame" src="files/Manav_Patel_Resume_ML.pdf" allowfullscreen></iframe>
+                            <iframe class="resume-frame" src="files/Manav_Patel_Resume_ML.pdf" style="width:100%; height:100vh; border:none; background-color:#ffffff;" allowfullscreen></iframe>
                             <p class="text-center mt-3">
-                                <a href="files/Manav_Patel_Resume_ML.pdf" target="_blank" class="btn btn-primary">Download ML Resume</a>
+                                <a href="files/Manav_Patel_Resume_ML.pdf" target="_blank" class="btn" style="background-color: #FF8C00; border: none; color: white;">Download ML Resume</a>
                             </p>
                         </div>
-
-                        <!-- Software Engineering Resume -->
                         <div role="tabpanel" class="tab-pane fade" id="swe">
-                            <iframe class="resume-frame" src="files/Manav_Patel_Resume_SWE.pdf" allowfullscreen></iframe>
+                            <iframe class="resume-frame" src="files/Manav_Patel_Resume_SWE.pdf" style="width:100%; height:100vh; border:none; background-color:#ffffff;" allowfullscreen></iframe>
                             <p class="text-center mt-3">
-                                <a href="files/Manav_Patel_Resume_SWE.pdf" target="_blank" class="btn btn-primary">Download SWE Resume</a>
+                                <a href="files/Manav_Patel_Resume_SWE.pdf" target="_blank" class="btn" style="background-color: #FF8C00; border: none; color: white;">Download SWE Resume</a>
                             </p>
                         </div>
                     </div>
@@ -1404,37 +1844,71 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Contact Me Section -->
+    <section id="contact" data-aos="fade-up" style="padding: 80px 0; background: #f9f9f9;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h2>Contact Me</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form action="mailto:manavpatel1241@hotmail.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="contactName">Name:</label>
+                            <input type="text" class="form-control" id="contactName" name="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email:</label>
+                            <input type="email" class="form-control" id="contactEmail" name="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message:</label>
+                            <textarea class="form-control" id="contactMessage" name="Message" rows="5"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="background-color: #FF8C00; border: none; display: block; margin: 0 auto;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="fh5co-footer">
         <div class="container">
             <div class="row mb-3">
                 <div class="col">
-                    <ul class="social-icons" style="display: flex; justify-content: center; gap: 20px; list-style: none; padding: 0; margin: 0;">
-                        <!-- LinkedIn Icon -->
+                    <ul class="social-icons"
+                        style="display: flex; justify-content: center; gap: 20px; list-style: none; padding: 0; margin: 0;">
                         <li>
-                            <a href="https://www.linkedin.com/in/manavpat/" target="_blank" style="text-decoration: none;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                            <a href="https://www.linkedin.com/in/manavpat/" target="_blank"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
+                                    stroke="white" stroke-width="2" viewBox="0 0 24 24">
                                     <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z"></path>
                                     <rect x="2" y="9" width="4" height="12"></rect>
                                     <circle cx="4" cy="4" r="2"></circle>
                                 </svg>
                             </a>
                         </li>
-
-                        <!-- GitHub Icon -->
                         <li>
                             <a href="https://github.com/mpat247" target="_blank" style="text-decoration: none;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
-                                    <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.85 10.95.57.1.78-.25.78-.55v-2.14c-3 .65-3.87-1.53-3.87-1.53-.52-1.31-1.27-1.66-1.27-1.66-1.04-.72.08-.71.08-.71 1.14.08 1.74 1.17 1.74 1.17 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97.01 1.94.13 2.87.39 2.2-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.4-2.71 5.37-5.29 5.65.41.35.78 1.03.78 2.07v3.06c0 .31.21.66.79.55 4.56-1.54 7.84-5.85 7.84-10.95 0-6.27-5.23-11.5-11.5-11.5z"></path>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
+                                    stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.85 10.95.57.1.78-.25.78-.55v-2.14c-3 .65-3.87-1.53-3.87-1.53-.52-1.31-1.27-1.66-1.27-1.66-1.04-.72.08-.71.08-.71 1.14.08 1.74 1.17 1.74 1.17 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97.01 1.94.13 2.87.39 2.2-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.4-2.71 5.37-5.29 5.65.41.35.78 1.03.78 2.07v3.06c0 .31.21.66.79.55 4.56-1.54 7.84-5.85 7.84-10.95 0-6.27-5.23-11.5-11.5-11.5z">
+                                    </path>
                                 </svg>
                             </a>
                         </li>
-
-                        <!-- Resume Icon -->
                         <li>
                             <a href="#resumes" style="text-decoration: none;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
                                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                     <polyline points="14 2 14 8 20 8"></polyline>
                                     <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -1455,41 +1929,31 @@
     </footer>
 
 
-    <!-- Scroll-to-Top Button -->
     <div class="gototop" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-        <a href="#" style="text-decoration: none; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #FFA500; border-radius: 50%;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <a href="#"
+            style="text-decoration: none; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #FFA500; border-radius: 50%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
                 <path d="M18 15l-6-6-6 6"></path>
             </svg>
         </a>
     </div>
 
-
-
     <!-- JavaScript Libraries -->
-    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Typed.js for Typewriter Effect -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <!-- Magnific Popup JS for Lightbox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <!-- particles.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-    <!-- Custom Scripts -->
     <script>
-        // Initialize AOS
         AOS.init({
             duration: 800,
             easing: 'slide',
             once: true
         });
 
-        // Initialize Typed.js with Slower Speed
         var typed = new Typed('.typed-text', {
             strings: ["Machine Learning Engineer", "Software Engineer"],
             typeSpeed: 50,
@@ -1497,23 +1961,20 @@
             loop: true
         });
 
-        // Navbar Scroll Effect
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             if ($(this).scrollTop() > 50) {
                 $('#navbar').addClass('scrolled');
             } else {
                 $('#navbar').removeClass('scrolled');
             }
 
-            // Show/Hide Scroll-to-Top Button
             if ($(this).scrollTop() > 300) {
                 $('.gototop').fadeIn();
             } else {
                 $('.gototop').fadeOut();
             }
 
-            // Update Side Navigation Active Link
-            $('section').each(function() {
+            $('section').each(function () {
                 var top = $(window).scrollTop();
                 var offset = $(this).offset().top - 150;
                 var height = $(this).outerHeight();
@@ -1525,7 +1986,6 @@
                 }
             });
 
-            // Show Side Navigation after scrolling past hero section
             if ($(this).scrollTop() > $('.hero-section').height() - 100) {
                 $('#sideNav').fadeIn();
             } else {
@@ -1533,23 +1993,20 @@
             }
         });
 
-        // Scroll-to-Top Smooth Scroll
-        $('.gototop a').click(function(e) {
+        $('.gototop a').click(function (e) {
             e.preventDefault();
-            $('html, body').animate({scrollTop: 0}, 800);
+            $('html, body').animate({ scrollTop: 0 }, 800);
         });
 
-        // Dark Mode Toggle
         const toggleButton = document.getElementById('darkModeToggle');
         toggleButton.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            toggleButton.innerHTML = document.body.classList.contains('dark-mode') 
-                ? '<i class="fas fa-sun"></i>' 
+            toggleButton.innerHTML = document.body.classList.contains('dark-mode')
+                ? '<i class="fas fa-sun"></i>'
                 : '<i class="fas fa-moon"></i>';
         });
 
-        // Project Filtering
-        $('.filter-btns .btn').click(function() {
+        $('.filter-btns .btn').click(function () {
             $('.filter-btns .btn').removeClass('active');
             $(this).addClass('active');
 
@@ -1562,15 +2019,13 @@
             }
         });
 
-        // Initialize Magnific Popup for Lightbox
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.work-item').magnificPopup({
                 type: 'inline',
                 midClick: true
             });
         });
 
-        // Initialize particles.js
         particlesJS("particles-js", {
             "particles": {
                 "number": {
@@ -1580,38 +2035,21 @@
                         "value_area": 800
                     }
                 },
-                "color": {
-                    "value": "#ffffff"
-                },
+                "color": { "value": "#ffffff" },
                 "shape": {
                     "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
+                    "stroke": { "width": 0, "color": "#000000" },
+                    "polygon": { "nb_sides": 5 }
                 },
                 "opacity": {
                     "value": 0.5,
                     "random": false,
-                    "anim": {
-                        "enable": true,
-                        "speed": 1,
-                        "opacity_min": 0.3,
-                        "sync": false
-                    }
+                    "anim": { "enable": true, "speed": 1, "opacity_min": 0.3, "sync": false }
                 },
                 "size": {
                     "value": 3,
                     "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 4,
-                        "size_min": 0.3,
-                        "sync": false
-                    }
+                    "anim": { "enable": false, "speed": 4, "size_min": 0.3, "sync": false }
                 },
                 "line_linked": {
                     "enable": true,
@@ -1628,54 +2066,27 @@
                     "straight": false,
                     "out_mode": "out",
                     "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
+                    "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
                 }
             },
             "interactivity": {
                 "detect_on": "canvas",
                 "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" },
                     "resize": true
                 },
                 "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
+                    "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
+                    "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
+                    "repulse": { "distance": 200, "duration": 0.4 },
+                    "push": { "particles_nb": 4 },
+                    "remove": { "particles_nb": 2 }
                 }
             },
             "retina_detect": true
         });
     </script>
 </body>
+
 </html>
