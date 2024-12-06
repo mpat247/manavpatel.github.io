@@ -19,7 +19,8 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&family=Montserrat:wght@400;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome for Standard Icons -->
@@ -57,6 +58,15 @@
             color: inherit;
         }
 
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
         /* Dark Mode Styles */
         body.dark-mode {
             background-color: #121212;
@@ -89,13 +99,34 @@
             border-bottom-right-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             display: none;
+            transition: transform 0.3s;
+        }
+
+        .side-nav.collapsed {
+            transform: translate(-100%, -50%);
+        }
+
+        .toggle-sidebar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #3A00D4;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .toggle-sidebar:hover {
+            color: #AE81FF;
         }
 
         .side-nav a {
             display: flex;
             align-items: center;
             padding: 10px;
-            color: #FF8C00;
+            color: #3A00D4;
             font-size: 16px;
             transition: background 0.3s, color 0.3s;
             margin-bottom: 5px;
@@ -104,7 +135,7 @@
 
         .side-nav a.active,
         .side-nav a:hover {
-            background: #FF8C00;
+            background: #3A00D4;
             color: #fff;
         }
 
@@ -119,7 +150,7 @@
             top: 0;
             left: 0;
             z-index: 999;
-            background: linear-gradient(45deg, #FF8C00, #FFA500);
+            background: linear-gradient(45deg, #3A00D4, #7C1DD9);
             transition: background 0.3s, box-shadow 0.3s;
         }
 
@@ -128,7 +159,7 @@
         }
 
         #navbar .navbar-brand {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             color: #fff;
         }
@@ -162,7 +193,7 @@
         }
 
         #navbar .navbar-social-icons a:hover {
-            color: #FFD700;
+            color: #AE81FF;
             transform: scale(1.2);
         }
 
@@ -178,10 +209,6 @@
             z-index: -1;
         }
 
-        .dark-mode-toggle:hover {
-            background: #FFA500;
-        }
-
         /* Hero Section */
         .hero-section {
             position: relative;
@@ -193,7 +220,7 @@
             color: #fff;
             overflow: hidden;
             z-index: 1;
-            background: linear-gradient(135deg, #FF8C00, #FFA500);
+            background: linear-gradient(135deg, #3A00D4, #7C1DD9);
         }
 
         #particles-js {
@@ -214,13 +241,14 @@
         }
 
         .hero-content h1 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 80px;
             margin-bottom: 20px;
             animation: fadeInDown 1s ease forwards;
         }
 
         .hero-content h3 {
+            font-family: 'Montserrat', sans-serif;
             font-weight: 400;
             margin-bottom: 30px;
             font-size: 36px;
@@ -228,7 +256,7 @@
         }
 
         .typed-text {
-            color: #FFD700;
+            color: #AE81FF;
             font-weight: 600;
         }
 
@@ -243,7 +271,7 @@
         }
 
         .hero-social-icons a {
-            color: #FFD700;
+            color: #AE81FF;
             transition: color 0.3s, transform 0.3s;
         }
 
@@ -322,7 +350,7 @@
         #about .info .first-block {
             width: 180px;
             font-weight: 600;
-            color: #FF8C00;
+            color: #3A00D4;
         }
 
         #about .info .second-block a {
@@ -331,7 +359,7 @@
         }
 
         #about .info .second-block a:hover {
-            color: #FF8C00;
+            color: #3A00D4;
         }
 
         #about .about-text p {
@@ -347,7 +375,7 @@
             text-align: center;
             padding: 20px;
             background: #fff;
-            border: 2px solid #FF8C00;
+            border: 2px solid #3A00D4;
             border-radius: 10px;
             margin: 10px;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -363,7 +391,7 @@
         }
 
         #about .skills .skill-item i {
-            color: #FF8C00;
+            color: #3A00D4;
             margin-bottom: 15px;
             font-size: 40px;
         }
@@ -371,42 +399,10 @@
         #about .skills .skill-item h5 {
             font-size: 20px;
             margin-bottom: 10px;
-            color: #FF8C00;
+            color: #3A00D4;
         }
 
         #about .skills .skill-item p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        #education {
-            padding: 80px 0;
-            background: #f1f1f1;
-        }
-
-        #education .education-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        #education .education-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        #education .card-title {
-            font-family: 'Poppins', sans-serif;
-            color: #FF8C00;
-            margin-bottom: 10px;
-            font-size: 22px;
-        }
-
-        #education .card-subtitle {
-            margin-bottom: 15px;
-            font-size: 18px;
-            color: #555;
-        }
-
-        #education .card-text {
             font-size: 16px;
             color: #555;
         }
@@ -424,7 +420,7 @@
 
         .timeline::before {
             content: '';
-            background: #FF8C00;
+            background: #3A00D4;
             position: absolute;
             left: 50%;
             top: 0;
@@ -460,7 +456,7 @@
             top: 20px;
             right: -10px;
             background: #fff;
-            border: 4px solid #FF8C00;
+            border: 4px solid #3A00D4;
             border-radius: 50%;
             width: 20px;
             height: 20px;
@@ -493,7 +489,7 @@
 
         .timeline .timeline-heading h3 {
             margin-top: 0;
-            color: #FF8C00;
+            color: #3A00D4;
             font-size: 24px;
         }
 
@@ -502,6 +498,38 @@
             margin: 5px 0;
             color: #555;
             font-size: 18px;
+        }
+
+        #education {
+            padding: 80px 0;
+            background: #f1f1f1;
+        }
+
+        #education .education-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #education .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        #education .card-title {
+            font-family: 'Montserrat', sans-serif;
+            color: #3A00D4;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        #education .card-subtitle {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        #education .card-text {
+            font-size: 16px;
+            color: #555;
         }
 
         #work {
@@ -543,7 +571,7 @@
         #work .desc h3 {
             margin: 0;
             font-size: 20px;
-            color: #FF8C00;
+            color: #3A00D4;
         }
 
         #work .desc h5 {
@@ -566,7 +594,7 @@
         .filter-btns .btn {
             margin: 0 10px;
             padding: 10px 20px;
-            background: #FF8C00;
+            background: #3A00D4;
             color: #fff;
             border: none;
             border-radius: 30px;
@@ -577,7 +605,7 @@
 
         .filter-btns .btn:hover,
         .filter-btns .btn.active {
-            background: #FFA500;
+            background: #7C1DD9;
             transform: scale(1.05);
         }
 
@@ -587,7 +615,7 @@
         }
 
         .modal-header {
-            background: #FF8C00;
+            background: #3A00D4;
             color: #fff;
             border-bottom: none;
         }
@@ -602,18 +630,18 @@
         }
 
         #resumes .nav-tabs {
-            border-bottom: 2px solid #FF8C00;
+            border-bottom: 2px solid #3A00D4;
         }
 
         #resumes .nav-tabs .nav-link {
-            color: #FF8C00;
+            color: #3A00D4;
             font-weight: 600;
             transition: background 0.3s, color 0.3s;
             font-size: 18px;
         }
 
         #resumes .nav-tabs .nav-link.active {
-            background: #FF8C00;
+            background: #3A00D4;
             color: #fff !important;
             border-radius: 5px;
         }
@@ -635,14 +663,14 @@
         }
 
         #fh5co-footer .social-icons a {
-            color: #FF8C00;
+            color: #3A00D4;
             margin: 0 10px;
             font-size: 24px;
             transition: transform 0.3s, color 0.3s;
         }
 
         #fh5co-footer .social-icons a:hover {
-            color: #FFA500;
+            color: #7C1DD9;
             transform: scale(1.2);
         }
 
@@ -661,13 +689,13 @@
             justify-content: center;
             width: 50px;
             height: 50px;
-            background: #FFA500;
+            background: #7C1DD9;
             border-radius: 50%;
             transition: background 0.3s, transform 0.3s;
         }
 
         .gototop a:hover {
-            background: #FFD700;
+            background: #AE81FF;
             transform: scale(1.1);
         }
 
@@ -678,8 +706,13 @@
                 left: 50%;
                 transform: translateX(-50%);
                 display: flex;
+                flex-direction: row;
                 gap: 15px;
-                background: rgba(255, 255, 255, 0.9);
+            }
+
+            .side-nav.collapsed {
+                transform: translateX(-50%) translateY(200%);
+                /* or hide differently on mobile */
             }
 
             .side-nav a {
@@ -725,6 +758,7 @@
 
     <!-- Side Navigation Bar -->
     <nav class="side-nav" id="sideNav">
+        <button class="toggle-sidebar" id="toggleSidebarBtn"><i class="fas fa-angle-left"></i></button>
         <a href="#about" class="nav-link"><i class="icon-user"></i> About Me</a>
         <a href="#experience" class="nav-link"><i class="icon-briefcase"></i> Experience</a>
         <a href="#education" class="nav-link"><i class="icon-graduation-cap"></i> Education</a>
@@ -790,7 +824,6 @@
                     </a>
                 </div>
             </div>
-        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -849,12 +882,12 @@
             <div class="row">
                 <div class="col-md-4" data-aos="fade-right">
                     <ul class="info">
-                        <li><span class="first-block">Full Name:</span><span class="second-block"><a href="#">Manav
+                        <li><span class="first-block">Full Name:</span><span class="second-block"><a href="#page">Manav
                                     Patel</a></span></li>
                         <li><span class="first-block">Email:</span><span class="second-block"><a
                                     href="mailto:manav1.patel@torontomu.ca">manav1.patel@torontomu.ca</a></span></li>
                         <li><span class="first-block">Website:</span><span class="second-block"><a
-                                    href="http://manavpatel.me">manavpatel.me</a></span></li>
+                                    href="http://manavpatel.me" target="_blank">manavpatel.me</a></span></li>
                         <li><span class="first-block">Resume:</span><span class="second-block"><a href="#resumes">My
                                     Resume</a></span></li>
                     </ul>
@@ -1004,7 +1037,7 @@
                 </div>
                 <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card education-card h-100">
-                        <a href="https://www.torontomu.ca/programs/undergraduate/computer-engineering/">
+                        <a href="https://www.torontomu.ca/programs/undergraduate/computer-engineering/" target="_blank">
                             <div class="card-body">
                                 <h4 class="card-title">Bachelor Of Engineering (BEng)</h4>
                                 <h5 class="card-subtitle mb-2 text-muted">Toronto Metropolitan University (Formerly
@@ -1041,18 +1074,7 @@
                 </div>
             </div>
 
-            <!-- ALL COURSES (16 total, arranged in pairs, left-right) -->
-            <!-- Order (Left | Right):
-            Neural Networks | Deep Learning
-            Neural Info. Processing | Secure Machine Learning
-            Advanced Data Engineering | Software Design and Architecture
-            Intelligent Systems | Distributed and Cloud Computing
-            Computer Vision | Software Testing
-            Software Requirement Analysis | Software Project Management
-            Operating Systems | Computer Networks
-            Network Security | Digital Systems Engineering
-            -->
-
+            <!-- Courses Lists -->
             <div class="tab-content mt-4">
                 <!-- All Courses -->
                 <div role="tabpanel" class="tab-pane fade show active" id="all-courses">
@@ -1225,24 +1247,21 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Row 9 -->
+                        <!-- Additional DBS for All -->
                         <div class="col-md-6 mb-3">
                             <div class="media">
-                                <img src="images/dbs.png" class="align-self-center mr-3" alt="Database Systems Icon" style="width:40px;">
+                                <img src="images/dbs.png" class="align-self-center mr-3" alt="Database Systems Icon"
+                                    style="width:40px;">
                                 <div class="media-body">
-                                    <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-science/CPS/510/" target="_blank">Database Systems</a>
+                                    <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-science/CPS/510/"
+                                        target="_blank">Database Systems</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- MEng Courses (5):
-                Left-Right pairs:
-                Neural Networks | Deep Learning
-                Neural Info. | Secure Machine
-                Advanced Data (alone on left)
-                -->
+                <!-- MEng Courses -->
                 <div role="tabpanel" class="tab-pane fade" id="meng-courses">
                     <div class="row">
                         <!-- Row 1 -->
@@ -1301,15 +1320,7 @@
                     </div>
                 </div>
 
-                <!-- BEng Courses (11):
-                Pairs:
-                Intelligent Systems | Software Design and Architecture
-                Distributed and Cloud Computing | Computer Vision
-                Software Testing | Software Requirement Analysis
-                Software Project Management | Operating Systems
-                Computer Networks | Network Security
-                Digital Systems Engineering alone last row left
-                -->
+                <!-- BEng Courses -->
                 <div role="tabpanel" class="tab-pane fade" id="beng-courses">
                     <div class="row">
                         <!-- Row 1 -->
@@ -1336,8 +1347,8 @@
                         <!-- Row 2 -->
                         <div class="col-md-6 mb-3">
                             <div class="media">
-                                <img src="images/dcc.png" class="align-self-center mr-3" alt="Distributed and Cloud Computing Icon"
-                                    style="width:40px;">
+                                <img src="images/dcc.png" class="align-self-center mr-3"
+                                    alt="Distributed and Cloud Computing Icon" style="width:40px;">
                                 <div class="media-body">
                                     <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE892_course_outline.html"
                                         target="_blank">Distributed and Cloud Computing</a>
@@ -1370,7 +1381,7 @@
                                 <img src="images/sra.png" class="align-self-center mr-3"
                                     alt="Software Requirement Analysis Icon" style="width:40px;">
                                 <div class="media-body">
-                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE692_course_outline.html"
+                                    <a href="https://www.ecb.torontomu.ca/undergraduate/outlines/COE691_course_outline.html"
                                         target="_blank">Software Requirement Analysis</a>
                                 </div>
                             </div>
@@ -1417,7 +1428,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Row 6 (last one alone) -->
+                        <!-- Row 6 -->
                         <div class="col-md-6 mb-3">
                             <div class="media">
                                 <img src="images/dse.png" class="align-self-center mr-3"
@@ -1430,28 +1441,26 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="media">
-                                <img src="images/dbs.png" class="align-self-center mr-3" alt="Digital Systems Engineering Icon" style="width:40px;">
+                                <img src="images/dbs.png" class="align-self-center mr-3" alt="Database Systems Icon"
+                                    style="width:40px;">
                                 <div class="media-body">
                                     <a href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-science/CPS/510/"
-                                    target="_blank">Database Systems</a>
+                                        target="_blank">Database Systems</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="work" data-aos="fade-up">
         <div class="container">
             <div class="row mb-5">
-                
                 <div class="col text-center"><a href="https://github.com/mpat247?tab=repositories">
-                    <h2>Projects</h2></a>
+                        <h2>Projects</h2>
+                    </a>
                 </div>
             </div>
             <div class="filter-btns" data-aos="fade-in">
@@ -1822,21 +1831,33 @@
                     </ul>
                     <div class="tab-content mt-4">
                         <div role="tabpanel" class="tab-pane fade show active" id="general">
-                            <iframe class="resume-frame" src="files/Manav_Patel_Resume.pdf" style="width:100%; height:100vh; border:none; background-color:#ffffff;" allowfullscreen></iframe>
+                            <iframe class="resume-frame" src="files/Manav_Patel_Resume.pdf"
+                                style="width:100%; height:100vh; border:none; background-color:#ffffff;"
+                                allowfullscreen></iframe>
                             <p class="text-center mt-3">
-                                <a href="files/Manav_Patel_Resume.pdf" target="_blank" class="btn" style="background-color: #FF8C00; border: none; color: white;">Download General Resume</a>
+                                <a href="files/Manav_Patel_Resume.pdf" target="_blank" class="btn"
+                                    style="background-color: #3A00D4; border: none; color: white;">Download General
+                                    Resume</a>
                             </p>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="ml">
-                            <iframe class="resume-frame" src="files/Manav_Patel_Resume_ML.pdf" style="width:100%; height:100vh; border:none; background-color:#ffffff;" allowfullscreen></iframe>
+                            <iframe class="resume-frame" src="files/Manav_Patel_Resume_ML.pdf"
+                                style="width:100%; height:100vh; border:none; background-color:#ffffff;"
+                                allowfullscreen></iframe>
                             <p class="text-center mt-3">
-                                <a href="files/Manav_Patel_Resume_ML.pdf" target="_blank" class="btn" style="background-color: #FF8C00; border: none; color: white;">Download ML Resume</a>
+                                <a href="files/Manav_Patel_Resume_ML.pdf" target="_blank" class="btn"
+                                    style="background-color: #3A00D4; border: none; color: white;">Download ML
+                                    Resume</a>
                             </p>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="swe">
-                            <iframe class="resume-frame" src="files/Manav_Patel_Resume_SWE.pdf" style="width:100%; height:100vh; border:none; background-color:#ffffff;" allowfullscreen></iframe>
+                            <iframe class="resume-frame" src="files/Manav_Patel_Resume_SWE.pdf"
+                                style="width:100%; height:100vh; border:none; background-color:#ffffff;"
+                                allowfullscreen></iframe>
                             <p class="text-center mt-3">
-                                <a href="files/Manav_Patel_Resume_SWE.pdf" target="_blank" class="btn" style="background-color: #FF8C00; border: none; color: white;">Download SWE Resume</a>
+                                <a href="files/Manav_Patel_Resume_SWE.pdf" target="_blank" class="btn"
+                                    style="background-color: #3A00D4; border: none; color: white;">Download SWE
+                                    Resume</a>
                             </p>
                         </div>
                     </div>
@@ -1869,7 +1890,8 @@
                             <textarea class="form-control" id="contactMessage" name="Message" rows="5"
                                 required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="background-color: #FF8C00; border: none; display: block; margin: 0 auto;">Submit</button>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #3A00D4; border: none; display: block; margin: 0 auto;">Submit</button>
                     </form>
                 </div>
             </div>
@@ -1930,8 +1952,8 @@
 
 
     <div class="gototop" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-        <a href="#"
-            style="text-decoration: none; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #FFA500; border-radius: 50%;">
+        <a href="#page"
+            style="text-decoration: none; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #7C1DD9; border-radius: 50%;">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
                 <path d="M18 15l-6-6-6 6"></path>
@@ -2024,6 +2046,22 @@
                 type: 'inline',
                 midClick: true
             });
+        });
+
+        // Toggle Sidebar
+        const sideNav = document.getElementById('sideNav');
+        const toggleSidebarBtn = document.getElementById('toggleSidebarBtn');
+        let sidebarOpen = true;
+
+        toggleSidebarBtn.addEventListener('click', () => {
+            sidebarOpen = !sidebarOpen;
+            if (sidebarOpen) {
+                sideNav.classList.remove('collapsed');
+                toggleSidebarBtn.innerHTML = '<i class="fas fa-angle-left"></i>';
+            } else {
+                sideNav.classList.add('collapsed');
+                toggleSidebarBtn.innerHTML = '<i class="fas fa-angle-right"></i>';
+            }
         });
 
         particlesJS("particles-js", {
