@@ -356,6 +356,7 @@
         #about .info .second-block a {
             color: #333;
             transition: color 0.3s;
+            margin-left: auto;
         }
 
         #about .info .second-block a:hover {
@@ -369,6 +370,10 @@
 
         #about .skills {
             margin-top: 40px;
+        }
+        
+        #second-block{
+            align-content: right;
         }
 
         #about .skills .skill-item {
@@ -428,6 +433,7 @@
             width: 4px;
             margin-left: -2px;
         }
+       
 
         .timeline li {
             margin: 20px 0;
@@ -831,122 +837,81 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="page">
-        <div id="particles-js"></div>
-        <div class="hero-content" data-aos="fade-up">
-            <h1>Manav Patel</h1>
-            <h3><span class="typed-text"></span></h3>
-            <div class="hero-social-icons"
-                style="display: flex; gap: 20px; align-items: center; justify-content: center; margin-top: 20px;">
-                <a href="https://www.linkedin.com/in/manavpat/" target="_blank" style="text-decoration: none;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="white"
-                        stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z"></path>
-                        <rect x="2" y="9" width="4" height="12"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
-                </a>
-                <a href="https://github.com/mpat247" target="_blank" style="text-decoration: none;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="white"
-                        stroke-width="2" viewBox="0 0 24 24">
-                        <path
-                            d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.85 10.95.57.1.78-.25.78-.55v-2.14c-3 .65-3.87-1.53-3.87-1.53-.52-1.31-1.27-1.66-1.27-1.66-1.04-.72.08-.71.08-.71 1.14.08 1.74 1.17 1.74 1.17 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97.01 1.94.13 2.87.39 2.2-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.4-2.71 5.37-5.29 5.65.41.35.78 1.03.78 2.07v3.06c0 .31.21.66.79.55 4.56-1.54 7.84-5.85 7.84-10.95 0-6.27-5.23-11.5-11.5-11.5z">
-                        </path>
-                    </svg>
-                </a>
-                <a href="#resumes" style="text-decoration: none;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <line x1="10" y1="9" x2="8" y2="9"></line>
-                    </svg>
-                </a>
-            </div>
+<section class="hero-section" id="page">
+    <div id="particles-js"></div>
+    <div class="hero-content" data-aos="fade-up">
+        <h1>Manav Patel</h1>
+        <h3><span class="typed-text"></span></h3>
+        <div class="hero-social-icons"
+            style="display: flex; gap: 20px; align-items: center; justify-content: center; margin-top: 20px;">
+            <a href="https://www.linkedin.com/in/manavpat/" target="_blank" style="text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="white"
+                    stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            <a href="https://github.com/mpat247" target="_blank" style="text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="white"
+                    stroke-width="2" viewBox="0 0 24 24">
+                    <path
+                        d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.85 10.95.57.1.78-.25.78-.55v-2.14c-3 .65-3.87-1.53-3.87-1.53-.52-1.31-1.27-1.66-1.27-1.66-1.04-.72.08-.71.08-.71 1.14.08 1.74 1.17 1.74 1.17 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97.01 1.94.13 2.87.39 2.2-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.4-2.71 5.37-5.29 5.65.41.35.78 1.03.78 2.07v3.06c0 .31.21.66.79.55 4.56-1.54 7.84-5.85 7.84-10.95 0-6.27-5.23-11.5-11.5-11.5z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#resumes" style="text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <line x1="10" y1="9" x2="8" y2="9"></line>
+                </svg>
+            </a>
+            <a href="mailto:manav1.patel@torontomu.ca" style="text-decoration: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 6L12 13 2 6"></path>
+                    <rect x="2" y="6" width="20" height="12" rx="2" ry="2"></rect>
+                </svg>
+            </a>
         </div>
-        <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });"
-            style="margin-top: 30px; text-align: center;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2"
-                viewBox="0 0 24 24">
-                <path d="M12 15.5l-7-7h14l-7 7z" />
-            </svg>
-        </div>
-    </section>
+    </div>
+    <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });"
+        style="margin-top: 30px; text-align: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path d="M12 15.5l-7-7h14l-7 7z" />
+        </svg>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" data-aos="fade-up">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col text-center">
-                    <h2><strong>About Me</strong></h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4" data-aos="fade-right">
-                    <ul class="info">
-                        <li><span class="first-block">Full Name:</span><span class="second-block"><a href="#page">Manav
-                                    Patel</a></span></li>
-                        <li><span class="first-block">Email:</span><span class="second-block"><a
-                                    href="mailto:manav1.patel@torontomu.ca">manav1.patel@torontomu.ca</a></span></li>
-                        <li><span class="first-block">Website:</span><span class="second-block"><a
-                                    href="http://manavpatel.me" target="_blank">manavpatel.me</a></span></li>
-                        <li><span class="first-block">Resume:</span><span class="second-block"><a href="#resumes">My
-                                    Resume</a></span></li>
-                    </ul>
-                </div>
-                <div class="col-md-8 about-text" data-aos="fade-left">
-                    <p>I'm Manav, a recent Software Engineering graduate currently pursuing a <a
-                            href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/"
-                            target="_blank">MEng in Computer Engineering</a> at <a href="https://www.torontomu.ca"
-                            target="_blank">Toronto Metropolitan University</a>, where I'm deepening my knowledge in
-                        machine learning and AI. I am on track to graduate in April 2025. I've gained valuable backend
-                        development experience building REST APIs and database models at <strong><a
-                                href="https://www.lockheedmartin.com/en-ca/index.html" target="_blank">Lockheed
-                                Martin</a></strong> and honed my frontend skills while working with React and Node.js
-                        applications at <strong><a href="https://www.fgfbrands.com/" target="_blank">FGF
-                                Brands</a></strong>. Currently, I'm a Teaching Assistant for <a
-                            href="https://www.torontomu.ca/calendar/2024-2025/courses/computer-engineering/COE/318/"
-                            target="_blank">COE318 Software Systems</a> (Intro to Java and OOP) at TMU. I'm a dedicated
-                        problem-solver, a hard worker, and always eager to learn new things.</p>
-                    <p>I'm actively seeking entry-level Software Engineering positions in machine learning, backend
-                        development, or software testing.</p>
-
-                    <div class="skills" data-aos="fade-up">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6 skill-item">
-                                <i class="fas fa-code"></i>
-                                <h5>Frontend Development</h5>
-                                <p>Experienced in creating responsive and user-friendly interfaces using HTML, CSS,
-                                    JavaScript, and React.</p>
-                            </div>
-                            <div class="col-md-6 col-sm-6 skill-item">
-                                <i class="fas fa-server"></i>
-                                <h5>Backend Development</h5>
-                                <p>Proficient in building robust backend systems with Node.js, Express.js, and Python.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-md-6 col-sm-6 skill-item">
-                                <i class="fas fa-robot"></i>
-                                <h5>Machine Learning</h5>
-                                <p>Skilled in developing and deploying machine learning models using TensorFlow,
-                                    scikit-learn, and PyTorch.</p>
-                            </div>
-                            <div class="col-md-6 col-sm-6 skill-item">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                                <h5>Teaching Assistant</h5>
-                                <p>Assisting students in understanding complex software engineering concepts and
-                                    programming languages.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- About Section -->
+<section id="about" data-aos="fade-up">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h2><strong>About Me</strong></h2>
             </div>
         </div>
-    </section>
+        <div class="row justify-content-center">
+            <div class="col-12 about-text text-center" data-aos="fade-left"></div>
+                <p>I'm <strong>Manav</strong>, a recent <strong><a href="https://www.torontomu.ca/calendar/2024-2025/programs/feas/computer_eng/" target="_blank">Software Engineering</a></strong> graduate currently pursuing a <a
+                        href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/"
+                        target="_blank"><strong>MEng in Artificial Intelligence</strong></a> at <a href="https://www.torontomu.ca"
+                        target="_blank"><strong>Toronto Metropolitan University</strong></a>. I have over a year of experience as a Software Engineer through internships at <strong><a
+                            href="https://www.lockheedmartin.com/en-ca/index.html" target="_blank">Lockheed
+                            Martin</a></strong> and <strong><a href="https://www.fgfbrands.com/" target="_blank">FGF
+                            Brands</a></strong>. Currently, I'm a Junior Software Engineer at <strong><a href="https://www.linkedin.com/company/gocashly/posts/?feedView=all" target="_blank">Cashly Inc.</a></strong>, an AI-driven FinTech startup, where I contribute to full-stack development, system design, and LLM fine-tuning. I’m also working as a Teaching Assistant at <strong><a href="https://www.torontomu.ca" target="_blank">TMU</a></strong>.</p>
+                <p>I'm actively seeking new grad, junior, and intern/co-op positions in machine learning, software development, or software testing.</p>
+                <p>Feel free to contact me at <a href="mailto:manav1.patel@torontomu.ca">manav1.patel@torontomu.ca</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Experience Section -->
     <section id="experience" class="bg-light" data-aos="fade-up">
@@ -1029,13 +994,11 @@
                     <a
                         href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/">
                         <div class="card-body">
-                            <h4 class="card-title">Master Of Engineering (MEng)</h4>
-                            <h5 class="card-subtitle mb-2 text-muted">Toronto Metropolitan University (Formerly
-                                Ryerson University)</h5>
+                            <h4 class="card-title"><strong>Master Of Engineering (MEng)</strong></h4>
+                            <h5 class="card-subtitle mb-2"><strong>Electrical and Computer Engineering - Artificial Intelligence</strong></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Toronto Metropolitan University (Formerly Ryerson University)</h6>
                             <p class="card-text"><strong>Location:</strong> Toronto, Ontario, Canada</p>
                             <p class="card-text"><strong>Duration:</strong> 2024 - Expected 2025</p>
-                            <p class="card-text"><strong>Specialization:</strong> Electrical and Computer
-                                Engineering - Artificial Intelligence</p>
                         </div>
                     </a>
                 </div>
@@ -1045,13 +1008,12 @@
                 <div class="card education-card h-100">
                     <a href="https://www.torontomu.ca/programs/undergraduate/computer-engineering/" target="_blank">
                         <div class="card-body">
-                            <h4 class="card-title">Bachelor Of Engineering (BEng)</h4>
-                            <h5 class="card-subtitle mb-2 text-muted">Toronto Metropolitan University (Formerly
-                                Ryerson University)</h5>
+                            <h4 class="card-title"><strong>Bachelor Of Engineering (BEng)</strong></h4>
+                            <h5 class="card-subtitle mb-2"><strong>Computer Engineering - Software Option</strong></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Toronto Metropolitan University (Formerly Ryerson University)</h6>
                             <p class="card-text"><strong>Location:</strong> Toronto, Ontario, Canada</p>
                             <p class="card-text"><strong>Duration:</strong> 2019 - 2024</p>
-                            <p class="card-text"><strong>Specialization:</strong> Computer Engineering - Software
-                                Option</p>
+                            
                         </div>
                     </a>
                 </div>
