@@ -1594,361 +1594,428 @@
 
 
 
-    <!-- Projects Section -->
-    <section id="work" data-aos="fade-up">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col text-center"><a href="https://github.com/mpat247?tab=repositories">
+ <!-- Projects Section -->
+<section id="work" data-aos="fade-up">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col text-center">
+                <a href="https://github.com/mpat247?tab=repositories" target="_blank">
                     <h2><strong>Projects</strong></h2>
-                    </a>
+                </a>
+            </div>
+        </div>
+        <div class="filter-btns" data-aos="fade-in">
+            <button class="btn active" data-filter="all">All</button>
+            <button class="btn" data-filter="ml">Machine Learning</button>
+            <button class="btn" data-filter="fullstack">Full Stack</button>
+            <button class="btn" data-filter="other">Other</button>
+        </div>
+        <div class="row">
+            <!-- New Projects Added at the Beginning -->
+
+            
+
+            <!-- Project 2: RDENet Oscillation Block -->
+            <div class="col-md-4 mb-4 project-item" data-category="ml">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal13"
+                    style="background-image: url('images/rde.jpg');">
+                    <div class="desc">
+                        <h3>RDENet Oscillation Block</h3>
+                        <h5>Deep Learning</h5>
+                        <span>CNNs, ResNet, Image Processing</span>
+                        <span>December 2024</span>
+                    </div>
                 </div>
             </div>
-            <div class="filter-btns" data-aos="fade-in">
-                <button class="btn active" data-filter="all">All</button>
-                <button class="btn" data-filter="ml">Machine Learning</button>
-                <button class="btn" data-filter="fullstack">Full Stack</button>
-                <button class="btn" data-filter="other">Other</button>
+
+            <!-- Project 3: Credit Scoring with Anomaly Detection -->
+            <div class="col-md-4 mb-4 project-item" data-category="ml">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal14"
+                    style="background-image: url('images/credit.png');">
+                    <div class="desc">
+                        <h3>Credit Scoring Models with Anomaly Detection against Data Poisoning Attacks</h3>
+                        <h5>Secure Machine Learning</h5>
+                        <span>Anomaly Detection, Random Forest, XGBoost, Data Poisoning Attacks, Scikit-Learn, Python</span>
+                        <span>December 2024</span>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 mb-4 project-item" data-category="ml">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal1"
-                        style="background-image: url('images/movie4.png');">
-                        <div class="desc">
-                            <h3>Movie Success Predictor</h3>
-                            <h5>Neural Networks</h5>
-                            <span>NLP, LSTM, BERT, Random Forest, TensorFlow, scikit-learn</span>
-                            <span>July 2024</span>
-                        </div>
+            <!-- Project 1: Humor Detection with ConceptNet -->
+            <div class="col-md-4 mb-4 project-item" data-category="ml">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal12"
+                    style="background-image: url('images/humor.png');">
+                    <div class="desc">
+                        <h3>Humor Detection with ConceptNet</h3>
+                        <h5>Neural Information Process and Retreival</h5>
+                        <span>PyTorch, Spacy, ConceptNet, NLP, BERT, Python</span>
+                        <span>November 2024</span>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 project-item" data-category="fullstack">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal2"
-                        style="background-image: url('images/image_grid.jpg');">
-                        <div class="desc">
-                            <h3>BiasAware</h3>
-                            <h5>Engineering Capstone Project</h5>
-                            <span>Node.js, React, MongoDB, Image Processing</span>
-                            <span>April 2024</span>
-                        </div>
+            </div>
+
+            <!-- Existing Projects (With Removed and Remaining Projects) -->
+
+            <!-- Project 4: Movie Success Predictor -->
+            <div class="col-md-4 mb-4 project-item" data-category="ml">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal1"
+                    style="background-image: url('images/movie4.png');">
+                    <div class="desc">
+                        <h3>Movie Success Predictor</h3>
+                        <h5>Neural Networks</h5>
+                        <span>NLP, LSTM, BERT, Random Forest, TensorFlow, scikit-learn</span>
+                        <span>July 2024</span>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 project-item" data-category="other">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal3"
-                        style="background-image: url('images/banking.png');">
-                        <div class="desc">
-                            <h3>Secure Banking System</h3>
-                            <h5>Network Security</h5>
-                            <span>Python Cryptography Libraries, PyQt</span>
-                            <span>March 2024</span>
-                        </div>
+            </div>
+
+            <!-- Project 5: BiasAware -->
+            <div class="col-md-4 mb-4 project-item" data-category="fullstack">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal2"
+                    style="background-image: url('images/image_grid.jpg');">
+                    <div class="desc">
+                        <h3>BiasAware</h3>
+                        <h5>Engineering Capstone Project</h5>
+                        <span>Node.js, React, MongoDB, Image Processing</span>
+                        <span>April 2024</span>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 project-item" data-category="fullstack">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal4"
-                        style="background-image: url('images/bus.webp');">
-                        <div class="desc">
-                            <h3>Resort Transportation Management System</h3>
-                            <h5>Distributed Systems and Cloud Computing</h5>
-                            <span>FastAPI, React, Docker, Kubernetes, AWS</span>
-                            <span>March 2024</span>
-                        </div>
+            </div>
+
+            <!-- Project 6: Secure Banking System -->
+            <div class="col-md-4 mb-4 project-item" data-category="other">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal3"
+                    style="background-image: url('images/banking.png');">
+                    <div class="desc">
+                        <h3>Secure Banking System</h3>
+                        <h5>Network Security</h5>
+                        <span>Python Cryptography Libraries, PyQt</span>
+                        <span>March 2024</span>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 project-item" data-category="ml">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal5"
-                        style="background-image: url('images/text.png');">
-                        <div class="desc">
-                            <h3>Text-Recognition OCR</h3>
-                            <h5>Computer Vision</h5>
-                            <span>Python, OpenCV, Pytesseract</span>
-                            <span>November 2023</span>
-                        </div>
+            </div>
+
+            <!-- Project 7: Resort Transportation Management System -->
+            <div class="col-md-4 mb-4 project-item" data-category="fullstack">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal4"
+                    style="background-image: url('images/bus.webp');">
+                    <div class="desc">
+                        <h3>Resort Transportation Management System</h3>
+                        <h5>Distributed Systems and Cloud Computing</h5>
+                        <span>FastAPI, React, Docker, Kubernetes, AWS</span>
+                        <span>March 2024</span>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 project-item" data-category="fullstack">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal6"
-                        style="background-image: url('images/calendar.jpg');">
-                        <div class="desc">
-                            <h3>onTrack</h3>
-                            <h5>Software Project Management</h5>
-                            <span>Node.js, Express.js, React, Oracle</span>
-                            <span>November 2023</span>
-                        </div>
+            </div>
+
+            <!-- Project 8: Text-Recognition OCR -->
+            <div class="col-md-4 mb-4 project-item" data-category="ml">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal5"
+                    style="background-image: url('images/text.png');">
+                    <div class="desc">
+                        <h3>Text-Recognition OCR</h3>
+                        <h5>Computer Vision</h5>
+                        <span>Python, OpenCV, Pytesseract</span>
+                        <span>November 2023</span>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 project-item" data-category="fullstack">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal7"
-                        style="background-image: url('images/ecommerce.png');">
-                        <div class="desc">
-                            <h3>Online Shopping Store</h3>
-                            <h5>Software Design and Architecture</h5>
-                            <span>Java, MySQL, Docker, Kubernetes, Google Cloud Platform</span>
-                            <span>March 2022</span>
-                        </div>
+            </div>
+
+            <!-- Project 9: onTrack -->
+            <div class="col-md-4 mb-4 project-item" data-category="fullstack">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal6"
+                    style="background-image: url('images/calendar.jpg');">
+                    <div class="desc">
+                        <h3>onTrack</h3>
+                        <h5>Software Project Management</h5>
+                        <span>Node.js, Express.js, React, Oracle</span>
+                        <span>November 2023</span>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 project-item" data-category="ml">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal8"
-                        style="background-image: url('images/movies.jpg');">
-                        <div class="desc">
-                            <h3>Movie Store DBMS</h3>
-                            <h5>Database Systems</h5>
-                            <span>Node.js, Express.js, React, Oracle</span>
-                            <span>November 2021</span>
-                        </div>
+            </div>
+
+            <!-- Project 10: Online Shopping Store -->
+            <div class="col-md-4 mb-4 project-item" data-category="fullstack">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal7"
+                    style="background-image: url('images/ecommerce.png');">
+                    <div class="desc">
+                        <h3>Online Shopping Store</h3>
+                        <h5>Software Design and Architecture</h5>
+                        <span>Java, MySQL, Docker, Kubernetes, Google Cloud Platform</span>
+                        <span>March 2022</span>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 project-item" data-category="fullstack">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal9"
-                        style="background-image: url('images/portfolio.png');">
-                        <div class="desc">
-                            <h3>manavpatel.me</h3>
-                            <span>HTML, CSS, JavaScript</span>
-                        </div>
+            </div>
+
+            <!-- Project 11: manavpatel.me -->
+            <div class="col-md-4 mb-4 project-item" data-category="fullstack">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal9"
+                    style="background-image: url('images/portfolio.png');">
+                    <div class="desc">
+                        <h3>manavpatel.me</h3>
+                        <span>HTML, CSS, JavaScript</span>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 project-item" data-category="other">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal10"
-                        style="background-image: url('images/alu.png');">
-                        <div class="desc">
-                            <h3>Simple ALU Design</h3>
-                            <span>VHDL, Quartus</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 project-item" data-category="all">
-                    <div class="work-item" data-toggle="modal" data-target="#projectModal11"
-                        style="background-image: url('images/github.png');">
-                        <div class="desc" style="font-size: 20px; color: #F9A029;">
-                            <h3>My GitHub</h3>
-                        </div>
+            </div>
+
+            <!-- Project 12: My GitHub -->
+            <div class="col-md-4 mb-4 project-item" data-category="all">
+                <div class="work-item" data-toggle="modal" data-target="#projectModal15"
+                    style="background-image: url('images/github.png');">
+                    <div class="desc" style="font-size: 20px; color: #F9A029;">
+                        <h3>My GitHub</h3>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     
 
     <!-- Project Modals -->
-    <div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Movie Success Predictor</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/movie4.png" alt="Movie Success Predictor" class="img-fluid mb-3">
-                    <p><strong>Overview:</strong> A machine learning project aimed at predicting the success of movies
-                        using various neural network architectures.</p>
-                    <p><strong>Technologies:</strong> NLP, LSTM, BERT, Random Forest, TensorFlow, scikit-learn</p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/MovieSuccessPredictor"
-                            target="_blank">MovieSuccessPredictor Repository</a></p>
-                </div>
+
+<!-- Modal 12: Humor Detection with ConceptNet -->
+<div class="modal fade" id="projectModal12" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Humor Detection with ConceptNet</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/humor.png" alt="Humor Detection with ConceptNet" class="img-fluid mb-3">
+                <p><strong>Overview:</strong> A Natural Language Processing project that leverages ConceptNet embeddings along side BERT embeddings from a Shared-Private BERT architecture to detect humor in text, enhancing sentiment analysis models.</p>
+                <p><strong>Technologies:</strong> PyTorch, Spacy, ConceptNet, NLP, BERT, Python</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Enhanced-Humour-Detection" target="_blank">HumorDetection Repository</a></p>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>BiasAware</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/image_grid.jpg" alt="BiasAware" class="img-fluid mb-3">
-                    <p><strong>Overview:</strong> An engineering capstone project focused on identifying and mitigating
-                        bias in machine learning models.</p>
-                    <p><strong>Technologies:</strong> Node.js, React, MongoDB, Image Processing</p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/BiasAware" target="_blank">BiasAware
-                            Repository</a></p>
-                </div>
+</div>
+
+<!-- Modal 13: RDENet Oscillation Block -->
+<div class="modal fade" id="projectModal13" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>RDENet Oscillation Block</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/rde.jpg" alt="RDENet Oscillation Block" class="img-fluid mb-3">
+                <p><strong>Overview:</strong> A deep learning project focused on developing an RDENet oscillation block to enhance image classification on poisoned data.</p>
+                <p><strong>Technologies:</strong> CNNs, ResNet, Image Processing</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/RDENet-Oscillation-Block" target="_blank">RDENet-Oscillation-Block Repository</a></p>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Secure Banking System</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/banking.png" alt="Secure Banking System" class="img-fluid mb-3">
-                    <p><strong>Overview:</strong> A secure banking application designed to protect user data and
-                        transactions through advanced cryptography.</p>
-                    <p><strong>Technologies:</strong> Python Cryptography Libraries, PyQt</p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/SecureBankingSystem"
-                            target="_blank">SecureBankingSystem Repository</a></p>
-                </div>
+</div>
+
+<!-- Modal 14: Credit Scoring with Anomaly Detection -->
+<div class="modal fade" id="projectModal14" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Credit Scoring with Anomaly Detection</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/credit.png" alt="Credit Scoring with Anomaly Detection against Data Poisoning Attacks" class="img-fluid mb-3">
+                <p><strong>Overview:</strong> A machine learning project that employs anomaly detection techniques to improve the accuracy of credit scoring models, identifying fraudulent activities and enhancing risk assessment.</p>
+                <p><strong>Technologies:</strong> Anomaly Detection, Random Forest, XGBoost, Data Poisoning Attacks, Scikit-Learn, Python</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Credit-Scoring-Model" target="_blank">CreditScoringAnomalyDetection Repository</a></p>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="projectModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Resort Transportation Management System</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/bus.webp" alt="Resort Transportation Management System" class="img-fluid mb-3">
-                    <p><strong>Overview:</strong> A comprehensive system for managing transportation logistics in resort
-                        environments, ensuring efficiency and reliability.</p>
-                    <p><strong>Technologies:</strong> FastAPI, React, Docker, Kubernetes, AWS</p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/ResortTransportationManagement"
-                            target="_blank">ResortTransportationManagement Repository</a></p>
-                </div>
+</div>
+
+<!-- Existing Modals -->
+
+<!-- Modal 1: Movie Success Predictor -->
+<div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Movie Success Predictor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/movie4.png" alt="Movie Success Predictor" class="img-fluid mb-3">
+                <p><strong>Overview:</strong> A machine learning project aimed at predicting the success of movies using various neural network architectures.</p>
+                <p><strong>Technologies:</strong> NLP, LSTM, BERT, Random Forest, TensorFlow, scikit-learn</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/MovieSuccessPredictor" target="_blank">MovieSuccessPredictor Repository</a></p>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="projectModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Text-Recognition OCR</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/text.png" alt="Text-Recognition OCR" class="img-fluid mb-3">
-                    <p><strong>Overview:</strong> An OCR system capable of accurately recognizing and extracting text
-                        from images using computer vision techniques.</p>
-                    <p><strong>Technologies:</strong> Python, OpenCV, Pytesseract</p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Text-Recognition-OCR"
-                            target="_blank">Text-Recognition-OCR Repository</a></p>
-                </div>
+</div>
+
+<!-- Modal 2: BiasAware -->
+<div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>BiasAware</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/image_grid.jpg" alt="BiasAware" class="img-fluid mb-3">
+                <p><strong>Overview:</strong> An engineering capstone project focused on identifying and mitigating bias in machine learning models.</p>
+                <p><strong>Technologies:</strong> Node.js, React, MongoDB, Image Processing</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/BiasAware" target="_blank">BiasAware Repository</a></p>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="projectModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>onTrack</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/calendar.jpg" alt="onTrack" class="img-fluid mb-3">
-                    <p><strong>Overview:</strong> A project management tool designed to help teams track progress,
-                        manage tasks, and collaborate efficiently.</p>
-                    <p><strong>Technologies:</strong> Node.js, Express.js, React, Oracle</p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/onTrack" target="_blank">onTrack
-                            Repository</a></p>
-                </div>
+</div>
+
+<!-- Modal 3: Secure Banking System -->
+<div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Secure Banking System</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/banking.png" alt="Secure Banking System" class="img-fluid mb-3">
+                <p><strong>Overview:</strong> A secure banking application designed to protect user data and transactions through advanced cryptography.</p>
+                <p><strong>Technologies:</strong> Python Cryptography Libraries, PyQt</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/SecureBankingSystem" target="_blank">SecureBankingSystem Repository</a></p>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="projectModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Online Shopping Store</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/ecommerce.png" alt="Online Shopping Store" class="img-fluid mb-3">
-                    <p><strong>Overview:</strong> An e-commerce platform designed to provide users with a seamless
-                        online shopping experience.</p>
-                    <p><strong>Technologies:</strong> Java, MySQL, Docker, Kubernetes, Google Cloud Platform</p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/OnlineShoppingStore"
-                            target="_blank">OnlineShoppingStore Repository</a></p>
-                </div>
+</div>
+
+<!-- Modal 4: Resort Transportation Management System -->
+<div class="modal fade" id="projectModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Resort Transportation Management System</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/bus.webp" alt="Resort Transportation Management System" class="img-fluid mb-3">
+                <p><strong>Overview:</strong> A comprehensive system for managing transportation logistics in resort environments, ensuring efficiency and reliability.</p>
+                <p><strong>Technologies:</strong> FastAPI, React, Docker, Kubernetes, AWS</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/ResortTransportationManagement" target="_blank">ResortTransportationManagement Repository</a></p>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="projectModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Movie Store DBMS</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/movies.jpg" alt="Movie Store DBMS" class="img-fluid mb-3">
-                    <p><strong>Overview:</strong> A Database Management System designed for managing movie data
-                        efficiently.</p>
-                    <p><strong>Technologies:</strong> Node.js, Express.js, React, Oracle</p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Movie-Store-DBMS"
-                            target="_blank">Movie-Store-DBMS
-                            Repository</a></p>
-                </div>
+</div>
+
+<!-- Modal 5: Text-Recognition OCR -->
+<div class="modal fade" id="projectModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Text-Recognition OCR</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/text.png" alt="Text-Recognition OCR" class="img-fluid mb-3">
+                <p><strong>Overview:</strong> An OCR system capable of accurately recognizing and extracting text from images using computer vision techniques.</p>
+                <p><strong>Technologies:</strong> Python, OpenCV, Pytesseract</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Text-Recognition-OCR" target="_blank">Text-Recognition-OCR Repository</a></p>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="projectModal9" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>manavpatel.me</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/portfolio.png" alt="manavpatel.me" class="img-fluid mb-3">
-                    <p><strong>Overview:</strong> My personal portfolio website showcasing my projects, experience, and
-                        skills.</p>
-                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/manavpatel.github.io"
-                            target="_blank">manavpatel.github.io Repository</a></p>
-                </div>
+</div>
+
+<!-- Modal 6: onTrack -->
+<div class="modal fade" id="projectModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>onTrack</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/calendar.jpg" alt="onTrack" class="img-fluid mb-3">
+                <p><strong>Overview:</strong> A project management tool designed to help teams track progress, manage tasks, and collaborate efficiently.</p>
+                <p><strong>Technologies:</strong> Node.js, Express.js, React, Oracle</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/onTrack" target="_blank">onTrack Repository</a></p>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="projectModal10" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Simple ALU Design</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/alu.png" alt="Simple ALU Design" class="img-fluid mb-3">
-                    <p><strong>Overview:</strong> A basic Arithmetic Logic Unit (ALU) design implemented using VHDL.</p>
-                    <p><strong>Technologies:</strong> VHDL, Quartus</p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/Simple-ALU-Design"
-                            target="_blank">Simple-ALU-Design Repository</a></p>
-                </div>
+</div>
+
+<!-- Modal 7: Online Shopping Store -->
+<div class="modal fade" id="projectModal7" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Online Shopping Store</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/ecommerce.png" alt="Online Shopping Store" class="img-fluid mb-3">
+                <p><strong>Overview:</strong> An e-commerce platform designed to provide users with a seamless online shopping experience.</p>
+                <p><strong>Technologies:</strong> Java, MySQL, Docker, Kubernetes, Google Cloud Platform</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/OnlineShoppingStore" target="_blank">OnlineShoppingStore Repository</a></p>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="projectModal11" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>My GitHub</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <img src="images/github.png" alt="My GitHub" class="img-fluid mb-3" style="max-width: 200px;">
-                    <p><strong>Overview:</strong> Explore all my projects, repositories, and contributions on my GitHub
-                        profile.</p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/mpat247" target="_blank">mpat247</a></p>
-                </div>
+</div>
+
+<!-- Modal 9: manavpatel.me -->
+<div class="modal fade" id="projectModal9" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>manavpatel.me</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/portfolio.png" alt="manavpatel.me" class="img-fluid mb-3">
+                <p><strong>Overview:</strong> My personal portfolio website showcasing my projects, experience, and skills.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247/manavpatel.github.io" target="_blank">manavpatel.github.io Repository</a></p>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Modal 15: My GitHub -->
+<div class="modal fade" id="projectModal15" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>My GitHub</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="images/github.png" alt="My GitHub" class="img-fluid mb-3" style="max-width: 200px;">
+                <p><strong>Overview:</strong> Explore all my projects, repositories, and contributions on my GitHub profile.</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mpat247" target="_blank">mpat247</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- Resumes Section -->
     <section id="resumes" data-aos="fade-up">
