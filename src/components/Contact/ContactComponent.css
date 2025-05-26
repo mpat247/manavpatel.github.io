@@ -39,7 +39,7 @@
   padding: 12px 14px;
   border-radius: 6px;
   border: 1px solid #444;
-  background: #2a2a2a;
+  background: var(--bg-alternate);
   color: #fff;
   font-family: inherit;
   resize: vertical;

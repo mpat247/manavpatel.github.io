@@ -1,16 +1,17 @@
 /* ─────────────────────────────────────────────────────────────
-   ResumesComponent
+   ResumesComponent  –  FINAL
    -------------------------------------------------------------
-   • Three-tab selector (General · Machine Learning · SWE)
-   • Displays a PDF in an <iframe>
-   • Download button
-   • Fully responsive, no external UI libs
+   • Two tabs (SWE / ML & Data)
+   • Canvas-only PDF → no duplicated text
+   • Responsive, no side padding / black bars
    ─────────────────────────────────────────────────────────── */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "./ResumesComponent.css";
 
-/* ----------   DATA   ---------- */
+/* ---------- DATA ---------- */
 const resumes = [
   {
     id: "swe",
@@ -24,9 +25,24 @@ const resumes = [
   },
 ];
 
+/* PDF worker (required for react-pdf) */
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+
 export default function ResumesComponent() {
-  const [active, setActive] = useState("general");
-  const current = resumes.find((r) => r.id === active) || resumes[0];
+  /* state */
+  const [active, setActive] = useState(resumes[0].id);
+  const [width, setWidth] = useState(900);
+  const [error, setError] = useState(null);
+
+  /* responsive width */
+  useEffect(() => {
+    const resize = () => setWidth(Math.min(900, window.innerWidth * 0.96));
+    resize();
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, []);
+
+  const current = resumes.find((r) => r.id === active);
 
   return (
     <section id="resumes" className="resumes-section">
@@ -35,45 +51,56 @@ export default function ResumesComponent() {
           <strong>Resumes</strong>
         </h2>
 
-        {/* ── TAB STRIP ─────────────────── */}
+        {/* ── tabs ───────────────────────────────── */}
         <ul className="resume-tabs">
-          {resumes.map((r) =>
-            r?.label ? (
-              <li key={r.id}>
-                <button
-                  className={`tab-btn ${active === r.id ? "active" : ""}`}
-                  onClick={() => setActive(r.id)}
-                >
-                  {r.label}
-                </button>
-              </li>
-            ) : null
-          )}
+          {resumes.map((r) => (
+            <li key={r.id}>
+              <button
+                className={`tab-btn ${active === r.id ? "active" : ""}`}
+                onClick={() => {
+                  setActive(r.id);
+                  setError(null);
+                }}
+              >
+                {r.label}
+              </button>
+            </li>
+          ))}
         </ul>
 
-        {/* ── IFRAME + DOWNLOAD ─────────── */}
-        <div className="resume-frame-wrap">
+        {/* ── viewer ─────────────────────────────── */}
+        <div className="pdf-frame">
           {current?.file ? (
-            <iframe
-              title={current.label}
-              src={`/files/${current.file}`}
-              className="resume-frame"
-              allowFullScreen
-            />
+            <Document
+              file={`/files/${current.file}`}
+              onLoadError={(e) => setError(e.message)}
+              loading="Loading PDF…"
+              className="pdf-document"
+            >
+              <Page
+                pageNumber={1}
+                width={width}
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
+              />
+            </Document>
           ) : (
-            <p className="error-text">Resume file not available.</p>
+            <p className="error-text">Resume unavailable.</p>
           )}
+
+          {error && <p className="error-text">Failed to load: {error}</p>}
         </div>
 
+        {/* ── download ───────────────────────────── */}
         {current?.file && (
           <p className="download-wrap">
             <a
               href={`/files/${current.file}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="download-btn"
             >
-              Download Resume
+              Download&nbsp;PDF
             </a>
           </p>
         )}
