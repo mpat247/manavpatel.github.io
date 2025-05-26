@@ -12,24 +12,24 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: ⬇️ Checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: 🛠 Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: 🧱 Build project
+      - name: Build project
         run: npm run build
 
-      - name: 📄 Copy 404.html fallback
+      - name: Copy 404.html fallback
         run: cp dist/index.html dist/404.html
 
-      - name: 🚀 Deploy to gh-pages branch
+      - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
