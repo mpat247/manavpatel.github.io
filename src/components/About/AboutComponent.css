@@ -1,0 +1,59 @@
+/*  ──────────  ABOUT SECTION  ─────────────────────────── */
+
+:root {
+  --accent-color: #1c9ceb;
+  --accent-hover: #59ccff;
+  --bg-darker: #161a1f;
+  --text-light: #ffffff;
+}
+
+/* full-width band, dark background */
+.about-section {
+  background: var(--bg-darker);
+  color: var(--text-light);
+  padding: 60px 1rem 80px; /* Reduced top and bottom padding */
+  text-align: center;
+}
+
+/* container keeps text column narrow on large screens */
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* heading exactly like the screenshot */
+.about-heading {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 2rem; /* Reduced bottom margin */
+  color: var(--text-light);
+}
+
+/* body text */
+.about-text p {
+  margin: 0 auto 1.25rem; /* Reduced bottom margin */
+  line-height: 1.5; /* Reduced line height */
+  font-size: clamp(1rem, 2.2vw, 1.125rem);
+  font-weight: 400;
+}
+
+/* hyperlinks – blue + hover tint */
+.about-text a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.about-text a:hover {
+  color: var(--accent-hover);
+}
+
+/* mobile spacing tweak */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 80px 1rem;
+  }
+  .about-heading {
+    margin-bottom: 2.25rem;
+  }
+}

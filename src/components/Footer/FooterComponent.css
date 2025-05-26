@@ -1,0 +1,73 @@
+/*  ───────────  FOOTER  ───────────────────────────────────── */
+
+.site-footer {
+  background: #0d1116;
+  color: #fff;
+  padding: 20px 1rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Social icon list */
+.footer-social {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
+  margin: 0 0 18px;
+}
+
+.footer-social a {
+  color: var(--text-light);
+  font-size: 1.875rem; /* 30 px */
+  transition: color 0.25s, transform 0.25s;
+}
+
+.footer-social a:hover {
+  color: var(--accent-hover);
+  transform: scale(1.2);
+}
+
+/* Copyright text */
+.footer-copy {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/*  ─── Back-to-top floating button ─── */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: background 0.25s, transform 0.25s;
+  z-index: 100;
+}
+
+.back-to-top:hover {
+  background: var(--accent-hover);
+  transform: scale(1.1);
+}
+
+/* Light-mode tweak */
+@media (prefers-color-scheme: light) {
+  .site-footer {
+    background: #f0f0f0;
+    color: #212121;
+  }
+
+  .footer-social a {
+    color: var(--accent-color);
+  }
+}

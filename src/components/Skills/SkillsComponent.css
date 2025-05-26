@@ -1,0 +1,91 @@
+/* ─────────────────────────────────────────────────────────────
+   Skills – section wrapper
+   ------------------------------------------------------------ */
+.skills-section {
+  padding: 60px 1rem 80px;
+  background: var(--bg-lighter);
+  color: var(--text-light);
+}
+
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Heading */
+.skills-heading {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+  color: var(--secondary-color);
+}
+
+/* ─────────── Grid ─────────── */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust spacing between cards */
+}
+
+/* ─────────── Box ─────────── */
+.skill-box {
+  padding: 24px 26px 28px;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--accent-color)
+  );
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 1 calc(33.333% - 20px); /* Ensure cards are responsive */
+  max-width: calc(33.333% - 20px);
+}
+
+.skill-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.skill-box h4 {
+  font-size: 1.1rem;
+  margin: 0 0 14px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-box h4 svg {
+  flex-shrink: 0;
+}
+
+.skill-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #ffffff;
+  word-break: break-word;
+}
+
+/* ─────────── Responsive tweak ─────────── */
+@media (max-width: 768px) {
+  .skills-section {
+    padding-bottom: 80px;
+  }
+
+  .skill-box {
+    flex: 1 1 calc(50% - 20px); /* Adjust for smaller screens */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-box {
+    flex: 1 1 100%; /* Stack cards on very small screens */
+    max-width: 100%;
+  }
+}

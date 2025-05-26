@@ -1,0 +1,91 @@
+/* ──────────────────────────  SIDEBAR NAV  ───────────────────────── */
+
+.side-nav {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: rgba(22, 26, 31, 0.9);
+  padding: 10px 12px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* hidden by default */
+  pointer-events: none; /* …until .show is applied */
+}
+
+.side-nav.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* collapsed = slide out of view */
+.side-nav.collapsed {
+  transform: translate(-100%, -50%);
+}
+
+/* toggle button (chevron) */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  transition: color 0.25s;
+}
+
+.toggle-btn:hover {
+  color: var(--accent-hover);
+}
+
+/* nav links */
+.side-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  color: var(--accent-color);
+  font-size: 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s;
+}
+
+.side-link:hover,
+.side-link.active {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+/* icons a bit bigger */
+.side-link svg {
+  font-size: 18px;
+}
+
+/* ─── Mobile: dock at bottom ─── */
+@media (max-width: 768px) {
+  .side-nav,
+  .side-nav.collapsed {
+    top: auto;
+    bottom: 12px;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    flex-direction: row;
+    border-radius: 10px;
+  }
+
+  .side-nav.show {
+    transform: translate(-50%, 0);
+  }
+
+  .toggle-btn {
+    order: 999; /* place button at the end */
+    margin: 0 0 0 6px;
+  }
+}

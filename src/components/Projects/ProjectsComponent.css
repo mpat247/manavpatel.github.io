@@ -1,0 +1,190 @@
+/* ─────────────────────────────────────────────────────────────
+   SECTION WRAPPER
+   ------------------------------------------------------------ */
+.projects-section {
+  padding: 60px 1rem 80px;
+  background: var(--bg-darker);
+  color: var(--text-light);
+}
+
+.projects-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.projects-heading {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+  color: var(--text-light);
+}
+
+/* ─────────── Filter Buttons ─────────── */
+.filter-btns {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  margin: 0 10px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 0.95rem;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+/* ─────────── Grid & Item ─────────── */
+.projects-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project-item {
+  position: relative;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  opacity: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: opacity 0.25s;
+}
+
+.project-item:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay h3 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+}
+
+.project-overlay h5 {
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.project-overlay span {
+  display: block;
+  font-size: 0.8rem;
+  color: #ddd;
+}
+
+/* ─────────── Modal ─────────── */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  position: relative;
+  max-width: 720px;
+  width: 90%;
+  background: #2a2a2a;
+  padding: 28px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  animation: modal-pop 0.35s ease;
+}
+
+@keyframes modal-pop {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.75rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.modal-desc,
+.modal-skills {
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+  color: #ddd;
+}
+
+.modal-link .btn-primary {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 26px;
+  background: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.25s;
+}
+
+.modal-link .btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+/* ─────────── Responsive tweak ─────────── */
+@media (max-width: 600px) {
+  .project-item {
+    height: 220px;
+  }
+  .modal-img {
+    max-height: 220px;
+  }
+}

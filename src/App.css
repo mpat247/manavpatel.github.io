@@ -1,0 +1,13 @@
+/* ---- global container ---- */
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+/* optional: utility to constrain max-width on large screens */
+/*
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+*/

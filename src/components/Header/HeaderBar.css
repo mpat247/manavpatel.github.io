@@ -1,0 +1,84 @@
+/* HeaderBar.css */
+
+/* ──────────────  Bar container  ────────────── */
+.header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 16px 40px;
+
+  background: linear-gradient(
+    45deg,
+    var(--secondary-color),
+    var(--accent-color)
+  );
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+
+  /* Grid = perfect centring */
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* title | nav | icons */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* ──────────────  Name / logo (left)  ────────────── */
+.header-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+/* ──────────────  Navigation (centre)  ────────────── */
+.header-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* centred within grid cell */
+  gap: 24px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+/* ──────────────  Social-media icons (right)  ────────────── */
+.header-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.icon {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: var(--primary-color);
+}

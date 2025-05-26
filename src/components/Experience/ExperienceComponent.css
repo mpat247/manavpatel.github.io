@@ -1,0 +1,171 @@
+/*  ──────────  EXPERIENCE SECTION  ────────────────────── */
+
+:root {
+  --accent-color: #1c9ceb;
+  --accent-hover: #59ccff;
+  --bg-darker: #161a1f;
+  --text-light: #ffffff;
+  --timeline-line: var(--accent-color);
+  --bg-lighter: #eeeeee;
+}
+
+/* section wrapper */
+.experience-section {
+  background: var(--bg-lighter);
+  color: var(--secondary-color);
+  padding: 60px 1rem 80px;
+}
+
+/* centered container */
+.experience-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* heading */
+.experience-heading {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+/*  ───  TIMELINE  ─────────────────────────────────────── */
+
+.timeline {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  margin-left: -2px;
+  background: var(--timeline-line);
+}
+
+/* each item */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 0 2.5rem 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+/* circular marker */
+.timeline-badge {
+  position: absolute;
+  top: 12px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border: 4px solid var(--accent-color);
+  border-radius: 50%;
+  background: var(--bg-darker);
+  z-index: 2;
+  transition: transform 0.3s;
+}
+
+.timeline-item:nth-child(even) .timeline-badge {
+  left: -10px;
+  right: auto;
+}
+
+.timeline-badge:hover {
+  transform: scale(1.2);
+}
+
+/* panel card */
+.timeline-panel {
+  background: #2a2a2a;
+  padding: 22px 26px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left; /* Align all content inside the cards to the left */
+}
+
+.timeline-panel:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.timeline-title {
+  margin: 0 0 6px;
+  font-size: 1.375rem;
+  color: var(--accent-color);
+}
+
+.timeline-location {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  color: #cccccc;
+}
+
+.timeline-company {
+  display: block;
+  margin-bottom: 10px;
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+.timeline-company a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.timeline-company a:hover {
+  color: var(--accent-hover);
+}
+
+.timeline-skills {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #bbbbbb;
+}
+
+/*  ───  RESPONSIVE  ──────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even),
+  .timeline-item:nth-child(odd) {
+    left: 0 !important;
+    width: 100%;
+    padding-left: 60px;
+    text-align: left;
+  }
+
+  .timeline-badge,
+  .timeline-item:nth-child(even) .timeline-badge {
+    left: 0;
+    right: auto;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .timeline-panel {
+    background: #f5f5f5;
+    color: #333;
+  }
+}

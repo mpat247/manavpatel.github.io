@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --accent-color: #1c9ceb;
+  --accent-hover: #59ccff;
+  --bg-alternate: #e3e3e3;
+  --secondary-color: #0b1e35;
+  --text-light: #ffffff;
+  --timeline-line: var(--accent-color);
+
+  font-family: "Poppins", "Roboto", system-ui, sans-serif;
+  background: #161a1f;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}

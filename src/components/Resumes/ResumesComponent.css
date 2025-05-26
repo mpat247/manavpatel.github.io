@@ -1,0 +1,90 @@
+/* ─────────────────────────────────────────────────────────────
+   SECTION WRAPPER
+   ------------------------------------------------------------ */
+.resumes-section {
+  padding: 60px 1rem 80px;
+  background: var(--bg-alternate);
+}
+
+.resumes-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--secondary-color);
+}
+
+.resumes-heading {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+}
+
+/* ───────── Tabs ───────── */
+.resume-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.tab-btn {
+  padding: 10px 26px;
+  font-size: 0.95rem;
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  border-radius: 30px;
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+/* ───────── Iframe & download ───────── */
+.resume-frame-wrap {
+  width: 100%;
+  height: 800px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.resume-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #202020;
+}
+
+.download-wrap {
+  text-align: center;
+  margin-top: 22px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 30px;
+  background: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.download-btn:hover {
+  background: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+/* ───────── Responsive tweak ───────── */
+@media (max-width: 768px) {
+  .resume-frame-wrap {
+    height: 620px;
+  }
+}
