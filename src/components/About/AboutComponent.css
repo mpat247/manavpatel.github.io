@@ -7,6 +7,44 @@
   --text-light: #ffffff;
 }
 
+/* Loading styles */
+.about-loading {
+  color: #ccc;
+  font-style: italic;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* Firebase content styles */
+.about-text .w-md-editor-markdown {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+.about-text .w-md-editor-markdown p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.about-text .w-md-editor-markdown a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.about-text .w-md-editor-markdown a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.about-text .w-md-editor-markdown strong {
+  font-weight: 600;
+}
+
+.about-text .w-md-editor-markdown em {
+  font-style: italic;
+}
+
 /* full-width band, dark background */
 .about-section {
   background: var(--bg-darker);

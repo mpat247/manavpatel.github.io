@@ -1,0 +1,188 @@
+/* About Editor Styles */
+.about-editor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-editor-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  color: #ccc;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #444;
+}
+
+.editor-header h2 {
+  color: #1c9ceb;
+  margin: 0;
+}
+
+.editor-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.visibility-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.visibility-toggle input {
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #27ae60;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #229954;
+}
+
+.save-btn:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.message {
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.message.success {
+  background: #27ae60;
+  color: white;
+}
+
+.message.error {
+  background: #ff4757;
+  color: white;
+}
+
+.last-saved {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.editor-instructions {
+  background: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #1c9ceb;
+}
+
+.editor-instructions h4 {
+  color: #1c9ceb;
+  margin: 0 0 1rem 0;
+}
+
+.editor-instructions ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #ccc;
+}
+
+.editor-instructions li {
+  margin-bottom: 0.5rem;
+}
+
+/* Override MDEditor dark theme */
+.w-md-editor {
+  background-color: #2a2a2a !important;
+}
+
+.w-md-editor-text-textarea,
+.w-md-editor-text-input,
+.w-md-editor-text {
+  color: #ffffff !important;
+  background-color: #333 !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.w-md-editor-text-textarea::placeholder {
+  color: #888;
+}
+
+.w-md-editor-bar {
+  background-color: #444 !important;
+  border-bottom: 1px solid #555;
+}
+
+.w-md-editor-bar button {
+  color: #ccc !important;
+}
+
+.w-md-editor-bar button:hover {
+  background-color: #555 !important;
+  color: #ffffff !important;
+}
+
+.preview-section {
+  margin-top: 2rem;
+}
+
+.preview-section h4 {
+  color: #1c9ceb;
+  margin-bottom: 1rem;
+}
+
+.about-preview {
+  background: #161a1f;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.about-preview p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.about-preview a {
+  color: #1c9ceb;
+  text-decoration: none;
+}
+
+.about-preview a:hover {
+  color: #59ccff;
+  text-decoration: underline;
+}
+
+.about-preview strong {
+  font-weight: 600;
+}
+
+.about-preview em {
+  font-style: italic;
+}

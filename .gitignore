@@ -23,4 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-.env
+# .env (temporarily commented out for initial Firebase setup)
+# .env
+.env.local
+.env.example

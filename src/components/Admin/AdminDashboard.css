@@ -1,0 +1,79 @@
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  display: flex;
+  height: calc(100vh - 80px); /* Subtract header height */
+}
+
+/* Navigation Sidebar */
+.admin-nav {
+  width: 280px;
+  background: #2a2a2a;
+  padding: 2rem 1rem;
+  border-right: 2px solid #444;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: #ccc;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.nav-tab:hover {
+  background: #444;
+  color: #ffffff;
+}
+
+.nav-tab.active {
+  background: #1c9ceb;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(28, 156, 235, 0.3);
+}
+
+.tab-icon {
+  font-size: 1.2rem;
+  min-width: 24px;
+}
+
+.tab-label {
+  font-weight: 500;
+}
+
+/* Content Area */
+.admin-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background: #161a1f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .admin-nav {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 1rem;
+  }
+
+  .nav-tab {
+    flex-shrink: 0;
+    min-width: 120px;
+  }
+}
