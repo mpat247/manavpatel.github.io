@@ -1,16 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap");
 
 :root {
-  --accent-color: #1c9ceb;
-  --accent-hover: #59ccff;
-  --bg-alternate: #e3e3e3;
-  --secondary-color: #0b1e35;
-  --text-light: #ffffff;
-  --timeline-line: var(--accent-color);
+  --accent-color: #1f4f8f;
+  --accent-hover: #2a66b8;
+  --bg-darker: #131820;
+  --bg-alternate: #cfd7e2;
+  --panel-bg: #d6dee9;
+  --secondary-color: #1a2533;
+  --text-light: #f8fafc;
+  --text-primary: #18212d;
+  --text-muted: #5d6774;
+  --border-color: #d4dbe5;
+  --timeline-line: #c7d0dc;
 
   font-family: "Poppins", "Roboto", system-ui, sans-serif;
-  background: #161a1f;
-  color: #fff;
+  background: #cdd6e2;
+  color: var(--text-primary);
   scroll-behavior: smooth;
 }
 
@@ -22,4 +27,6 @@
 
 body {
   margin: 0;
+  background: #cdd6e2;
+  color: var(--text-primary);
 }

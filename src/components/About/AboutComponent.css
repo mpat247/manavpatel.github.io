@@ -1,59 +1,63 @@
-/*  ──────────  ABOUT SECTION  ─────────────────────────── */
-
-:root {
-  --accent-color: #1c9ceb;
-  --accent-hover: #59ccff;
-  --bg-darker: #161a1f;
-  --text-light: #ffffff;
-}
-
-/* full-width band, dark background */
 .about-section {
-  background: var(--bg-darker);
-  color: var(--text-light);
-  padding: 60px 1rem 80px; /* Reduced top and bottom padding */
-  text-align: center;
+  padding: 32px;
+  background: var(--panel-bg);
 }
 
-/* container keeps text column narrow on large screens */
 .about-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 28px;
 }
 
-/* heading exactly like the screenshot */
+.about-label {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
 .about-heading {
-  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin: 0;
+  font-size: clamp(1.9rem, 3.6vw, 2.5rem);
   font-weight: 700;
-  margin-bottom: 2rem; /* Reduced bottom margin */
-  color: var(--text-light);
+  color: var(--secondary-color);
 }
 
-/* body text */
+.about-text-panel {
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 24px;
+}
+
 .about-text p {
-  margin: 0 auto 1.25rem; /* Reduced bottom margin */
-  line-height: 1.5; /* Reduced line height */
-  font-size: clamp(1rem, 2.2vw, 1.125rem);
+  margin: 0 0 14px;
+  line-height: 1.7;
+  font-size: 1rem;
   font-weight: 400;
+  color: var(--text-primary);
 }
 
-/* hyperlinks – blue + hover tint */
 .about-text a {
   color: var(--accent-color);
   text-decoration: none;
-  transition: color 0.25s;
+  transition: color 0.2s;
 }
 
 .about-text a:hover {
   color: var(--accent-hover);
 }
 
-/* mobile spacing tweak */
-@media (max-width: 480px) {
+@media (max-width: 900px) {
   .about-section {
-    padding: 80px 1rem;
+    padding: 22px;
   }
-  .about-heading {
-    margin-bottom: 2.25rem;
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }

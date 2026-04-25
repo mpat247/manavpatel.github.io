@@ -125,20 +125,22 @@ const projectData = [
 /* ################  COMPONENT ################ */
 export default function ProjectsComponent() {
   const [filter, setFilter] = useState("all");
-  const [activeModal, setActiveModal] = useState(null);
 
   const filtered = projectData.filter(
-    (p) => filter === "all" || p.category === filter
+    (p) => filter === "all" || p.category === filter,
   );
+  const featured = filtered.slice(0, 2);
+  const supporting = filtered.slice(2);
 
   return (
     <section id="projects" className="projects-section">
       <div className="projects-container">
-        <h2 className="projects-heading">
-          <strong>Projects</strong>
-        </h2>
+        <div className="projects-header">
+          <h2 className="projects-heading">
+            <strong>Projects</strong>
+          </h2>
+        </div>
 
-        {/* ========= Filter Buttons ========= */}
         <div className="filter-btns" data-aos="fade-in">
           {["all", "ml", "fullstack", "other"].map((cat) => (
             <button
@@ -149,85 +151,80 @@ export default function ProjectsComponent() {
               {cat === "all"
                 ? "All"
                 : cat === "ml"
-                ? "Machine Learning"
-                : cat === "fullstack"
-                ? "Full Stack"
-                : "Other"}
+                  ? "Machine Learning"
+                  : cat === "fullstack"
+                    ? "Full Stack"
+                    : "Other"}
             </button>
           ))}
         </div>
 
-        {/* ========= Grid ========= */}
-        <div className="projects-grid">
-          {filtered.map((proj) => (
-            <div
+        <div className="projects-featured-grid">
+          {featured.map((proj) => (
+            <article
               key={proj.id}
-              className="project-item"
+              className="project-card featured"
               data-aos="fade-up"
-              style={{
-                backgroundImage: `url(/images/${proj.img})`,
-              }}
-              onClick={() => setActiveModal(proj)}
             >
-              <div className="project-overlay">
+              <img
+                src={`/images/${proj.img}`}
+                alt={proj.title}
+                className="project-image"
+              />
+              <div className="project-content">
                 <h3>{proj.title}</h3>
                 {proj.subtitle && <h5>{proj.subtitle}</h5>}
-                {proj.skills && <span>{proj.skills}</span>}
-                {proj.date && <span>{proj.date}</span>}
+                <p>{proj.description}</p>
+                {proj.skills && (
+                  <span className="project-meta">{proj.skills}</span>
+                )}
+                {proj.date && <span className="project-meta">{proj.date}</span>}
+                {proj.github && (
+                  <a
+                    href={proj.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-primary"
+                  >
+                    View on GitHub
+                  </a>
+                )}
               </div>
-            </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="projects-support-grid">
+          {supporting.map((proj) => (
+            <article key={proj.id} className="project-card" data-aos="fade-up">
+              <img
+                src={`/images/${proj.img}`}
+                alt={proj.title}
+                className="project-image"
+              />
+              <div className="project-content">
+                <h3>{proj.title}</h3>
+                {proj.subtitle && <h5>{proj.subtitle}</h5>}
+                <p>{proj.description}</p>
+                {proj.skills && (
+                  <span className="project-meta">{proj.skills}</span>
+                )}
+                {proj.date && <span className="project-meta">{proj.date}</span>}
+                {proj.github && (
+                  <a
+                    href={proj.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-primary"
+                  >
+                    View on GitHub
+                  </a>
+                )}
+              </div>
+            </article>
           ))}
         </div>
       </div>
-
-      {/* ========= Modal ========= */}
-      {activeModal && (
-        <div className="modal-backdrop" onClick={() => setActiveModal(null)}>
-          <div
-            className="modal-card"
-            onClick={(e) => e.stopPropagation()} /* prevent backdrop click */
-          >
-            <button
-              className="modal-close"
-              aria-label="Close"
-              onClick={() => setActiveModal(null)}
-            >
-              &times;
-            </button>
-
-            <img
-              src={`/images/${activeModal.img}`}
-              alt={activeModal.title}
-              className="modal-img"
-            />
-
-            <h3>{activeModal.title}</h3>
-            {activeModal.subtitle && <h4>{activeModal.subtitle}</h4>}
-
-            <p className="modal-desc">{activeModal.description}</p>
-
-            {activeModal.skills && (
-              <p className="modal-skills">
-                <strong>Tech:&nbsp;</strong>
-                {activeModal.skills}
-              </p>
-            )}
-
-            {activeModal.github && (
-              <p className="modal-link">
-                <a
-                  href={activeModal.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-primary"
-                >
-                  View on GitHub
-                </a>
-              </p>
-            )}
-          </div>
-        </div>
-      )}
     </section>
   );
 }

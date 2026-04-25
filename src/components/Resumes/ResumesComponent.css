@@ -1,101 +1,110 @@
-/* ─────────────────────────────────────────────────────────────
-   SECTION WRAPPER
-   ----------------------------------------------------------- */
 .resumes-section {
-  padding: 60px 1rem 80px;
-  background: var(--bg-alternate);
-  color: var(--secondary-color);
+  padding: 32px;
+  background: var(--panel-bg);
 }
 
 .resumes-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.resumes-heading {
-  text-align: center;
-  font-size: clamp(2rem, 5vw, 2.75rem);
-  font-weight: 700;
-  margin-bottom: 3.5rem;
+.resumes-header {
+  margin-bottom: 20px;
 }
 
-/* ───────── Tabs ───────── */
+.resumes-label {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.resumes-heading {
+  margin: 0;
+  font-size: clamp(1.9rem, 3.6vw, 2.5rem);
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
 .resume-tabs {
   display: flex;
-  justify-content: center;
   gap: 8px;
   list-style: none;
   padding: 0;
-  margin: 0 0 28px;
+  margin: 0 0 16px;
 }
 
 .tab-btn {
-  padding: 10px 28px;
-  font-size: 0.95rem;
+  padding: 8px 14px;
+  font-size: 0.9rem;
   font-weight: 600;
-  background: transparent;
-  border: 2px solid var(--accent-color);
-  border-radius: 32px;
-  color: var(--accent-color);
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--secondary-color);
   cursor: pointer;
-  transition: background 0.25s, color 0.25s, transform 0.25s;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
 }
 
 .tab-btn:hover,
 .tab-btn.active {
-  background: var(--accent-color);
-  color: #fff;
-  transform: translateY(-2px);
+  background: #f3f8ff;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
-/* ───────── Viewer ───────── */
 .pdf-frame {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: transparent;
-  border-radius: 8px;
-  /* box-shadow: 0 4px 16px rgb(0 0 0 / 35%); */
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 12px;
   overflow: hidden;
-  width: 100%; /* Ensure it spans the full width */
+  width: 100%;
 }
 
-.react-pdf-document {
+.pdf-document {
   margin: 0 auto;
-  /* box-shadow: 0 4px 16px rgb(0 0 0 / 35%); */
 }
 
 .error-text {
   padding: 2rem;
-  color: #ff6b6b;
+  color: #a72727;
   text-align: center;
 }
 
-/* ───────── Download button ───────── */
-.download-wrap {
-  text-align: center;
-  margin-top: 24px;
+.resume-actions {
+  margin-top: 14px;
 }
 
 .download-btn {
   display: inline-block;
-  padding: 12px 32px;
-  border-radius: 32px;
+  padding: 9px 14px;
+  border-radius: 8px;
   background: var(--accent-color);
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.25s, transform 0.25s;
+  font-size: 0.9rem;
+  transition: background 0.2s;
 }
 
 .download-btn:hover {
   background: var(--accent-hover);
-  transform: scale(1.05);
 }
 
-/* ───────── Responsive tweak ───────── */
-@media (max-width: 768px) {
-  .pdf-frame {
-    min-height: 620px;
+@media (max-width: 900px) {
+  .resumes-section {
+    padding: 22px;
+  }
+
+  .resume-tabs {
+    flex-wrap: wrap;
   }
 }

@@ -24,7 +24,7 @@ export default function ContactComponent() {
     const mailto = `mailto:manav1.patel@torontomu.ca
            ?subject=Portfolio%20Contact%20-%20${encodeURIComponent(form.name)}
            &body=${encodeURIComponent(
-             form.message + "\n\nFrom: " + form.email
+             form.message + "\n\nFrom: " + form.email,
            )}`;
 
     window.location.href = mailto.replace(/\s/g, "");
@@ -33,9 +33,12 @@ export default function ContactComponent() {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-container">
-        <h2 className="contact-heading">
-          <strong>Contact&nbsp;Me</strong>
-        </h2>
+        <div className="contact-intro">
+          <h2 className="contact-heading">
+            <strong>Contact&nbsp;Me</strong>
+          </h2>
+          <p className="contact-email">manav1.patel@torontomu.ca</p>
+        </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
           <label>

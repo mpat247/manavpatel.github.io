@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import {
   BsLinkedin,
   BsGithub,
-  BsFileEarmarkText,
+  BsEnvelopeFill,
   BsChevronUp,
 } from "react-icons/bs";
 import "./FooterComponent.css";
@@ -49,8 +49,8 @@ export default function FooterComponent() {
         </li>
 
         <li>
-          <a href="#resumes">
-            <BsFileEarmarkText />
+          <a href="mailto:manav1.patel@torontomu.ca">
+            <BsEnvelopeFill />
           </a>
         </li>
       </ul>

@@ -1,13 +1,31 @@
-/* ---- global container ---- */
-#root {
-  margin: 0;
-  padding: 0;
+.app-shell {
+  min-height: 100dvh;
 }
 
-/* optional: utility to constrain max-width on large screens */
-/*
-main {
-  max-width: 1280px;
-  margin: 0 auto;
+.dashboard-main {
+  margin-left: 280px;
+  padding: 28px;
+  display: grid;
+  gap: 24px;
 }
-*/
+
+.dashboard-main > section,
+.dashboard-main > footer {
+  border: 1px solid var(--border-color);
+  background-color: var(--panel-bg);
+  background-image: none;
+  border-radius: 16px;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-main {
+    margin-left: 0;
+    padding: 84px 16px 16px;
+    gap: 16px;
+  }
+
+  .dashboard-main > section,
+  .dashboard-main > footer {
+    border-radius: 12px;
+  }
+}

@@ -2,59 +2,94 @@ import "./ExperienceComponent.css";
 
 const experienceItems = [
   {
-    title: "Junior Software Engineer",
+    title: "Software Engineer (Full-Time)",
+    location: "Ottawa, Ontario, Canada",
+    company: {
+      name: "Lockheed Martin",
+      url: "https://www.lockheedmartin.com/en-ca/",
+    },
+    period: "June 2026 – Present",
+    team: "Naval Systems",
+    // skills:
+    //   "Software Development · Data Integrations · Data Engineering · OneStream ",
+  },
+  {
+    title: "Intermediate Application Developer (Contract)",
+    location: "Guelph, Ontario, Canada",
+    company: {
+      name: "Linamar Corp.",
+      url: "https://www.linamar.com//",
+    },
+    period: "Aug 2025 – May 2026",
+    team: "Financial Systems",
+    skills:
+      "Software Development · Data Integrations · Data Engineering · OneStream ",
+  },
+  {
+    title: "ML Research Assistant (Thesis)",
+    location: "Toronto, Ontario, Canada",
+    company: {
+      name: "CVIP Lab – Toronto Metropolitan University",
+      url: "https://www.torontomu.ca/electrical-computer-biomedical/research/#!accordion-1578519133634-computer-vision-and-image-processing--cvip--laboratory",
+    },
+    period: "May 2025 – Present",
+    team: "Computer Vision & Image Processing (CVIP) Lab",
+    skills:
+      "Machine Learning · Image Processing · Computer Vision · Medical Imaging",
+  },
+  {
+    title: "AI Agent Developer – NLP & Mental Health (Volunteer)",
+    location: "Toronto, Ontario, Canada",
+    company: {
+      name: "Unity Health Toronto",
+      url: "https://unityhealth.to/",
+    },
+    period: "Oct 2025 - Jan 2026",
+    skills: "Data Science · NLP · AI Agents · Mental Health Research",
+  },
+  {
+    title: "Software Engineer (Part-Time)",
     location: "Oakville, Ontario, Canada",
     company: {
       name: "Cashly Inc.",
       url: "https://gocashly.io/",
     },
-    period: "Nov 2024 – Present",
+    period: "Sept 2024 – Feb 2026",
+    team: "Mortgage Tech Services",
     skills:
-      "Next.js · Node.js · PostgreSQL · AI-Driven Products · Full-Stack Development · End-to-End Delivery · Machine Learning",
+      "Full-Stack Development · Artificial Intelligence · SaaS · Start-up",
   },
   {
-    title: "ML Research Assistant",
-    location: "Toronto, Ontario, Canada",
-    company: {
-      name: "Toronto Metropolitan Universtiy - CVIP Lab",
-      url: "https://www.torontomu.ca/electrical-computer-biomedical/research/#!accordion-1578519133634-computer-vision-and-image-processing--cvip--laboratory",
-    },
-    period: "May 2025 – Aug 2025",
-    skills:
-      "PyTorch · CNNs · Transformers · Image Denoising · Medical Imaging · Model Evaluation ",
-  },
-  {
-    title: "Graduate Teaching Assistant",
+    title: "Graduate Teaching Assistant (Part-Time)",
     location: "Toronto, Ontario, Canada",
     company: {
       name: "Toronto Metropolitan University",
       url: "https://www.torontomu.ca",
     },
     period: "Sep 2024 – Apr 2025",
-    skills:
-      "Java · OOP · JUnit · Docker · Kubernetes · GCP · REST APIs · University Teaching",
+    skills: "Software Systems · Software Architecture & Design",
   },
   {
-    title: ".NET Software Developer Intern",
+    title: ".NET Software Developer (Internship)",
     location: "Toronto, Ontario, Canada",
     company: {
       name: "FGF Brands",
       url: "https://www.fgfbrands.com/",
     },
     period: "May 2023 – Aug 2023",
-    skills:
-      "C# · .NET Framework · ASP.NET MVC · SQL Server · Git · Microsoft Azure",
+    team: "Enablement Operations",
+    skills: "Full Stack Development · DevOps · Automation",
   },
   {
-    title: "Backend Developer Intern",
+    title: "Backend Developer (Internship)",
     location: "Ottawa, Ontario, Canada",
     company: {
       name: "Lockheed Martin",
       url: "https://www.lockheedmartin.com/en-ca/",
     },
     period: "Sep 2022 – Apr 2023",
-    skills:
-      "JavaScript · REST APIs · PostgreSQL · Express.js · Node.js · Git · Docker",
+    team: "Rotary & Mission Systems - Training & Sustainment",
+    skills: "Backend Development · Relational Databases · NLP",
   },
 ];
 
@@ -62,38 +97,42 @@ export default function ExperienceComponent() {
   return (
     <section id="experience" className="experience-section">
       <div className="experience-container">
-        <h2 className="experience-heading">
-          <strong>Experience</strong>
-        </h2>
+        <div className="experience-header">
+          <h2 className="experience-heading">
+            <strong>Experience</strong>
+          </h2>
+        </div>
 
-        <ul className="timeline">
+        <ul className="career-track">
           {experienceItems.map((item, idx) => (
-            <li
-              key={item.title}
-              className="timeline-item"
-              data-aos={idx % 2 ? "fade-left" : "fade-right"}
-            >
-              <span className="timeline-badge">
-                <i className={`fas fa-${item.icon}`} aria-hidden="true" />
-              </span>
+            <li key={item.title} className="career-item" data-aos="fade-up">
+              <div className="career-meta">
+                <p className="career-period">{item.period}</p>
+                <h3 className="career-company">
+                  <a href={item.company.url} target="_blank" rel="noreferrer">
+                    {item.company.name}
+                  </a>
+                </h3>
+                <p className="career-location">{item.location}</p>
+              </div>
 
-              <div className="timeline-panel">
-                <h3 className="timeline-title">{item.title}</h3>
-                <h4 className="timeline-location">{item.location}</h4>
+              <div className="career-details">
+                <h4 className="career-title">{item.title}</h4>
+                <div className="career-extra">
+                  {item.team ? (
+                    <p className="career-extra-row">
+                      <strong>Team:&nbsp;</strong>
+                      <span>{item.team}</span>
+                    </p>
+                  ) : null}
 
-                <span className="timeline-company">
-                  <strong>
-                    <a href={item.company.url} target="_blank" rel="noreferrer">
-                      {item.company.name}
-                    </a>
-                  </strong>{" "}
-                  | {item.period}
-                </span>
-
-                <p className="timeline-skills">
-                  <strong>Skills:&nbsp;</strong>
-                  {item.skills}
-                </p>
+                  {item.skills ? (
+                    <p className="career-extra-row">
+                      <strong>Skills:&nbsp;</strong>
+                      <span>{item.skills}</span>
+                    </p>
+                  ) : null}
+                </div>
               </div>
             </li>
           ))}

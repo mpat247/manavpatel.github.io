@@ -1,150 +1,176 @@
-/* ─────────────────────────────────────────────────────────────
-   COLOUR TOKENS – must exist in :root (index.css)
-   ------------------------------------------------------------ */
-:root {
-  --edu-bg: var(--bg-darker);
-  --edu-card-bg: #2a2a2a;
-  --edu-blue: var(--accent-color);
-  --edu-blue-2: var(--accent-hover);
-  --edu-text: var(--text-light);
-}
-
-/* ─────────── Section wrapper ─────────── */
 .education-section {
-  background: var(--edu-bg);
-  color: var(--edu-text);
-  padding: 60px 1rem 80px;
+  background: var(--panel-bg);
+  padding: 32px;
 }
 
 .edu-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* ─────────── Headings ─────────── */
+.edu-header {
+  margin-bottom: 20px;
+}
+
+.edu-label {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
 .edu-heading {
-  text-align: center;
-  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin: 0;
+  font-size: clamp(1.9rem, 3.6vw, 2.5rem);
   font-weight: 700;
-  margin-bottom: 3.5rem;
-  color: var(--edu-text);
+  color: var(--secondary-color);
 }
 
 .courses-heading {
-  text-align: center;
-  font-size: 1.6rem;
-  margin: 60px 0 25px;
+  margin: 0 0 18px;
+  font-size: 1.25rem;
+  color: var(--secondary-color);
 }
 
-/* ─────────── Cards row ─────────── */
 .edu-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
 .edu-card {
-  background: var(--edu-card-bg);
-  border-radius: 10px;
-  padding: 26px 28px 30px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
   text-align: left;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
   text-decoration: none;
-  color: var(--edu-text);
+  color: var(--text-primary);
 }
 
 .edu-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent-color);
+  background: #f7fbff;
 }
 
 .edu-card h3 {
-  font-size: 1.25rem;
-  margin: 0 0 6px;
-  color: var(--edu-blue);
+  font-size: 1.1rem;
+  margin: 0 0 7px;
+  color: var(--secondary-color);
 }
 
 .edu-card h4 {
-  font-size: 1.05rem;
+  font-size: 0.96rem;
   margin: 0 0 8px;
-  color: #cccccc;
+  color: var(--text-primary);
 }
 
 .edu-card h5 {
-  font-size: 0.95rem;
-  margin: 0 0 12px;
-  color: #cccccc;
+  font-size: 0.92rem;
+  margin: 0 0 10px;
+  color: var(--text-muted);
+}
+
+.edu-specialization {
+  margin: 0 0 8px;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.edu-specialization strong {
+  color: var(--secondary-color);
 }
 
 .edu-card p {
   margin: 0 0 6px;
-  font-size: 0.9rem;
-  color: #bbbbbb;
+  font-size: 0.88rem;
+  color: var(--text-muted);
 }
 
-/* ─────────── Tabs ─────────── */
+.courses-panel {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 20px;
+}
+
 .course-tabs {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 32px;
+  gap: 10px;
+  margin-bottom: 18px;
 }
 
 .tab {
-  padding: 8px 18px;
+  padding: 8px 14px;
   background: transparent;
-  border: 2px solid var(--edu-blue);
-  border-radius: 30px;
-  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.9rem;
   cursor: pointer;
-  color: var(--edu-blue);
-  transition: background 0.25s, color 0.25s;
+  color: var(--secondary-color);
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
 }
 
 .tab.active,
 .tab:hover {
-  background: var(--edu-blue);
-  color: #fff;
+  background: #f2f7ff;
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
-/* ─────────── Course grid ─────────── */
+.tab:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 .course-grid {
   display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .course-tile {
-  display: flex;
+  display: grid;
+  grid-template-columns: 30px 1fr;
   align-items: center;
-  gap: 14px;
-  padding: 14px 18px;
-  background: var(--edu-card-bg);
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   text-decoration: none;
-  color: var(--edu-text);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.course-tile img {
-  width: 40px;
-  height: 40px;
-}
-
-.course-tile span {
-  font-size: 0.95rem;
-  line-height: 1.35;
+  color: var(--text-primary);
+  transition:
+    border-color 0.2s,
+    background 0.2s;
 }
 
 .course-tile:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  border-color: var(--accent-color);
+  background: #f7fbff;
 }
 
-/* ─────────── Responsive tweaks ─────────── */
-@media (max-width: 640px) {
-  .edu-card {
-    text-align: center;
+.course-tile img {
+  width: 24px;
+  height: 24px;
+}
+
+.course-tile span {
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .education-section {
+    padding: 22px;
   }
 }

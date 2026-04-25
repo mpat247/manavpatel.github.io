@@ -26,7 +26,7 @@ const skillGroups = [
         <polyline points="8 6 2 12 8 18" />
       </svg>
     ),
-    text: "Python · Java · JavaScript · TypeScript · Go · C · C# · SQL · HTML/CSS",
+    text: "Python · TypeScript · Java · C# · C++ · C · Go · SQL · HTML/CSS",
   },
   {
     title: "Frameworks / Libraries",
@@ -47,7 +47,7 @@ const skillGroups = [
         <polyline points="2 12 12 17 22 12" />
       </svg>
     ),
-    text: "Express.js · React.js · Next.js · Node.js · FastAPI · Flask · Django · ASP.NET · JUnit · Selenium · TestNG · gRPC",
+    text: "Node.js (Express) · Django · FastAPI · Spring Boot · ASP.NET Core & MVC · React · Next.js · NumPy · Pandas · PyTorch · TensorFlow · Scikit-learn · OpenCV · FAISS · Hugging Face · LangChain · Matplotlib · gRPC · Flask · JUnit · Selenium · Jest · PyTest",
   },
   {
     title: "Machine Learning",
@@ -75,7 +75,7 @@ const skillGroups = [
         <line x1="1" y1="14" x2="4" y2="14" />
       </svg>
     ),
-    text: "PyTorch · TensorFlow · Keras · NumPy · Pandas · Scikit-learn · Matplotlib · Langchain · Ollama · Hugging Face",
+    text: "PyTorch · TensorFlow · Keras · NumPy · Pandas · Scikit-learn · Matplotlib · LangChain · Ollama · Hugging Face",
   },
   {
     title: "Data",
@@ -97,7 +97,7 @@ const skillGroups = [
         <path d="M3 17c0 1.66 4.03 3 9 3s9-1.34 9-3" />
       </svg>
     ),
-    text: "PostgreSQL · MongoDB · MySQL · SQL Server · Hive · Hadoop · Spark · BigQuery · Elasticsearch · Redis",
+    text: "PostgreSQL · MongoDB · MySQL · SQL Server · Redis · Neo4j · OneStream · BigQuery · Hive · Hadoop · Spark · Elasticsearch",
   },
   {
     title: "DevOps & Tools",
@@ -116,17 +116,21 @@ const skillGroups = [
         <path d="M14.7 6.3a5.5 5.5 0 0 0-7.4 7.4l-4.2 4.2a2 2 0 0 0 2.8 2.8l4.2-4.2a5.5 5.5 0 0 0 7.4-7.4l-2.1-2.1z" />
       </svg>
     ),
-    text: "Docker · Kubernetes · Google Cloud Platform · Amazon Web Services · Azure · GitHub Actions · Git",
+    text: "AWS · GCP · Azure · Docker · Kubernetes · CI/CD (GitHub Actions) · NGINX · Git · GitHub · Postman · VS Code · IntelliJ · Eclipse",
   },
 ];
 
 export default function SkillsComponent() {
+  const skillItems = (text) => text.split(" · ");
+
   return (
     <section id="skills" className="skills-section">
       <div className="skills-container">
-        <h2 className="skills-heading">
-          <strong>Skills</strong>
-        </h2>
+        <div className="skills-header">
+          <h2 className="skills-heading">
+            <strong>Skills</strong>
+          </h2>
+        </div>
 
         <div className="skills-grid">
           {skillGroups.map(({ title, icon, text }) => (
@@ -135,7 +139,11 @@ export default function SkillsComponent() {
                 {icon}
                 {title}
               </h4>
-              <p>{text}</p>
+              <ul>
+                {skillItems(text).map((item) => (
+                  <li key={`${title}-${item}`}>{item}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

@@ -47,11 +47,13 @@ export default function ResumesComponent() {
   return (
     <section id="resumes" className="resumes-section">
       <div className="resumes-container">
-        <h2 className="resumes-heading">
-          <strong>Resumes</strong>
-        </h2>
+        <div className="resumes-header">
+          <p className="resumes-label">Resumes</p>
+          <h2 className="resumes-heading">
+            <strong>Resumes</strong>
+          </h2>
+        </div>
 
-        {/* ── tabs ───────────────────────────────── */}
         <ul className="resume-tabs">
           {resumes.map((r) => (
             <li key={r.id}>
@@ -68,7 +70,6 @@ export default function ResumesComponent() {
           ))}
         </ul>
 
-        {/* ── viewer ─────────────────────────────── */}
         <div className="pdf-frame">
           {current?.file ? (
             <Document
@@ -91,9 +92,8 @@ export default function ResumesComponent() {
           {error && <p className="error-text">Failed to load: {error}</p>}
         </div>
 
-        {/* ── download ───────────────────────────── */}
         {current?.file && (
-          <p className="download-wrap">
+          <div className="resume-actions">
             <a
               href={`/files/${current.file}`}
               target="_blank"
@@ -102,7 +102,7 @@ export default function ResumesComponent() {
             >
               Download&nbsp;PDF
             </a>
-          </p>
+          </div>
         )}
       </div>
     </section>
