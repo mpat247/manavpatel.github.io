@@ -5,7 +5,7 @@ export default function AboutComponent() {
   return (
     <section id="about" className="about-section">
       <div className="about-container">
-        <div className="about-label-col">
+        <div className="about-header">
           <h2 className="about-heading">
             <strong>About&nbsp;Me</strong>
           </h2>
@@ -14,9 +14,9 @@ export default function AboutComponent() {
         <div className="about-text-panel">
           <div className="about-text">
             <p>
-              I’m <strong>Manav&nbsp;Patel</strong>, a software engineer with
-              hands-on experience across backend systems, machine learning, and
-              data-focused engineering. I completed my{" "}
+              Hi, I’m <strong>Manav&nbsp;Patel</strong>, a software engineer
+              with hands-on experience across backend systems, machine learning,
+              and data-focused engineering. I completed my{" "}
               <a
                 href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/"
                 target="_blank"

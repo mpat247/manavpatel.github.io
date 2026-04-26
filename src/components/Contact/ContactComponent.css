@@ -6,17 +6,13 @@
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.contact-label {
-  margin: 0 0 8px;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
+.contact-intro {
+  text-align: center;
 }
 
 .contact-heading {
@@ -98,7 +94,6 @@
   }
 
   .contact-container {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 12px;
   }
 }

@@ -26,7 +26,7 @@ const skillGroups = [
         <polyline points="8 6 2 12 8 18" />
       </svg>
     ),
-    text: "Python · TypeScript · Java · C# · C++ · C · Go · SQL · HTML/CSS",
+    text: "Python · TypeScript · Java · C# · C++ · C · Go · Bash · SQL · HTML/CSS",
   },
   {
     title: "Frameworks / Libraries",
@@ -47,7 +47,7 @@ const skillGroups = [
         <polyline points="2 12 12 17 22 12" />
       </svg>
     ),
-    text: "Node.js (Express) · Django · FastAPI · Spring Boot · ASP.NET Core & MVC · React · Next.js · NumPy · Pandas · PyTorch · TensorFlow · Scikit-learn · OpenCV · FAISS · Hugging Face · LangChain · Matplotlib · gRPC · Flask · JUnit · Selenium · Jest · PyTest",
+    text: "Node.js (Express) · FastAPI · Spring Boot · ASP.NET Core & MVC · React · Next.js · OpenCV · FAISS · gRPC · Flask · JUnit · Selenium · Jest · PyTest",
   },
   {
     title: "Machine Learning",
@@ -97,7 +97,7 @@ const skillGroups = [
         <path d="M3 17c0 1.66 4.03 3 9 3s9-1.34 9-3" />
       </svg>
     ),
-    text: "PostgreSQL · MongoDB · MySQL · SQL Server · Redis · Neo4j · OneStream · BigQuery · Hive · Hadoop · Spark · Elasticsearch",
+    text: "PostgreSQL · MongoDB · MySQL · SQL Server · Redis · OneStream · BigQuery",
   },
   {
     title: "DevOps & Tools",

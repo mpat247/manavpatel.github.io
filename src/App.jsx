@@ -18,10 +18,10 @@ export default function App() {
         <HeroComponent />
         <AboutComponent />
         <ExperienceComponent />
-        <EducationComponent />
         <SkillsComponent />
-        <ProjectsComponent />
+        <EducationComponent />
         <PublicationsComponent />
+        <ProjectsComponent />
         {/* <ResumesComponent /> */}
         <ContactComponent />
         <FooterComponent />

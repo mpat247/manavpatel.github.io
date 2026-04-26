@@ -85,6 +85,18 @@ const courses = [
     url: "https://omscs.gatech.edu/cs-7642-reinforcement-learning",
     track: "msc",
   },
+  {
+    name: "Robotics",
+    icon: "/images/robotics.png",
+    url: "https://omscs.gatech.edu/cs-7638-robotics-ai-techniques",
+    track: "msc",
+  },
+  {
+    name: "Research",
+    icon: "/images/research.webp",
+    url: "https://omscs.gatech.edu/cs-8803-o24-intro-research",
+    track: "msc",
+  },
 
   /* ——— Graduate (MEng) ——— */
   {

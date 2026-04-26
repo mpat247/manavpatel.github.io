@@ -18,10 +18,10 @@ const links = [
   { id: "hero", label: "Intro", icon: <BsHouseDoor /> },
   { id: "about", label: "About", icon: <BsPerson /> },
   { id: "experience", label: "Experience", icon: <BsBriefcase /> },
-  { id: "education", label: "Education", icon: <BsMortarboard /> },
   { id: "skills", label: "Skills", icon: <BsCodeSlash /> },
-  { id: "projects", label: "Projects", icon: <BsFolder /> },
+  { id: "education", label: "Education", icon: <BsMortarboard /> },
   { id: "publications", label: "Publications", icon: <BsJournalText /> },
+  { id: "projects", label: "Projects", icon: <BsFolder /> },
   { id: "contact", label: "Contact", icon: <BsEnvelope /> },
 ];
 
