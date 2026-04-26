@@ -115,7 +115,10 @@ const experienceItems = [
     period: "May 2023 – Aug 2023",
     team: "Enablement Operations",
     skills: "Full Stack Development · DevOps · Automation",
-    projects: ["Internal Automation Tools"],
+    projects: [
+      "Workflow Management Portal (WMP)",
+      "Process Execution Platform (PEP)",
+    ],
     points: [
       "Enhanced ERP tools for 1,500+ employees across 6 facilities, improving reliability by 30% through optimized APIs and supply chain workflows.",
       "Developed ASP.NET and Kendo UI dashboards, resolving user-reported issues and driving a 25% efficiency gain across internal operations.",
@@ -132,6 +135,7 @@ const experienceItems = [
     period: "Sep 2022 – Apr 2023",
     team: "Rotary & Mission Systems - Training & Sustainment",
     skills: "Backend Development · Relational Databases · NLP",
+    projects: ["Emergency Response Tool", "Training Needs Analysis Platform"],
     points: [
       "Built REST APIs with Express.js and designed PostgreSQL schemas for a submarine emergency response platform and an internal training system.",
       "Designed an NLP pipeline to convert training manuals into structured KSA data, reducing manual parsing and accelerating training development.",
