@@ -181,7 +181,7 @@ export default function HeroComponent() {
             <BsGithub />
           </a>
           <a
-            href="mailto:manav1.patel@torontomu.ca"
+            href="mailto:manavpatel.dev@gmail.com"
             className="hero-icon"
             aria-label="Email"
           >

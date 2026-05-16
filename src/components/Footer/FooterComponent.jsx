@@ -49,7 +49,7 @@ export default function FooterComponent() {
         </li>
 
         <li>
-          <a href="mailto:manav1.patel@torontomu.ca">
+          <a href="mailto:manavpatel.dev@gmail.com">
             <BsEnvelopeFill />
           </a>
         </li>

@@ -18,7 +18,7 @@ const education = [
     specialization: "Computing Systems (OMSCS)",
     school: "Georgia Institute of Technology",
     url: "https://www.omscs.gatech.edu/specialization-computing-systems",
-    period: "Incoming Jam 2027",
+    period: "Incoming Jan 2027",
   },
   {
     degree: "Master of Engineering (MEng)",

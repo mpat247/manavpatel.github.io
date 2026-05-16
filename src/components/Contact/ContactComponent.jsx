@@ -21,7 +21,7 @@ export default function ContactComponent() {
     // basic validation
     if (!form.name || !form.email || !form.message) return;
 
-    const mailto = `mailto:manav1.patel@torontomu.ca
+    const mailto = `mailto:manavpatel.dev@gmail.com
            ?subject=Portfolio%20Contact%20-%20${encodeURIComponent(form.name)}
            &body=${encodeURIComponent(
              form.message + "\n\nFrom: " + form.email,
@@ -37,7 +37,7 @@ export default function ContactComponent() {
           <h2 className="contact-heading">
             <strong>Contact&nbsp;Me</strong>
           </h2>
-          <p className="contact-email">manav1.patel@torontomu.ca</p>
+          <p className="contact-email">manavpatel.dev@gmail.com</p>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
