@@ -12,6 +12,7 @@ import "./EducationComponent.css";
 /* ――― data -------------------------------------------------- */
 
 const education = [
+  /*
   {
     degree: "Master of Science (MS)",
     program: "Computer Science",
@@ -20,6 +21,7 @@ const education = [
     url: "https://www.omscs.gatech.edu/specialization-computing-systems",
     period: "Incoming Jan 2027",
   },
+  */
   {
     degree: "Master of Engineering (MEng)",
     program: "Electrical & Computer Engineering",
@@ -42,7 +44,8 @@ const education = [
 
 /* course list */
 const courses = [
-  /* ——— Master of Science (MS) ——— */
+  /*
+  // ——— Master of Science (MS) ———
   {
     name: "Advanced Operating Systems",
     icon: "/images/aopsys.png",
@@ -97,6 +100,7 @@ const courses = [
     url: "https://omscs.gatech.edu/cs-8803-o24-intro-research",
     track: "msc",
   },
+  */
 
   /* ——— Graduate (MEng) ——— */
   {
@@ -276,7 +280,7 @@ export default function EducationComponent() {
           <div className="course-tabs">
             {[
               { id: "all", label: "All" },
-              { id: "msc", label: "MSc" },
+              /* { id: "msc", label: "MSc" }, */
               { id: "meng", label: "MEng" },
               { id: "beng", label: "BEng" },
             ].map((t) => (

@@ -38,7 +38,8 @@ export default function AboutComponent() {
                   Engineering)
                 </strong>
               </a>{" "}
-              at Toronto&nbsp;Metropolitan&nbsp;University. I’m an incoming{" "}
+              at Toronto&nbsp;Metropolitan&nbsp;University.
+              {/* I’m an incoming MS Computer Science (Computing Systems) student at Georgia Tech.
               <a
                 href="https://www.omscs.gatech.edu/specialization-computing-systems"
                 target="_blank"
@@ -48,7 +49,7 @@ export default function AboutComponent() {
                   MS&nbsp;Computer&nbsp;Science&nbsp;(Computing&nbsp;Systems)
                 </strong>
               </a>{" "}
-              student at Georgia&nbsp;Tech.
+              student at Georgia&nbsp;Tech. */}
             </p>
 
             <p>
@@ -87,8 +88,8 @@ export default function AboutComponent() {
 
             <p>
               Feel free to reach out at&nbsp;
-              <a href="mailto:manav1.patel@torontomu.ca">
-                manav1.patel@torontomu.ca
+              <a href="mailto:manavpatel.dev@gmail.com">
+                manavpatel.dev@gmail.com
               </a>
               .
             </p>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap");
 
 :root {
   --accent-color: #1f4f8f;
@@ -13,7 +13,7 @@
   --border-color: #d4dbe5;
   --timeline-line: #c7d0dc;
 
-  font-family: "Poppins", "Roboto", system-ui, sans-serif;
+  font-family: "DM Sans", system-ui, sans-serif;
   background: #cdd6e2;
   color: var(--text-primary);
   scroll-behavior: smooth;
@@ -29,4 +29,8 @@ body {
   margin: 0;
   background: #cdd6e2;
   color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
 }
