@@ -9,7 +9,7 @@ const publications = [
     venue: "EUSiPCO 2026",
     venueUrl: "https://eusipco2026.org/",
     year: "2026",
-    status: "Submitted · In Review",
+    status: "Submitted · Accepted",
     expandable: true,
     previewImage: "/images/contextmar.png",
     previewAlt: "ContextMAR project preview",
