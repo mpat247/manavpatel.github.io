@@ -3,6 +3,7 @@ import "./ExperienceComponent.css";
 
 const experienceItems = [
   {
+    id: "lockheed-martin-software-engineer",
     title: "Software Engineer (Full-Time)",
     location: "Ottawa, Ontario, Canada",
     company: {
@@ -11,11 +12,39 @@ const experienceItems = [
     },
     period: "June 2026 – Present",
     team: "Naval Systems",
-    // skills:
-    //   "Software Development · Data Integrations · Data Engineering · OneStream ",
+    points: [
+      "Develop distributed Java backend services and inter-process messaging for CMS 330 on the Canadian Surface Combatant (CSC), spanning combat-system and naval simulation software across ship subsystems.",
+      "Validate service interactions through integration testing and system-level verification across system and simulation software.",
+      "Maintain code quality and build reliability using GitLab source control, Jenkins CI, SonarQube analysis, and Linux virtual machines.",
+      "Create behavioral UML models in CAMEO Systems Modeler, including activity and sequence diagrams, to document software behavior and component interactions.",
+    ],
   },
   {
-    title: "Intermediate Application Developer (Contract)",
+    id: "tmu-cvip-ml-research",
+    title: "ML Research Assistant",
+    location: "Toronto, Ontario, Canada",
+    company: {
+      name: "CVIP Lab – Toronto Metropolitan University",
+      url: "https://www.torontomu.ca/electrical-computer-biomedical/research/#!accordion-1578519133634-computer-vision-and-image-processing--cvip--laboratory",
+    },
+    period: "May 2025 – Aug 2026",
+    team: "Computer Vision & Image Processing (CVIP) Lab",
+    skills: "Machine Learning · Image Processing · Computer Vision · Medical Imaging",
+    points: [
+      "Engineered HDF5 pipelines for 100K+ CT images, improving experimental throughput ~67% via parallel loading and checkpointing.",
+      "Built 2 CT metal artifact-reduction models with CNN, Transformer, and GAN architectures, achieving ~48 dB PSNR and ~0.99 SSIM.",
+      "Benchmarked 15+ variants through ablations, quantifying gains from cross-window attention and physics-guided supervision.",
+      "Paper 1: ContextMAR: Transformer-Based Multi-Scale Framework for Metal Artifact Reduction in CT Imaging - EUSIPCO 2026",
+      "Paper 2: TransMAR-GAN: A Transformer and GAN Framework for High-Fidelity MAR in CT Imaging - IEEE TBME (Under Review)",
+    ],
+    projects: [
+      "ContextMAR",
+      "TransMAR-GAN",
+    ],
+  },
+  {
+    id: "linamar-application-developer",
+    title: "Application Developer",
     location: "Guelph, Ontario, Canada",
     company: {
       name: "Linamar Corp.",
@@ -24,10 +53,10 @@ const experienceItems = [
     period: "Aug 2025 – May 2026",
     team: "Financial Systems",
     points: [
-      "Designed and implemented data integration and ETL pipelines across multiple enterprise systems, consolidating and transforming data into OneStream for downstream financial processing, and optimized workflows through batching and parallelization to reduce runtime by ~92%.",
-      "Built an in-house CI/CD and version control solution for OneStream, automating 100% of deployment workflows and eliminating manual release processes.",
-      "Designed and implemented a reusable structured logging system for OneStream pipelines, improving observability and enabling faster debugging and issue resolution in production workflows.",
-      "Owned end-to-end development of features as the primary developer on the team, driving design, implementation, and deployment of internal systems.",
+      "Delivered VB.NET and REST API integrations across IFS Cloud, SAP, and OneStream, automating sales imports for 135+ entities.",
+      "Automated OneStream business-rule deployments with CI/CD and GitHub source control, eliminating manual deployment steps.",
+      "Prototyped a C# and SQL admin dashboard for user permissions, license usage, and workflow submission tracking.",
+      "Documented integration rules and led two knowledge-transfer sessions for ongoing maintenance and entity onboarding.",
     ],
     projects: [
       "OneStream ETL Pipeline",
@@ -36,77 +65,67 @@ const experienceItems = [
     ],
   },
   {
-    title: "ML Research Assistant (Thesis)",
-    location: "Toronto, Ontario, Canada",
-    company: {
-      name: "CVIP Lab – Toronto Metropolitan University",
-      url: "https://www.torontomu.ca/electrical-computer-biomedical/research/#!accordion-1578519133634-computer-vision-and-image-processing--cvip--laboratory",
-    },
-    period: "May 2025 – Apr 2026",
-    team: "Computer Vision & Image Processing (CVIP) Lab",
-    skills:
-      "Machine Learning · Image Processing · Computer Vision · Medical Imaging",
-    points: [
-      "Implemented and enhanced machine learning models for metal artifact reduction in CT imaging, reducing noise and imaging artifacts across multiple medical imaging datasets.",
-      "Engineered large-scale data processing pipelines for 100K+ CT image samples, enabling efficient training and evaluation of machine learning models.",
-      "Accelerated experimental throughput by optimizing training pipelines through parallel data loading, checkpointing, and logging, achieving up to ~67% faster training across repeated experiments.",
-    ],
-    projects: ["ContextMAR", "TransMAR-GAN"],
-  },
-  {
-    title: "AI Agent Developer – NLP & Mental Health (Volunteer)",
+    id: "unity-health-ai-data-science-research",
+    title: "AI/Data Science Research Assistant",
     location: "Toronto, Ontario, Canada",
     company: {
       name: "Unity Health Toronto",
       url: "https://unityhealth.to/",
     },
-    period: "Oct 2025 – Jan 2026",
+    period: "Sep 2025 – Feb 2026",
     skills: "Data Science · NLP · AI Agents · Mental Health Research",
     points: [
-      "Built interpretable ML models (Logistic Regression, Random Forest, XGBoost, LightGBM) on 68K+ survey samples, applying population weighting, compact feature sets, and PR-AUC-driven selection to handle highly imbalanced clinical outcomes.",
-      "Developed a reproducible, config-driven ML pipeline for data ingestion, preprocessing, training, calibration, and explainability (SHAP, PDPs), enabling robust evaluation and publication-ready results.",
+      "Processed 45,000+ adult NSDUH records and 2,300+ variables with recoding, imputation, feature alignment, and leakage controls.",
+      "Reduced 2,300+ variables using LASSO, Elastic Net, RFE, and RFECV into compact 6-, 10-, and 19-feature screening tiers.",
+      "Trained Logistic Regression, Random Forest, XGBoost, and LightGBM using survey weights, stratified 5-fold CV, and held-out testing.",
+      "Optimized screening thresholds for high recall, achieving ROC-AUC ~0.93, sensitivity ~0.91, and NPV ~0.99, and implemented SHAP.",
+      "Built a reproducible publication pipeline and co-authored a JAMIA manuscript, currently under peer review.",
     ],
   },
   {
-    title: "Software Engineer (Part-Time)",
+    id: "cashly-software-developer",
+    title: "Software Developer",
     location: "Oakville, Ontario, Canada",
     company: {
       name: "Cashly Inc.",
       url: "https://gocashly.io/",
     },
-    period: "Sept 2024 – Feb 2026",
+    period: "Sep 2024 – Jan 2026",
     team: "Mortgage Tech Services",
-    skills:
-      "Full-Stack Development · Artificial Intelligence · SaaS · Start-up",
+    skills: "Full-Stack Development · Artificial Intelligence · SaaS · Start-up",
     projects: [
       "CRM Migration & System Rebuild",
       "AI-Driven Communication Platform",
       "Customer Data Processing & Automation Pipelines",
     ],
     points: [
-      "Automated data extraction from PDFs, emails, forms, and transcripts by using Python scripts and LangChain in n8n, cutting manual effort by 60%.",
-      "Designed and built a multi-channel outreach dialer (phone, email, chat) using Twilio and Gmail APIs, increasing lead contact rates by ~3x.",
-      "Migrated legacy CRM to a Next.js + Supabase stack to reduce technical debt; deployed and maintained the production application on AWS EC2.",
-      "Implemented CI/CD pipelines using GitHub Actions to automate builds and deployments, reducing release time from ~3 hours to ~2 minutes.",
+      "Modernized a full-stack CRM using Next.js, React, TypeScript, and Supabase/PostgreSQL for sales and outreach workflows.",
+      "Integrated Supabase authentication, Google OAuth, and server-side session handling with protected routes.",
+      "Orchestrated Kanban, campaign, and dialer workflows with Twilio, Gmail APIs, and WebSockets, driving ~3× lead engagement.",
+      "Streamlined document and transcript processing with Python, LangChain, and n8n, reducing manual effort by 60%.",
     ],
   },
   {
-    title: "Graduate Teaching Assistant (Part-Time)",
+    id: "tmu-graduate-teaching-assistant",
+    title: "Graduate Teaching Assistant",
     location: "Toronto, Ontario, Canada",
     company: {
       name: "Toronto Metropolitan University",
       url: "https://www.torontomu.ca",
     },
     period: "Sep 2024 – Apr 2025",
-    skills:
-      "SDLC · System Design · Object-Oriented Programming · Full-Stack Engineering · University Teaching · Public Speaking",
-    courses: ["Software Systems", "Software Design & Architecture"],
+    skills: "SDLC · System Design · Object-Oriented Programming · Full-Stack Engineering · University Teaching · Public Speaking",
+    courses: [
+      "Software Systems",
+      "Software Design & Architecture",
+    ],
     points: [
-      "Led Java OOP and software architecture labs, providing hands-on instruction in debugging, deployment, and best practices using technologies such as Tomcat, MySQL, Kubernetes, Docker, and Google Cloud for 75+ students.",
+      "Led tutorials and labs for 100+ students in Software Systems and Software Design & Architecture courses.",
     ],
   },
   {
-    title: ".NET Software Developer (Internship)",
+    id: "fgf-brands-software-developer",
+    title: "Software Developer",
     location: "Toronto, Ontario, Canada",
     company: {
       name: "FGF Brands",
@@ -120,13 +139,13 @@ const experienceItems = [
       "Process Execution Platform (PEP)",
     ],
     points: [
-      "Enhanced ERP tools for 1,500+ employees across 6 facilities, improving reliability by 30% through optimized APIs and supply chain workflows.",
-      "Developed ASP.NET and Kendo UI dashboards, resolving user-reported issues and driving a 25% efficiency gain across internal operations.",
-      "Automated dataset refreshes using SQL Server jobs and stored procedures, removing manual syncs and ensuring real-time company reporting.",
+      "Shipped ASP.NET features and 20+ Kendo UI components across 50+ forms supporting workflows at 12 bakeries.",
+      "Created 15+ .NET APIs using C# and SQL Server for an application managing 1,000+ assets, inventory, and orders.",
     ],
   },
   {
-    title: "Backend Developer (Internship)",
+    id: "lockheed-martin-software-developer",
+    title: "Software Developer",
     location: "Ottawa, Ontario, Canada",
     company: {
       name: "Lockheed Martin",
@@ -135,11 +154,14 @@ const experienceItems = [
     period: "Sep 2022 – Apr 2023",
     team: "Rotary & Mission Systems - Training & Sustainment",
     skills: "Backend Development · Relational Databases · NLP",
-    projects: ["Emergency Response Tool", "Training Needs Analysis Platform"],
+    projects: [
+      "Emergency Response Tool",
+      "Training Needs Analysis Platform",
+    ],
     points: [
-      "Built REST APIs with Express.js and designed PostgreSQL schemas for a submarine emergency response platform and an internal training system.",
-      "Designed an NLP pipeline to convert training manuals into structured KSA data, reducing manual parsing and accelerating training development.",
-      "Integrated a reinforcement learning model to auto-score KSAs based on skill difficulty, importance, and frequency (DIF), for personalized training.",
+      "Implemented React interfaces and Node.js/Express APIs backed by PostgreSQL for an emergency-response tool for CSC ship.",
+      "Engineered an NLP pipeline to extract knowledge, skills, and abilities from 10+ manuals for training-needs analysis.",
+      "Built a Jest/Puppeteer regression suite with 60+ automated tests and 90%+ coverage, identifying 15+ defects across core workflows.",
     ],
   },
 ];
@@ -147,8 +169,8 @@ const experienceItems = [
 export default function ExperienceComponent() {
   const [openRole, setOpenRole] = useState(null);
 
-  const toggleRole = (title) => {
-    setOpenRole((current) => (current === title ? null : title));
+  const toggleRole = (id) => {
+    setOpenRole((current) => (current === id ? null : id));
   };
 
   return (
@@ -162,13 +184,13 @@ export default function ExperienceComponent() {
 
         <ul className="career-track">
           {experienceItems.map((item) => (
-            <li key={item.title} className="career-item" data-aos="fade-up">
+            <li key={item.id} className="career-item" data-aos="fade-up">
               {item.points?.length || item.projects?.length ? (
                 <button
                   type="button"
                   className="career-toggle"
-                  onClick={() => toggleRole(item.title)}
-                  aria-expanded={openRole === item.title}
+                  onClick={() => toggleRole(item.id)}
+                  aria-expanded={openRole === item.id}
                 >
                   <div className="career-meta">
                     <p className="career-period">{item.period}</p>
@@ -262,7 +284,7 @@ export default function ExperienceComponent() {
                 </div>
               )}
 
-              {openRole === item.title ? (
+              {openRole === item.id ? (
                 <div className="career-expanded">
                   {item.points?.length ? (
                     <ul className="career-points">
