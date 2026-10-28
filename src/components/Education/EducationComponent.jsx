@@ -44,6 +44,12 @@ const education = [
 const courses = [
   // ——— Planned Master of Science (MS) coursework ———
   {
+    name: "Intro to Graduate Algorithms",
+    icon: "/images/dsa.png",
+    url: "https://omscs.gatech.edu/cs-6515-intro-graduate-algorithms",
+    track: "msc",
+  },
+  {
     name: "Advanced Operating Systems",
     icon: "/images/aopsys.png",
     url: "https://omscs.gatech.edu/cs-6210-advanced-operating-systems",

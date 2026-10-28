@@ -18,7 +18,6 @@ export default function ProjectsComponent() {
             </span>
             <h3>Under Revamp</h3>
             <p>
-              I’m refreshing this space with selected software and ML/AI projects.
               Explore my work on GitHub in the meantime.
             </p>
             <a
