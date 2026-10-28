@@ -1,8 +1,8 @@
 /* ─────────────────────────────────────────────────────────────
    EducationComponent
    -------------------------------------------------------------
-   Shows two education cards (MEng + BEng) and a tabbed grid of
-   “Relevant Courses” (All · MEng · BEng).
+   Shows education cards (MS + MEng + BEng) and a tabbed grid of
+   “Relevant Courses” (All · MSCS · MEng · BEng).
    The tab system is a tiny React useState – no Bootstrap needed.
    ─────────────────────────────────────────────────────────── */
 
@@ -12,7 +12,6 @@ import "./EducationComponent.css";
 /* ――― data -------------------------------------------------- */
 
 const education = [
-  /*
   {
     degree: "Master of Science (MS)",
     program: "Computer Science",
@@ -21,7 +20,6 @@ const education = [
     url: "https://www.omscs.gatech.edu/specialization-computing-systems",
     period: "Incoming Jan 2027",
   },
-  */
   {
     degree: "Master of Engineering (MEng)",
     program: "Electrical & Computer Engineering",
@@ -44,8 +42,7 @@ const education = [
 
 /* course list */
 const courses = [
-  /*
-  // ——— Master of Science (MS) ———
+  // ——— Planned Master of Science (MS) coursework ———
   {
     name: "Advanced Operating Systems",
     icon: "/images/aopsys.png",
@@ -100,7 +97,6 @@ const courses = [
     url: "https://omscs.gatech.edu/cs-8803-o24-intro-research",
     track: "msc",
   },
-  */
 
   /* ——— Graduate (MEng) ——— */
   {
@@ -266,7 +262,7 @@ export default function EducationComponent() {
                 {e.specialization}
               </p>
               <h5>{e.school}</h5>
-              <p>{e.location}</p>
+              {e.location ? <p>{e.location}</p> : null}
               <p>{e.period}</p>
             </a>
           ))}
@@ -277,10 +273,16 @@ export default function EducationComponent() {
             <strong>Relevant Courses</strong>
           </h3>
 
+          {(tab === "all" || tab === "msc") && (
+            <p className="courses-note">
+              Georgia Tech MSCS courses are planned coursework.
+            </p>
+          )}
+
           <div className="course-tabs">
             {[
               { id: "all", label: "All" },
-              /* { id: "msc", label: "MSc" }, */
+              { id: "msc", label: "MSCS (Planned)" },
               { id: "meng", label: "MEng" },
               { id: "beng", label: "BEng" },
             ].map((t) => (

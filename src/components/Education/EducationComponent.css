@@ -34,6 +34,13 @@
   color: var(--secondary-color);
 }
 
+.courses-note {
+  margin: -8px 0 18px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
 .edu-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

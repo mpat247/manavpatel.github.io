@@ -1,8 +1,8 @@
 /* ─────────────────────────────────────────────────────────────
    SkillsComponent
    -------------------------------------------------------------
-   Categories: Languages · Frameworks/Libraries · Machine
-   Learning · Data · DevOps & Tools
+   Categories: Languages · Frameworks/Testing · ML/AI · Data ·
+   Cloud, DevOps, & Tools
    ─────────────────────────────────────────────────────────── */
 
 import "./SkillsComponent.css";
@@ -26,10 +26,10 @@ const skillGroups = [
         <polyline points="8 6 2 12 8 18" />
       </svg>
     ),
-    text: "Python · TypeScript · Java · C# · C++ · C · Go · Bash · SQL · HTML/CSS",
+    text: "Java · Python · TypeScript · JavaScript · C# · C++ · C · SQL",
   },
   {
-    title: "Frameworks / Libraries",
+    title: "Frameworks / Testing",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -47,10 +47,10 @@ const skillGroups = [
         <polyline points="2 12 12 17 22 12" />
       </svg>
     ),
-    text: "Node.js (Express) · FastAPI · Spring Boot · ASP.NET Core & MVC · React · Next.js · OpenCV · FAISS · gRPC · Flask · JUnit · Selenium · Jest · PyTest",
+    text: "React · Node.js · Express.js · FastAPI · .NET · ASP.NET Core/MVC · Flask · Spring Boot · JUnit · Jest · pytest",
   },
   {
-    title: "Machine Learning",
+    title: "ML / AI",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ const skillGroups = [
         <line x1="1" y1="14" x2="4" y2="14" />
       </svg>
     ),
-    text: "PyTorch · TensorFlow · Keras · NumPy · Pandas · Scikit-learn · Matplotlib · LangChain · Ollama · Hugging Face",
+    text: "PyTorch · TensorFlow · scikit-learn · XGBoost · LightGBM · Hugging Face · Sentence Transformers · spaCy · OpenCV · FAISS · LangChain",
   },
   {
     title: "Data",
@@ -97,10 +97,10 @@ const skillGroups = [
         <path d="M3 17c0 1.66 4.03 3 9 3s9-1.34 9-3" />
       </svg>
     ),
-    text: "PostgreSQL · MongoDB · MySQL · SQL Server · Redis · OneStream · BigQuery",
+    text: "PostgreSQL · MongoDB · MySQL · SQL Server · Redis · BigQuery · Qdrant",
   },
   {
-    title: "DevOps & Tools",
+    title: "Cloud, DevOps, & Tools",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ const skillGroups = [
         <path d="M14.7 6.3a5.5 5.5 0 0 0-7.4 7.4l-4.2 4.2a2 2 0 0 0 2.8 2.8l4.2-4.2a5.5 5.5 0 0 0 7.4-7.4l-2.1-2.1z" />
       </svg>
     ),
-    text: "AWS · GCP · Azure · Docker · Kubernetes · CI/CD (GitHub Actions) · NGINX · Git · GitHub · Postman · VS Code · IntelliJ · Eclipse",
+    text: "AWS · Azure · GCP · Docker · Kubernetes · Git · CI/CD · Jenkins · SonarQube · Jira · Postman · Visual Studio · VS Code",
   },
 ];
 
