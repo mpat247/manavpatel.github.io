@@ -14,46 +14,38 @@ export default function AboutComponent() {
         <div className="about-text-panel">
           <div className="about-text">
             <p>
-              Hi, I’m <strong>Manav</strong>, a software engineer with hands-on
-              experience in backend systems, machine learning, and data-focused
-              engineering. I completed my{" "}
+              Hi, I’m <strong>Manav</strong>!
+            </p>
+
+            <p>
+              I’m an{" "}
               <a
                 href="https://www.torontomu.ca/engineering-architectural-science/programs/graduate-programs/electrical-computer-engineering-graduate-programs/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <strong>
-                  MEng&nbsp;in&nbsp;Electrical&nbsp;&amp;&nbsp;Computer
-                  &nbsp;Engineering&nbsp;(Artificial&nbsp;Intelligence)
+                  MEng&nbsp;in&nbsp;Electrical&nbsp;&amp;&nbsp;Computer&nbsp;Engineering&nbsp;(Artificial&nbsp;Intelligence)
                 </strong>
               </a>{" "}
-              and my{" "}
+              and{" "}
               <a
                 href="https://www.torontomu.ca/programs/undergraduate/computer-engineering/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <strong>
-                  BEng&nbsp;in&nbsp;Computer&nbsp;Engineering&nbsp;(Software
-                  Engineering)
+                  BEng&nbsp;in&nbsp;Computer&nbsp;Engineering&nbsp;(Software&nbsp;Engineering)
                 </strong>
               </a>{" "}
-              at Toronto&nbsp;Metropolitan&nbsp;University.
-              {/* I’m an incoming MS Computer Science (Computing Systems) student at Georgia Tech.
-              <a
-                href="https://www.omscs.gatech.edu/specialization-computing-systems"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <strong>
-                  MS&nbsp;Computer&nbsp;Science&nbsp;(Computing&nbsp;Systems)
-                </strong>
-              </a>{" "}
-              student at Georgia&nbsp;Tech. */}
+              graduate from Toronto&nbsp;Metropolitan&nbsp;University (formerly
+              Ryerson&nbsp;University), with experience in software engineering and
+              applied ML research across the aerospace &amp; defence, healthcare,
+              manufacturing, and fintech industries.
             </p>
 
             <p>
-              I’m currently a Software Engineer at &nbsp;
+              I’m currently a Software Engineer at{" "}
               <a
                 href="https://www.lockheedmartin.com/en-ca/"
                 target="_blank"
@@ -61,33 +53,35 @@ export default function AboutComponent() {
               >
                 Lockheed&nbsp;Martin
               </a>{" "}
-              , and I also contribute to ML research and applied AI work through{" "}
+              and an incoming{" "}
               <a
-                href="https://www.torontomu.ca"
+                href="https://www.omscs.gatech.edu/specialization-computing-systems"
                 target="_blank"
                 rel="noreferrer"
               >
-                Toronto&nbsp;Metropolitan&nbsp;University
+                <strong>MSCS</strong>
               </a>{" "}
-              and{" "}
-              <a
-                href="https://unityhealth.to/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Unity&nbsp;Health&nbsp;Toronto
-              </a>
-              .
+              student at Georgia&nbsp;Tech, specializing in Computing Systems.
             </p>
 
             <p>
-              I’m open to contract, freelance, part-time, or casual
-              opportunities, as well as collaborations in software engineering,
-              backend development, and machine learning.
+              I’m interested in research opportunities in applied ML/AI,
+              particularly multimodal AI, AI agents and LLM applications, and
+              trustworthy and secure ML. I’m interested in exploring adjacent
+              research areas and applying ML/AI methods and solutions across new
+              domains.
             </p>
 
             <p>
-              Feel free to reach out at&nbsp;
+              I’m also open to part-time, hourly, or project-based independent
+              contracting opportunities in software engineering, backend/API
+              development, ML/AI engineering, data and automation pipelines,
+              systems integration, internal tooling, technical R&amp;D, and other
+              ad hoc technical work.
+            </p>
+
+            <p>
+              Please feel free to reach out at&nbsp;
               <a href="mailto:manavpatel.dev@gmail.com">
                 manavpatel.dev@gmail.com
               </a>
