@@ -97,6 +97,7 @@ export default function PublicationsComponent() {
                   <button
                     type="button"
                     className="publication-expand-toggle"
+                    aria-expanded={openPublicationTitle === publication.title}
                     onClick={() => togglePublicationDetails(publication.title)}
                   >
                     View More

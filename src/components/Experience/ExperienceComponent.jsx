@@ -168,140 +168,46 @@ const experienceItems = [
 
 export default function ExperienceComponent() {
   const [openRole, setOpenRole] = useState(null);
-
-  const toggleRole = (id) => {
-    setOpenRole((current) => (current === id ? null : id));
-  };
+  const toggleRole = (id) => setOpenRole((current) => current === id ? null : id);
 
   return (
     <section id="experience" className="experience-section">
       <div className="experience-container">
         <div className="experience-header">
-          <h2 className="experience-heading">
-            <strong>Experience</strong>
-          </h2>
+          <h2 className="experience-heading"><strong>Experience</strong></h2>
         </div>
-
         <ul className="career-track">
           {experienceItems.map((item) => (
-            <li key={item.id} className="career-item" data-aos="fade-up">
-              {item.points?.length || item.projects?.length ? (
-                <button
-                  type="button"
-                  className="career-toggle"
-                  onClick={() => toggleRole(item.id)}
-                  aria-expanded={openRole === item.id}
-                >
-                  <div className="career-meta">
-                    <p className="career-period">{item.period}</p>
-                    <h3 className="career-company">
-                      <a
-                        href={item.company.url}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {item.company.name}
-                      </a>
-                    </h3>
-                    <p className="career-location">{item.location}</p>
+            <li key={item.id} className="career-item">
+              <div className="career-summary">
+                <div className="career-meta">
+                  <p className="career-period">{item.period}</p>
+                  <h3 className="career-company">
+                    <a href={item.company.url} target="_blank" rel="noreferrer">{item.company.name}</a>
+                  </h3>
+                  <p className="career-location">{item.location}</p>
+                </div>
+                <div className="career-details">
+                  <h4 className="career-title">{item.title}</h4>
+                  <div className="career-extra">
+                    {item.team && <p className="career-extra-row"><strong>Team: </strong><span>{item.team}</span></p>}
+                    {item.courses?.length > 0 && <p className="career-extra-row"><strong>Courses: </strong><span>{item.courses.join(" · ")}</span></p>}
+                    {item.skills && <p className="career-extra-row"><strong>Skills: </strong><span>{item.skills}</span></p>}
                   </div>
-
-                  <div className="career-details">
-                    <div className="career-title-row">
-                      <h4 className="career-title">{item.title}</h4>
-                      <span
-                        className="career-toggle-indicator"
-                        aria-hidden="true"
-                      />
-                    </div>
-
-                    <div className="career-extra">
-                      {item.team ? (
-                        <p className="career-extra-row">
-                          <strong>Team:&nbsp;</strong>
-                          <span>{item.team}</span>
-                        </p>
-                      ) : null}
-
-                      {item.courses?.length ? (
-                        <p className="career-extra-row">
-                          <strong>Courses:&nbsp;</strong>
-                          <span>{item.courses.join(" · ")}</span>
-                        </p>
-                      ) : null}
-
-                      {item.skills ? (
-                        <p className="career-extra-row">
-                          <strong>Skills:&nbsp;</strong>
-                          <span>{item.skills}</span>
-                        </p>
-                      ) : null}
-                    </div>
-                  </div>
-                </button>
-              ) : (
-                <div className="career-toggle career-toggle-static">
-                  <div className="career-meta">
-                    <p className="career-period">{item.period}</p>
-                    <h3 className="career-company">
-                      <a
-                        href={item.company.url}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {item.company.name}
-                      </a>
-                    </h3>
-                    <p className="career-location">{item.location}</p>
-                  </div>
-
-                  <div className="career-details">
-                    <h4 className="career-title">{item.title}</h4>
-
-                    <div className="career-extra">
-                      {item.team ? (
-                        <p className="career-extra-row">
-                          <strong>Team:&nbsp;</strong>
-                          <span>{item.team}</span>
-                        </p>
-                      ) : null}
-
-                      {item.courses?.length ? (
-                        <p className="career-extra-row">
-                          <strong>Courses:&nbsp;</strong>
-                          <span>{item.courses.join(" · ")}</span>
-                        </p>
-                      ) : null}
-
-                      {item.skills ? (
-                        <p className="career-extra-row">
-                          <strong>Skills:&nbsp;</strong>
-                          <span>{item.skills}</span>
-                        </p>
-                      ) : null}
-                    </div>
-                  </div>
+                  <button className="career-details-toggle" type="button"
+                    onClick={() => toggleRole(item.id)} aria-expanded={openRole === item.id}
+                    aria-controls={`details-${item.id}`}>
+                    <span>{openRole === item.id ? "Hide details" : "View details"}</span>
+                    <span aria-hidden="true">{openRole === item.id ? "−" : "+"}</span>
+                  </button>
+                </div>
+              </div>
+              {openRole === item.id && (
+                <div className="career-expanded" id={`details-${item.id}`}>
+                  {item.points?.length > 0 && <ul className="career-points">{item.points.map((point) => <li key={point}>{point}</li>)}</ul>}
+                  {item.projects?.length > 0 && <div className="career-projects"><strong>Key Projects: </strong><span>{item.projects.join(" · ")}</span></div>}
                 </div>
               )}
-
-              {openRole === item.id ? (
-                <div className="career-expanded">
-                  {item.points?.length ? (
-                    <ul className="career-points">
-                      {item.points.map((point) => (
-                        <li key={point}>{point}</li>
-                      ))}
-                    </ul>
-                  ) : null}
-
-                  {item.projects?.length ? (
-                    <div className="career-projects">
-                      <strong>Key Projects:&nbsp;</strong>
-                      <span>{item.projects.join(" · ")}</span>
-                    </div>
-                  ) : null}
-                </div>
-              ) : null}
             </li>
           ))}
         </ul>

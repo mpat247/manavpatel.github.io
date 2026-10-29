@@ -1,0 +1,90 @@
+:root {
+  --paper:#fcfcfc; --ink:#15191e; --muted:#747c87; --accent:#234fe8;
+  --line:#e0e3e7; --line-strong:#aeb5bf; --wash:#f1f4f9; --selection:#d7e0ff;
+  --sans:"IBM Plex Sans",sans-serif; --display:"IBM Plex Sans",sans-serif; --mono:"IBM Plex Mono",monospace;
+}
+.portfolio-nav { position:sticky; top:0; z-index:20; width:100%; padding:0 max(48px,calc((100% - 1180px)/2)); min-height:76px; background:var(--paper); }
+.nav-monogram { display:none; }
+.nav-fullname { display:block; font-size:15px; font-weight:600; letter-spacing:-.04em; }
+.nav-links { gap:20px; }
+.nav-link { font-family:var(--mono); font-size:10px; padding:28px 0; position:relative; }
+.nav-link.active::after { content:""; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--accent); }
+.nav-mail { border:1px solid var(--line-strong); padding:8px 11px; font-family:var(--mono); font-size:10px; }
+.portfolio-hero { padding:78px 0 68px; display:grid; grid-template-columns:minmax(0,1fr) 330px; align-items:end; gap:24px 40px; }
+.hero-profession { grid-column:1/-1; margin:0 0 6px; color:var(--accent); font-size:11px; }
+.hero-name { font-size:clamp(65px,7vw,104px); font-weight:500; letter-spacing:-.075em; white-space:nowrap; }
+.hero-disciplines { font-family:var(--mono); font-size:12px; line-height:2; margin:0 0 5px; padding-left:26px; border-left:2px solid var(--accent); }
+.hero-socials { grid-column:1/-1; border-top:1px solid var(--line); padding-top:22px; gap:30px; }
+.hero-socials a { font-family:var(--mono); font-size:10px; }
+.hero-scroll { display:none; }
+.portfolio-main { counter-reset:section; }
+.portfolio-main > section:not(.portfolio-hero) { padding:50px 0; counter-increment:section; }
+.portfolio-site :is(.about-heading,.experience-heading,.skills-heading,.edu-heading,.publications-heading,.projects-heading,.contact-heading) { font-size:20px; color:var(--ink); text-transform:none; letter-spacing:-.025em; font-weight:500; display:flex; gap:18px; align-items:baseline; }
+.portfolio-site :is(.about-heading,.experience-heading,.skills-heading,.edu-heading,.publications-heading,.projects-heading,.contact-heading)::before { content:"0" counter(section); color:var(--accent); font-family:var(--mono); font-size:10px; font-weight:400; letter-spacing:0; }
+.portfolio-site .about-text { margin-left:47px; max-width:850px; columns:2; column-gap:42px; }
+.portfolio-site .about-text p { font-size:14px; line-height:1.85; break-inside:avoid; }
+.portfolio-site .about-text p:first-child { font-size:23px; font-weight:500; letter-spacing:-.04em; }
+.portfolio-site .about-text p:first-child strong { font-weight:500; }
+.career-summary { padding:24px; grid-template-columns:255px minmax(0,1fr); }
+.portfolio-site .career-item { border-left:1px solid var(--line); border-right:1px solid var(--line); }
+.portfolio-site .career-item:hover { background:var(--wash); }
+.portfolio-site .career-period { color:var(--accent); font-size:10px; }
+.portfolio-site .career-title { font-size:20px; }
+.portfolio-site .career-expanded { padding:0 30px 30px 311px; }
+.career-details-toggle { font-family:var(--mono); font-size:10px; }
+.portfolio-site .skill-box { padding:20px 24px; border-left:1px solid var(--line); border-right:1px solid var(--line); grid-template-columns:255px minmax(0,1fr); }
+.portfolio-site .skill-box h4 { font-family:var(--mono); font-size:11px; }
+.portfolio-site .skill-box li { font-size:13px; color:var(--ink); }
+.portfolio-site .edu-cards { border:1px solid var(--line); }
+.portfolio-site .edu-card,.portfolio-site .edu-card:first-child { padding:25px; }
+.portfolio-site .edu-card h3 { font-size:17px; }
+.portfolio-site .edu-card p:last-child { font-family:var(--mono); font-size:10px; color:var(--accent); margin-top:16px; }
+.portfolio-site .course-tabs { gap:0; }
+.portfolio-site .tab { border-right:0; font-family:var(--mono); font-size:10px; }
+.portfolio-site .tab:last-child { border-right:1px solid var(--line); }
+.portfolio-site .tab.active { background:var(--accent); border-color:var(--accent); }
+.portfolio-site .course-tile { padding:16px; border:1px solid var(--line); margin-right:-1px; margin-bottom:-1px; }
+.portfolio-site .course-tile span { font-size:12px; }
+.portfolio-site .publications-list { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+.portfolio-site .publication-item { border-top:2px solid var(--ink); padding-top:24px; }
+.portfolio-site .publication-item:first-child { border-top:2px solid var(--ink); }
+.portfolio-site .publication-title { font-size:24px; line-height:1.4; font-weight:500; letter-spacing:-.04em; }
+.portfolio-site .publication-status { color:var(--accent); font-family:var(--mono); font-size:10px; }
+.portfolio-site .projects-revamp { padding:30px; border:1px solid var(--line); border-left:3px solid var(--accent); }
+.portfolio-site .projects-revamp h3 { font-size:34px; font-weight:500; letter-spacing:-.05em; }
+.portfolio-site .projects-revamp-link { font-family:var(--mono); font-size:10px; }
+.portfolio-site .contact-container { display:grid; grid-template-columns:1fr 1fr; gap:60px; }
+.portfolio-site .contact-email { margin-top:38px; font-size:25px; font-weight:400; letter-spacing:-.04em; }
+.portfolio-site .contact-form { padding:0; }
+.portfolio-site .submit-btn { background:var(--accent); font-family:var(--mono); font-size:10px; }
+@media(max-width:1000px) {
+  .portfolio-nav { padding:0 36px; }
+  .nav-links { gap:12px; }
+  .portfolio-hero { grid-template-columns:1fr 240px; gap:24px; }
+  .hero-name { font-size:70px; }
+  .hero-disciplines { font-size:10px; padding-left:20px; }
+  .career-summary { grid-template-columns:200px minmax(0,1fr); }
+  .portfolio-site .career-expanded { padding-left:256px; }
+  .portfolio-site .skill-box { grid-template-columns:200px minmax(0,1fr); }
+}
+@media(max-width:720px) {
+  .portfolio-nav { width:100%; padding:0 20px; min-height:68px; }
+  .nav-link { font-size:11px; padding:12px 0; }
+  .nav-link.active::after { content:none; }
+  .portfolio-hero { display:block; padding:52px 0 36px; }
+  .hero-name { white-space:normal; font-size:72px; margin:24px 0; }
+  .hero-name span { display:block; }
+  .hero-name span + span::before { content:none; }
+  .hero-disciplines { max-width:300px; font-size:11px; margin:24px 0; }
+  .hero-socials { gap:24px; padding-top:14px; }
+  .portfolio-main > section:not(.portfolio-hero) { padding:36px 0; }
+  .portfolio-site .about-text { columns:1; margin-left:0; }
+  .career-summary { padding:22px 18px; grid-template-columns:1fr; gap:18px; }
+  .portfolio-site .career-expanded { padding:0 18px 24px; }
+  .portfolio-site .skill-box { padding:20px 18px; grid-template-columns:1fr; gap:12px; }
+  .portfolio-site .edu-card,.portfolio-site .edu-card:first-child { padding:22px 18px; }
+  .portfolio-site .publications-list { grid-template-columns:1fr; gap:20px; }
+  .portfolio-site .contact-container { grid-template-columns:1fr; gap:30px; }
+  .portfolio-site .contact-email { margin-top:20px; }
+  .portfolio-site .projects-revamp { padding:25px 20px; }
+}

@@ -294,6 +294,8 @@ export default function EducationComponent() {
             ].map((t) => (
               <button
                 key={t.id}
+                type="button"
+                aria-pressed={tab === t.id}
                 onClick={() => setTab(t.id)}
                 className={tab === t.id ? "tab active" : "tab"}
               >
