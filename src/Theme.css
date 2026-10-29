@@ -1,0 +1,104 @@
+:root {
+  --paper:#20211e; --ink:#e7e7df; --muted:#9a9d91; --accent:#b0c29b;
+  --line:#3a3c34; --line-strong:#666b5a; --wash:#282a24; --selection:#566147;
+  --sans:"DM Sans",sans-serif; --display:"Lora",Georgia,serif; --mono:"IBM Plex Mono",monospace;
+  color-scheme:dark;
+}
+.portfolio-site { width:min(1120px,calc(100% - 112px)); margin:0 auto; display:grid; grid-template-columns:200px minmax(0,1fr); gap:90px; align-items:start; }
+.portfolio-nav { position:sticky; top:72px; display:flex; flex-direction:column; align-items:flex-start; width:100%; margin:72px 0 0; padding:0; min-height:calc(100dvh - 144px); border:0; gap:0; }
+.nav-monogram { display:none; }
+.nav-fullname { display:block; font-family:var(--display); font-size:23px; font-weight:400; letter-spacing:-.04em; }
+.nav-role { display:block; margin:10px 0 34px; font-size:11px; color:var(--muted); }
+.nav-links { display:flex; flex-direction:column; align-items:flex-start; margin:0; gap:2px; }
+.nav-link { font-size:11px; gap:14px; padding:10px 0; }
+.nav-number { display:inline; font-family:var(--mono); font-size:9px; color:var(--line-strong); }
+.nav-link.active { color:var(--ink); }
+.nav-link.active .nav-number { color:var(--accent); }
+.nav-mail { display:flex; margin-top:38px; font-size:11px; color:var(--accent); }
+.portfolio-main { width:100%; margin:0; min-width:0; }
+.portfolio-hero { padding:76px 0 47px; }
+.hero-profession { font-size:10px; letter-spacing:.04em; margin-bottom:23px; color:var(--accent); }
+.hero-name { font-family:var(--display); font-size:68px; letter-spacing:-.06em; font-weight:400; }
+.hero-disciplines { font-size:12px; line-height:1.9; max-width:360px; margin:24px 0 20px; }
+.hero-socials { gap:22px; }
+.hero-socials a { font-size:10px; color:var(--muted); }
+.hero-socials a > svg:first-child { display:none; }
+.hero-socials a > svg:last-child { width:9px; }
+.hero-scroll { display:none; }
+.portfolio-main > section:not(.portfolio-hero) { padding:40px 0; }
+.portfolio-site :is(.about-header,.experience-header,.skills-header,.edu-header,.publications-header,.projects-header) { margin-bottom:28px; }
+.portfolio-site :is(.about-heading,.experience-heading,.skills-heading,.edu-heading,.publications-heading,.projects-heading,.contact-heading) { font-family:var(--mono); font-size:10px; font-weight:400; letter-spacing:.06em; }
+.portfolio-site .about-text p { font-family:var(--display); font-size:15px; line-height:1.9; color:#d0d2c6; margin-bottom:24px; }
+.portfolio-site .about-text p:first-child { font-size:28px; color:var(--ink); }
+.portfolio-site .about-text a { color:var(--ink); text-decoration-color:var(--line-strong); }
+.career-summary { grid-template-columns:145px minmax(0,1fr); gap:25px; padding:24px 0; }
+.portfolio-site .career-period { font-size:9px; }
+.portfolio-site .career-company { font-size:13px; font-weight:500; }
+.portfolio-site .career-location { font-size:10px; }
+.portfolio-site .career-title { font-size:17px; line-height:1.5; }
+.portfolio-site .career-extra-row { font-size:10px; line-height:1.9; }
+.career-details-toggle { font-size:10px; padding-top:12px; }
+.portfolio-site .career-expanded { padding-left:170px; }
+.portfolio-site .career-points li { font-size:12px; line-height:1.9; color:#d0d2c6; }
+.portfolio-site .career-projects { font-size:10px; }
+.portfolio-site .skill-box { grid-template-columns:145px minmax(0,1fr); gap:25px; padding:19px 0; }
+.portfolio-site .skill-box h4 { font-size:11px; font-weight:400; color:var(--ink); }
+.portfolio-site .skill-box li { font-size:11px; color:#bec2b3; }
+.portfolio-site .edu-cards { grid-template-columns:1fr; margin-bottom:30px; }
+.portfolio-site .edu-card,.portfolio-site .edu-card:first-child { padding:24px 0; border:0; border-bottom:1px solid var(--line); }
+.portfolio-site .edu-card:last-child { border:0; }
+.portfolio-site .edu-card h3 { font-family:var(--display); font-size:20px; font-weight:400; }
+.portfolio-site .edu-card h4 { font-size:12px; }
+.portfolio-site .edu-card h5 { font-size:11px; font-weight:400; }
+.portfolio-site .edu-card p { font-size:10px; }
+.portfolio-site .edu-card p:last-child { font-family:var(--mono); font-size:9px; }
+.portfolio-site .courses-heading { font-size:14px; }
+.portfolio-site .courses-note { font-size:10px; }
+.portfolio-site .tab { font-size:10px; padding:7px 10px; }
+.portfolio-site .course-grid { grid-template-columns:1fr 1fr; }
+.portfolio-site .course-tile span { font-size:10px; }
+.portfolio-site .publication-title { font-family:var(--display); font-size:23px; line-height:1.6; letter-spacing:-.025em; }
+.portfolio-site .publication-meta { font-size:9px; }
+.portfolio-site .publication-status,.portfolio-site .publication-expand-toggle { font-size:10px; }
+.portfolio-site .projects-revamp { padding:24px 0; }
+.portfolio-site .projects-revamp h3 { font-family:var(--display); font-size:32px; }
+.portfolio-site .projects-revamp p { font-size:12px; }
+.portfolio-site .projects-revamp-link { font-size:10px; }
+.portfolio-site .projects-revamp-badge { font-size:9px; }
+.portfolio-site .contact-email { font-size:26px; font-family:var(--display); }
+.portfolio-site .contact-form { grid-template-columns:1fr; gap:22px; }
+.portfolio-site .contact-form label { font-size:10px; }
+.portfolio-site .contact-form input,.portfolio-site .contact-form textarea { font-size:13px; }
+.portfolio-site .submit-btn { background:var(--accent); color:var(--paper); font-size:11px; }
+.portfolio-site .footer-copy { font-size:9px; }
+.portfolio-site .footer-social a { font-size:13px; }
+@media(max-width:1050px) {
+  .portfolio-site { width:calc(100% - 80px); grid-template-columns:160px minmax(0,1fr); gap:50px; }
+  .hero-name { font-size:60px; }
+  .career-summary { grid-template-columns:120px minmax(0,1fr); gap:22px; }
+  .portfolio-site .career-expanded { padding-left:142px; }
+  .portfolio-site .skill-box { grid-template-columns:120px minmax(0,1fr); gap:22px; }
+}
+@media(max-width:800px) {
+  .portfolio-site { display:block; width:calc(100% - 40px); max-width:650px; }
+  .portfolio-nav { position:relative; top:0; min-height:70px; width:100%; margin:0; flex-direction:row; flex-wrap:wrap; align-items:center; border-bottom:1px solid var(--line); }
+  .nav-fullname { font-size:20px; }
+  .nav-role,.nav-mail { display:none; }
+  .nav-menu { display:flex; margin-left:auto; }
+  .nav-links { display:none; width:100%; flex-direction:initial; padding:12px 0 24px; grid-template-columns:1fr 1fr; }
+  .nav-links.is-open { display:grid; }
+  .nav-link { font-size:12px; }
+  .portfolio-hero { padding:52px 0 36px; }
+  .hero-name { font-size:62px; }
+  .portfolio-main > section:not(.portfolio-hero) { padding:36px 0; }
+}
+@media(max-width:550px) {
+  .portfolio-site .about-text p { font-size:14px; }
+  .career-summary { grid-template-columns:1fr; gap:16px; }
+  .portfolio-site .career-expanded { padding-left:0; }
+  .portfolio-site .career-company { font-size:15px; }
+  .portfolio-site .career-title { font-size:18px; }
+  .portfolio-site .career-points li { font-size:12px; }
+  .portfolio-site .skill-box { grid-template-columns:1fr; gap:12px; }
+  .portfolio-site .skill-box h4 { font-size:12px; }
+}

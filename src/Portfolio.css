@@ -1,0 +1,175 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; -webkit-font-smoothing: antialiased; }
+button, input, textarea { font: inherit; }
+button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; }
+button { cursor: pointer; }
+::selection { background: var(--selection); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.portfolio-site { --accent-color: var(--accent); --accent-hover: var(--ink); --secondary-color: var(--ink); --text-primary: var(--ink); --text-muted: var(--muted); --border-color: var(--line); --panel-bg: transparent; }
+.portfolio-main { width: min(1120px, calc(100% - 96px)); margin: 0 auto; }
+.skip-link { position: fixed; top: -80px; left: 20px; z-index: 100; padding: 12px 20px; background: var(--ink); color: var(--paper); }
+.skip-link:focus { top: 16px; }
+.portfolio-nav { width: min(1280px, calc(100% - 96px)); min-height: 88px; margin: 0 auto; display: flex; align-items: center; gap: 32px; border-bottom: 1px solid var(--line); }
+.nav-brand { text-decoration: none; display: flex; align-items: center; flex-shrink: 0; }
+.nav-monogram { font-family: var(--display); font-size: 38px; line-height: 1; letter-spacing: -3px; }
+.nav-fullname, .nav-role, .nav-number { display: none; }
+.nav-links { display: flex; align-items: center; justify-content: center; gap: 22px; margin-left: auto; }
+.nav-link { display: flex; align-items: center; gap: 12px; font-size: 12px; text-decoration: none; color: var(--muted); padding: 12px 0; transition: color .15s; }
+.nav-link:hover, .nav-link.active { color: var(--accent); }
+.nav-mail { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; text-decoration: none; }
+.nav-menu { display: none; border: 0; color: var(--ink); background: transparent; padding: 8px; font-size: 24px; }
+.portfolio-hero { position: relative; padding: 96px 0 62px; border-bottom: 0; }
+.hero-profession { margin: 0 0 26px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+.hero-name { margin: 0; font-family: var(--display); font-size: clamp(76px, 10vw, 142px); font-weight: 400; letter-spacing: -.065em; line-height: .98; }
+.hero-name span { display: inline; }
+.hero-name span + span::before { content: " "; }
+.hero-disciplines { margin: 30px 0; font-size: 16px; color: var(--muted); line-height: 1.8; }
+.hero-socials { display: flex; flex-wrap: wrap; gap: 24px; }
+.hero-socials a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-size: 13px; padding: 8px 0; }
+.hero-socials a:hover { color: var(--accent); }
+.hero-socials a > svg:last-child { width: 11px; }
+.hero-scroll { position: absolute; right: 0; bottom: 70px; font-size: 12px; text-decoration: none; color: var(--muted); display: flex; gap: 28px; }
+.portfolio-main > section:not(.portfolio-hero) { padding: 64px 0; border-top: 1px solid var(--line); background: transparent; border-radius: 0; scroll-margin-top: 36px; }
+.portfolio-site :is(.about-container,.experience-container,.skills-container,.edu-container,.publications-container,.projects-container,.contact-container) { max-width: none; margin: 0; }
+.portfolio-site :is(.about-header,.experience-header,.skills-header,.edu-header,.publications-header,.projects-header,.contact-intro) { text-align: left; margin: 0 0 30px; }
+.portfolio-site :is(.about-heading,.experience-heading,.skills-heading,.edu-heading,.publications-heading,.projects-heading,.contact-heading) { font-family: var(--sans); font-size: 12px; font-weight: 500; line-height: 1.5; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+.portfolio-site :is(.about-heading,.experience-heading,.skills-heading,.edu-heading,.publications-heading,.projects-heading,.contact-heading) strong { font-weight: inherit; }
+.portfolio-site h3,.portfolio-site h4,.portfolio-site h5 { font-family: var(--sans); }
+.portfolio-site .about-text-panel { padding: 0; border: 0; border-radius: 0; background: transparent; }
+.portfolio-site .about-text { max-width: 780px; }
+.portfolio-site .about-text p { margin: 0 0 22px; font-size: 16px; line-height: 1.85; color: var(--ink); }
+.portfolio-site .about-text p:first-child { font-family: var(--display); font-size: 32px; line-height: 1.4; letter-spacing: -.025em; margin-bottom: 24px; }
+.portfolio-site .about-text p:first-child strong { font-weight: 400; }
+.portfolio-site .about-text p:last-child { margin-bottom: 0; }
+.portfolio-site .about-text a { color: inherit; text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 4px; transition: color .15s; }
+.portfolio-site .about-text a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.portfolio-site .about-text a strong { font-weight: 500; }
+.portfolio-site .career-track { gap: 0; }
+.portfolio-site .career-item { border: 0; border-radius: 0; border-bottom: 1px solid var(--line); background: transparent; overflow: visible; }
+.portfolio-site .career-item:first-child { border-top: 1px solid var(--line); }
+.career-summary { display: grid; grid-template-columns: 230px minmax(0,1fr); gap: 32px; padding: 27px 0; }
+.portfolio-site .career-period { font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--muted); line-height: 1.6; margin: 0 0 12px; }
+.portfolio-site .career-company { font-size: 15px; line-height: 1.5; margin: 0 0 5px; font-weight: 600; }
+.portfolio-site .career-company a { color: var(--ink); }
+.portfolio-site .career-company a:hover { color: var(--accent); }
+.portfolio-site .career-location { font-size: 11px; line-height: 1.5; color: var(--muted); }
+.portfolio-site .career-title { font-size: 19px; line-height: 1.45; font-weight: 500; margin: 0 0 13px; letter-spacing: -.02em; }
+.portfolio-site .career-extra { gap: 6px; }
+.portfolio-site .career-extra-row { font-size: 12px; color: var(--muted); line-height: 1.7; }
+.portfolio-site .career-extra-row strong { color: var(--muted); font-weight: 500; }
+.career-details-toggle { display: inline-flex; align-items: center; gap: 22px; border: 0; background: transparent; padding: 14px 0 0; color: var(--accent); font-size: 11px; }
+.career-details-toggle span:last-child { font-size: 17px; line-height: 1; }
+.portfolio-site .career-expanded { border: 0; padding: 0 0 28px 262px; }
+.portfolio-site .career-points { margin: 0; gap: 12px; padding-left: 16px; }
+.portfolio-site .career-points li { font-size: 13px; line-height: 1.85; padding-left: 3px; }
+.portfolio-site .career-points li::marker { color: var(--accent); }
+.portfolio-site .career-projects { margin-top: 22px; padding-top: 15px; border-color: var(--line); font-size: 11px; line-height: 1.8; color: var(--muted); }
+.portfolio-site .career-projects strong { font-weight: 500; }
+.portfolio-site .skills-grid { gap: 0; }
+.portfolio-site .skill-box { grid-template-columns: 230px minmax(0,1fr); padding: 22px 0; gap: 32px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; align-items: start; }
+.portfolio-site .skill-box:first-child { border-top: 1px solid var(--line); }
+.portfolio-site .skill-box h4 { font-size: 13px; font-weight: 500; line-height: 1.7; }
+.portfolio-site .skill-box h4 svg { display: none; }
+.portfolio-site .skill-box ul { gap: 6px 18px; }
+.portfolio-site .skill-box li { padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.portfolio-site .edu-cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; margin-bottom: 42px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.portfolio-site .edu-card { padding: 25px 22px; border: 0; border-right: 1px solid var(--line); border-radius: 0; background: transparent; }
+.portfolio-site .edu-card:first-child { padding-left: 0; }
+.portfolio-site .edu-card:last-child { border-right: 0; }
+.portfolio-site .edu-card:hover { background: var(--wash); }
+.portfolio-site .edu-card h3 { font-size: 16px; line-height: 1.5; font-weight: 500; margin-bottom: 10px; }
+.portfolio-site .edu-card h4 { font-size: 13px; font-weight: 400; line-height: 1.6; }
+.portfolio-site .edu-card h5 { font-size: 12px; font-weight: 500; line-height: 1.6; margin-top: 14px; color: var(--ink); }
+.portfolio-site .edu-card p { font-size: 11px; line-height: 1.7; color: var(--muted); }
+.portfolio-site .edu-specialization strong { font-weight: 400; }
+.portfolio-site .courses-panel { border: 0; border-radius: 0; background: transparent; padding: 0; }
+.portfolio-site .courses-heading { font-size: 16px; font-weight: 500; margin-bottom: 18px; }
+.portfolio-site .courses-heading strong { font-weight: inherit; }
+.portfolio-site .courses-note { font-size: 11px; }
+.portfolio-site .course-tabs { gap: 8px; margin-bottom: 24px; }
+.portfolio-site .tab { border: 1px solid var(--line); border-radius: 0; font-size: 11px; color: var(--muted); background: transparent; padding: 8px 12px; }
+.portfolio-site .tab.active,.portfolio-site .tab:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.portfolio-site .course-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; }
+.portfolio-site .course-tile { grid-template-columns: 1fr; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 14px 14px 14px 0; min-height: 52px; gap: 0; background: transparent; }
+.portfolio-site .course-tile:hover { color: var(--accent); background: var(--wash); border-color: var(--line-strong); }
+.portfolio-site .course-tile img { display: none; }
+.portfolio-site .course-tile span { font-size: 11px; line-height: 1.6; }
+.portfolio-site .publications-list { gap: 0; }
+.portfolio-site .publication-item { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; padding: 26px 0; }
+.portfolio-site .publication-item:first-child { border-top: 1px solid var(--line); }
+.portfolio-site .publication-title { font-family: var(--display); font-size: 25px; font-weight: 400; line-height: 1.45; letter-spacing: -.015em; max-width: 790px; margin-bottom: 16px; }
+.portfolio-site .publication-meta { font-family: var(--mono); font-size: 10px; line-height: 1.8; color: var(--muted); }
+.portfolio-site .publication-meta strong { font-weight: 400; }
+.portfolio-site .publication-status { font-size: 11px; line-height: 1.8; }
+.portfolio-site .publication-expand { border: 0; margin-top: 10px; padding: 0; }
+.portfolio-site .publication-expand-toggle { font-size: 11px; font-weight: 500; }
+.portfolio-site .publication-expand-content { margin-top: 24px; }
+.portfolio-site .publication-repo-link { font-size: 12px; font-weight: 400; }
+.portfolio-site .projects-revamp { display: block; padding: 30px 0; border: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; }
+.portfolio-site .projects-revamp-badge { padding: 0; border: 0; border-radius: 0; color: var(--muted); background: transparent; font-family: var(--mono); font-size: 10px; font-weight: 400; }
+.portfolio-site .projects-revamp-badge > span { width: 5px; height: 5px; }
+.portfolio-site .projects-revamp h3 { font-family: var(--display); font-size: 40px; font-weight: 400; letter-spacing: -.025em; margin: 18px 0; }
+.portfolio-site .projects-revamp p { font-size: 13px; line-height: 1.8; }
+.portfolio-site .projects-revamp-link { background: transparent; color: var(--accent); padding: 0 0 6px; border-bottom: 1px solid var(--accent); border-radius: 0; margin-top: 24px; font-size: 12px; font-weight: 500; }
+.portfolio-site .projects-revamp-link:hover { background: transparent; color: var(--ink); }
+.portfolio-site .projects-revamp-art { display: none; }
+.portfolio-site .contact-container { gap: 20px; }
+.portfolio-site .contact-intro { margin: 0; }
+.portfolio-site .contact-email { text-align: left; margin: 20px 0 0; font-family: var(--display); font-size: clamp(22px,3vw,36px); letter-spacing: -.03em; overflow-wrap: anywhere; color: var(--ink); }
+.portfolio-site .contact-form { border: 0; background: transparent; padding: 22px 0 0; border-radius: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.portfolio-site .contact-form label { font-size: 11px; color: var(--muted); }
+.portfolio-site .contact-form input,.portfolio-site .contact-form textarea { border: 0; border-bottom: 1px solid var(--line-strong); border-radius: 0; padding: 12px 0; background: transparent; color: var(--ink); font-size: 15px; box-shadow: none; }
+.portfolio-site .contact-form input:focus,.portfolio-site .contact-form textarea:focus { outline: 0; border-color: var(--accent); box-shadow: 0 1px 0 var(--accent); }
+.portfolio-site .textarea-label { grid-column: 1/-1; }
+.portfolio-site .submit-btn { justify-self: start; background: var(--ink); color: var(--paper); border-radius: 0; font-size: 12px; font-weight: 400; padding: 12px 22px; }
+.portfolio-site .submit-btn:hover { background: var(--accent); }
+.portfolio-site .site-footer { padding: 30px 0 44px; border-top: 1px solid var(--line); background: transparent; border-radius: 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.portfolio-site .footer-social { margin: 0; padding: 0; gap: 18px; }
+.portfolio-site .footer-social a { color: var(--muted); font-size: 15px; }
+.portfolio-site .footer-copy { margin: 0; color: var(--muted); font-family: var(--mono); font-size: 10px; }
+.portfolio-site .back-to-top { background: var(--paper); border: 1px solid var(--line); border-radius: 0; box-shadow: none; color: var(--ink); right: 24px; bottom: 24px; width: 36px; height: 36px; }
+@media(max-width:1000px) {
+  .portfolio-nav { gap: 24px; }
+  .nav-links { gap: 14px; }
+  .nav-mail { display: none; }
+  .career-summary { grid-template-columns: 190px minmax(0,1fr); gap: 24px; }
+  .portfolio-site .career-expanded { padding-left: 214px; }
+  .portfolio-site .skill-box { grid-template-columns: 190px minmax(0,1fr); gap: 24px; }
+}
+@media(max-width:720px) {
+  html { scroll-padding-top: 90px; }
+  .portfolio-nav { width: calc(100% - 40px); min-height: 70px; position: relative; flex-wrap: wrap; gap: 0; }
+  .nav-monogram { font-size: 32px; }
+  .nav-menu { display: inline-flex; margin-left: auto; }
+  .nav-links { display: none; width: 100%; margin: 0; padding: 12px 0 24px; gap: 0; grid-template-columns: 1fr 1fr; }
+  .nav-links.is-open { display: grid; }
+  .nav-link { font-size: 13px; padding: 12px 0; }
+  .nav-number { display: inline; font-family: var(--mono); font-size: 9px; color: var(--muted); }
+  .portfolio-main { width: calc(100% - 40px); }
+  .portfolio-hero { padding: 66px 0 48px; }
+  .hero-name { font-size: clamp(64px,15vw,100px); }
+  .hero-disciplines { font-size: 13px; max-width: 320px; margin: 24px 0 18px; }
+  .hero-socials { gap: 22px; }
+  .hero-socials a { font-size: 12px; }
+  .hero-scroll { display: none; }
+  .portfolio-main > section:not(.portfolio-hero) { padding: 42px 0; }
+  .portfolio-site .about-text p { font-size: 14px; line-height: 1.9; }
+  .portfolio-site .about-text p:first-child { font-size: 28px; }
+  .career-summary { grid-template-columns: 1fr; gap: 18px; padding: 25px 0; }
+  .portfolio-site .career-company { font-size: 16px; }
+  .portfolio-site .career-title { font-size: 19px; }
+  .portfolio-site .career-expanded { padding: 0 0 28px; }
+  .portfolio-site .career-points li { font-size: 13px; }
+  .portfolio-site .skill-box { grid-template-columns: 1fr; gap: 13px; padding: 22px 0; }
+  .portfolio-site .skill-box li { font-size: 12px; }
+  .portfolio-site .edu-cards { grid-template-columns: 1fr; }
+  .portfolio-site .edu-card { padding: 24px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .portfolio-site .edu-card:last-child { border-bottom: 0; }
+  .portfolio-site .course-grid { grid-template-columns: 1fr 1fr; }
+  .portfolio-site .publication-title { font-size: 22px; }
+  .portfolio-site .contact-form { grid-template-columns: 1fr; }
+  .portfolio-site .site-footer { flex-wrap: wrap; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } *,*::before,*::after { transition: none !important; } }

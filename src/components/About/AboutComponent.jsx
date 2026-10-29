@@ -7,7 +7,7 @@ export default function AboutComponent() {
       <div className="about-container">
         <div className="about-header">
           <h2 className="about-heading">
-            <strong>About&nbsp;Me</strong>
+            <strong>About Me</strong>
           </h2>
         </div>
 
@@ -25,7 +25,7 @@ export default function AboutComponent() {
                 rel="noreferrer"
               >
                 <strong>
-                  MEng&nbsp;in&nbsp;Electrical&nbsp;&amp;&nbsp;Computer&nbsp;Engineering&nbsp;(Artificial&nbsp;Intelligence)
+                  MEng in Electrical &amp; Computer Engineering (Artificial Intelligence)
                 </strong>
               </a>{" "}
               and{" "}
@@ -35,11 +35,11 @@ export default function AboutComponent() {
                 rel="noreferrer"
               >
                 <strong>
-                  BEng&nbsp;in&nbsp;Computer&nbsp;Engineering&nbsp;(Software&nbsp;Engineering)
+                  BEng in Computer Engineering (Software Engineering)
                 </strong>
               </a>{" "}
-              graduate from Toronto&nbsp;Metropolitan&nbsp;University (formerly
-              Ryerson&nbsp;University), with experience in software engineering and
+              graduate from Toronto Metropolitan University (formerly
+              Ryerson University), with experience in software engineering and
               applied ML research across the aerospace &amp; defence, healthcare,
               manufacturing, and fintech industries.
             </p>
@@ -51,7 +51,7 @@ export default function AboutComponent() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Lockheed&nbsp;Martin
+                Lockheed Martin
               </a>{" "}
               and an incoming{" "}
               <a
@@ -61,7 +61,7 @@ export default function AboutComponent() {
               >
                 <strong>MSCS</strong>
               </a>{" "}
-              student at Georgia&nbsp;Tech, specializing in Computing Systems.
+              student at Georgia Tech, specializing in Computing Systems.
             </p>
 
             <p>
@@ -81,7 +81,7 @@ export default function AboutComponent() {
             </p>
 
             <p>
-              Please feel free to reach out at&nbsp;
+              Please feel free to reach out at 
               <a href="mailto:manavpatel.dev@gmail.com">
                 manavpatel.dev@gmail.com
               </a>
