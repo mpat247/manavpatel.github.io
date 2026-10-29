@@ -1,6 +1,3 @@
-import "./App.css";
-import SidebarNav from "./components/Sidebar/SidebarNav";
-import HeroComponent from "./components/Hero/HeroComponent";
 import AboutComponent from "./components/About/AboutComponent";
 import ExperienceComponent from "./components/Experience/ExperienceComponent";
 import EducationComponent from "./components/Education/EducationComponent";
@@ -9,20 +6,22 @@ import ProjectsComponent from "./components/Projects/ProjectsComponent";
 import PublicationsComponent from "./components/Publications/PublicationsComponent";
 import ContactComponent from "./components/Contact/ContactComponent";
 import FooterComponent from "./components/Footer/FooterComponent";
+import { PortfolioNav, PortfolioHero } from "./PortfolioChrome";
+import "./Portfolio.css";
+import "./Theme.css";
 
 export default function App() {
   return (
-    <div className="app-shell">
-      <SidebarNav />
-      <main className="dashboard-main">
-        <HeroComponent />
+    <div className="portfolio-site">
+      <PortfolioNav />
+      <main id="main" tabIndex={-1} className="portfolio-main">
+        <PortfolioHero />
         <AboutComponent />
         <ExperienceComponent />
         <SkillsComponent />
         <EducationComponent />
         <PublicationsComponent />
         <ProjectsComponent />
-        {/* <ResumesComponent /> */}
         <ContactComponent />
         <FooterComponent />
       </main>

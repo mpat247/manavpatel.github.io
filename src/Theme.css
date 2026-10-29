@@ -1,0 +1,66 @@
+:root {
+  --paper:#f4f1e9; --ink:#252621; --muted:#737369; --accent:#a6412a;
+  --line:#d9d6cc; --line-strong:#afaea2; --wash:#eeebe2; --selection:#e5cfc1;
+  --sans:"DM Sans",sans-serif; --display:"DM Serif Display",Georgia,serif; --mono:"IBM Plex Mono",monospace;
+}
+.portfolio-nav { width:min(1280px,calc(100% - 96px)); }
+.nav-monogram { color:var(--accent); }
+.nav-link { font-size:11px; }
+.portfolio-hero { display:grid; grid-template-columns:minmax(0,1fr) 290px; gap:0 60px; padding:92px 0 86px; }
+.hero-name { grid-column:1; grid-row:1/4; font-size:clamp(90px,11vw,148px); letter-spacing:-.055em; }
+.hero-name span { display:block; }
+.hero-name span + span::before { content:none; }
+.hero-name span:last-child { font-style:italic; color:var(--accent); }
+.hero-profession { grid-column:2; align-self:end; margin:0 0 18px; font-size:11px; }
+.hero-disciplines { grid-column:2; align-self:start; font-size:20px; line-height:1.65; margin:0; max-width:260px; }
+.hero-socials { grid-column:2; align-self:end; gap:18px; }
+.hero-socials a { font-size:11px; }
+.hero-socials a > svg:first-child { display:none; }
+.hero-scroll { display:none; }
+.portfolio-site :is(.about-container,.experience-container,.skills-container,.edu-container,.publications-container,.projects-container,.contact-container) { display:grid; grid-template-columns:140px minmax(0,1fr); gap:0 42px; }
+.portfolio-site :is(.about-header,.experience-header,.skills-header,.edu-header,.publications-header,.projects-header) { grid-column:1; margin:3px 0 0; }
+.portfolio-site :is(.about-text-panel,.career-track,.skills-grid,.edu-cards,.courses-panel,.publications-list,.projects-revamp,.contact-form) { grid-column:2; }
+.portfolio-site .about-text p { font-size:15px; }
+.portfolio-site .about-text p:first-child { font-size:34px; margin-top:-10px; }
+.career-summary { grid-template-columns:200px minmax(0,1fr); gap:28px; }
+.portfolio-site .career-expanded { padding-left:228px; }
+.portfolio-site .career-title { font-size:18px; }
+.portfolio-site .skill-box { grid-template-columns:200px minmax(0,1fr); gap:28px; }
+.portfolio-site .edu-card { padding:22px 16px; }
+.portfolio-site .edu-card:first-child { padding-left:0; }
+.portfolio-site .edu-card h3 { font-size:14px; }
+.portfolio-site .edu-card h4 { font-size:12px; }
+.portfolio-site .contact-intro { grid-column:1/-1; display:grid; grid-template-columns:140px minmax(0,1fr); gap:42px; align-items:baseline; }
+.portfolio-site .contact-email { margin:0; font-size:32px; }
+.portfolio-site .site-footer { margin-left:182px; }
+@media(max-width:1000px) {
+  .portfolio-main { width:calc(100% - 72px); }
+  .portfolio-site :is(.about-container,.experience-container,.skills-container,.edu-container,.publications-container,.projects-container,.contact-container) { grid-template-columns:110px minmax(0,1fr); gap:0 28px; }
+  .portfolio-site .contact-intro { grid-template-columns:110px minmax(0,1fr); gap:28px; }
+  .portfolio-hero { grid-template-columns:minmax(0,1fr) 240px; gap:28px; }
+  .hero-disciplines { font-size:17px; }
+  .career-summary { grid-template-columns:150px minmax(0,1fr); gap:22px; }
+  .portfolio-site .career-expanded { padding-left:172px; }
+  .portfolio-site .skill-box { grid-template-columns:150px minmax(0,1fr); gap:22px; }
+  .portfolio-site .site-footer { margin-left:138px; }
+}
+@media(max-width:720px) {
+  .portfolio-nav,.portfolio-main { width:calc(100% - 40px); }
+  .portfolio-hero { display:block; padding:58px 0 44px; }
+  .hero-profession { margin-bottom:26px; }
+  .hero-name { font-size:96px; }
+  .hero-disciplines { font-size:15px; margin:28px 0 22px; max-width:290px; }
+  .hero-socials { gap:24px; }
+  .portfolio-site :is(.about-container,.experience-container,.skills-container,.edu-container,.publications-container,.projects-container,.contact-container) { display:block; }
+  .portfolio-site :is(.about-header,.experience-header,.skills-header,.edu-header,.publications-header,.projects-header) { margin:0 0 28px; }
+  .portfolio-site .about-text p { font-size:14px; }
+  .portfolio-site .about-text p:first-child { margin-top:0; font-size:30px; }
+  .career-summary { grid-template-columns:1fr; gap:18px; }
+  .portfolio-site .career-expanded { padding-left:0; }
+  .portfolio-site .skill-box { grid-template-columns:1fr; gap:12px; }
+  .portfolio-site .edu-card { padding:24px 0; }
+  .portfolio-site .edu-card h3 { font-size:16px; }
+  .portfolio-site .contact-intro { display:block; }
+  .portfolio-site .contact-email { margin-top:24px; font-size:25px; }
+  .portfolio-site .site-footer { margin-left:0; }
+}
